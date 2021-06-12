@@ -172,6 +172,9 @@ color:#000;
 	    max-height: 90vh;
 	    margin-top:10px;
 	}
+    .mHide{
+        display: none;
+    }
 }
 
 .header{
