@@ -18,17 +18,10 @@ h2{
     font-family: 'Lucida Sans', 'Lucida Sans Regular';
 }
 
-.carbg{
-    size: cover;
-    
-}
+
 .right.carousel-control, 
 .left.carousel-control 
 {
      visibility:hidden;
 }
 
-.carsoulImg{
-    width:1300px;
-    height:600px;
-}

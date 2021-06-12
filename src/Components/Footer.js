@@ -67,11 +67,11 @@ const Footer = () =>{
                     <div className="col-md-6">
                         <h5 className=" text-uppercase mt-3 mb-4">We Accept following payments</h5>
                         <span>
-                        <img src={PAY} width="50px"></img>
-                        <img src={PAY} width="50px"></img>
-                        <img src={PAY} width="50px"></img>
-                        <img src={PAY} width="50px"></img>
-                        <img src={PAY} width="50px"></img>
+                        <img src={PAY} width="50px" alt="payment"></img>
+                        <img src={PAY} width="50px" alt="payment 1"></img>
+                        <img src={PAY} width="50px" alt="payment 2"></img>
+                        <img src={PAY} width="50px" alt="payment 3"></img>
+                        <img src={PAY} width="50px" alt="payment 4"></img>
                         </span>
                         <div className="mt-2">
 

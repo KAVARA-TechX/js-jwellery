@@ -10,7 +10,7 @@ const BootStrapCarsoul=()=>{
         <Carousel fade controls={false}>
         <Carousel.Item interval={3000}>
           <img
-            className="w-100"
+            className="carasoulImg"
             src={Image1}
             alt="First slide"
             />
@@ -22,25 +22,25 @@ const BootStrapCarsoul=()=>{
         </Carousel.Item>
         <Carousel.Item interval={3000}> 
           <img
-            className="w-100"
+            className="carasoulImg"
             src={Image2}
             alt="Second slide"
 
           />
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            {/* <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={3000}>
           <img
-            className="w-100"
+            className="carasoulImg"
             src={Image4}
             alt="Third slide"
           />
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            {/* <h3>Third slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

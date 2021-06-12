@@ -180,3 +180,18 @@ color:#000;
 }
 /* ============ mobile view .end// ============ */
 
+.cursor-pointer{
+    cursor: pointer;
+}
+
+
+
+.logoImg{
+    width: 150px;
+    height: 50px;
+}
+
+.carasoulImg{
+    width: 1370px;
+    max-height: 85vh;
+}
