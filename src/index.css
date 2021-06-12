@@ -42,9 +42,7 @@ h4{
   margin-left: -50px;
 }
 
-.back :hover{
-    background-color: white;
-}
+
 
 
 
@@ -69,6 +67,7 @@ h4{
     .col-sm-3{
         margin-left: 20%;
     }
+    
     .carousel-control-prev-icon{
         margin-left: 80%;
     }
@@ -85,7 +84,6 @@ h4{
     .col-sm-3{
         margin-left: 20%;
     }
-
     .carousel-control-prev-icon{
         margin-left: 50%;
     }
@@ -135,13 +133,50 @@ h4{
     position: relative;
     width: 100%;
  }
- .img{
-   width:auto;
-   height: 230px;
- }
+ 
+ 
  .top-left{
     position: absolute;
     left:0;
     top:0;
     font-family:"Helvetica";
  }
+
+ .navbar .megamenu{ padding: 1rem; }
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+	
+	.navbar .has-megamenu{position:static!important;}
+	.navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
+	
+}	
+/* ============ desktop view .end// ============ */
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+    .navbar .nav-item:hover .nav-link{ color: #000;  }
+    .navbar .nav-item .dropdown-menu{ margin-top:0; }
+}   
+/* ============ desktop view .end// ============ */
+.navbar-dark .navbar-nav .nav-link{
+    color:#000;
+}
+.navbar-dark .navbar-nav .active>.nav-link,
+ .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show,
+  .navbar-dark .navbar-nav .show>.nav-link{
+color:#000;
+}
+/* ============ mobile view ============ */
+@media(max-width: 991px){
+	.navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+		overflow-y: auto;
+	    max-height: 90vh;
+	    margin-top:10px;
+	}
+}
+
+.header{
+
+    color: #61819F;
+}
+/* ============ mobile view .end// ============ */
+

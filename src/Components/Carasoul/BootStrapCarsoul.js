@@ -10,7 +10,7 @@ const BootStrapCarsoul=()=>{
         <Carousel fade controls={false}>
         <Carousel.Item interval={3000}>
           <img
-            className=" d-block w-100"
+            className="w-100"
             src={Image1}
             alt="First slide"
             />
