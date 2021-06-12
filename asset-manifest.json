@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/js-jwellery/static/css/main.9f3dd138.chunk.css",
-    "main.js": "/js-jwellery/static/js/main.830d8f33.chunk.js",
-    "main.js.map": "/js-jwellery/static/js/main.830d8f33.chunk.js.map",
-    "runtime-main.js": "/js-jwellery/static/js/runtime-main.6c7af45e.js",
-    "runtime-main.js.map": "/js-jwellery/static/js/runtime-main.6c7af45e.js.map",
+    "main.css": "/js-jwellery/static/css/main.7c99e8f8.chunk.css",
+    "main.js": "/js-jwellery/static/js/main.9da25847.chunk.js",
+    "main.js.map": "/js-jwellery/static/js/main.9da25847.chunk.js.map",
+    "runtime-main.js": "/js-jwellery/static/js/runtime-main.3e1c3496.js",
+    "runtime-main.js.map": "/js-jwellery/static/js/runtime-main.3e1c3496.js.map",
     "static/css/2.9e6e418a.chunk.css": "/js-jwellery/static/css/2.9e6e418a.chunk.css",
-    "static/js/2.feba1653.chunk.js": "/js-jwellery/static/js/2.feba1653.chunk.js",
-    "static/js/2.feba1653.chunk.js.map": "/js-jwellery/static/js/2.feba1653.chunk.js.map",
-    "static/js/3.42f346f6.chunk.js": "/js-jwellery/static/js/3.42f346f6.chunk.js",
-    "static/js/3.42f346f6.chunk.js.map": "/js-jwellery/static/js/3.42f346f6.chunk.js.map",
+    "static/js/2.8d487918.chunk.js": "/js-jwellery/static/js/2.8d487918.chunk.js",
+    "static/js/2.8d487918.chunk.js.map": "/js-jwellery/static/js/2.8d487918.chunk.js.map",
+    "static/js/3.97975db8.chunk.js": "/js-jwellery/static/js/3.97975db8.chunk.js",
+    "static/js/3.97975db8.chunk.js.map": "/js-jwellery/static/js/3.97975db8.chunk.js.map",
     "index.html": "/js-jwellery/index.html",
     "static/css/2.9e6e418a.chunk.css.map": "/js-jwellery/static/css/2.9e6e418a.chunk.css.map",
-    "static/css/main.9f3dd138.chunk.css.map": "/js-jwellery/static/css/main.9f3dd138.chunk.css.map",
-    "static/js/2.feba1653.chunk.js.LICENSE.txt": "/js-jwellery/static/js/2.feba1653.chunk.js.LICENSE.txt",
+    "static/css/main.7c99e8f8.chunk.css.map": "/js-jwellery/static/css/main.7c99e8f8.chunk.css.map",
+    "static/js/2.8d487918.chunk.js.LICENSE.txt": "/js-jwellery/static/js/2.8d487918.chunk.js.LICENSE.txt",
     "static/media/Dring.6a29639c.png": "/js-jwellery/static/media/Dring.6a29639c.png",
-    "static/media/Image1.152b143a.jpg": "/js-jwellery/static/media/Image1.152b143a.jpg",
+    "static/media/Image1.8bea2f70.jpg": "/js-jwellery/static/media/Image1.8bea2f70.jpg",
     "static/media/Image2.52f430e5.jpg": "/js-jwellery/static/media/Image2.52f430e5.jpg",
     "static/media/Image3.b4c97f14.jpg": "/js-jwellery/static/media/Image3.b4c97f14.jpg",
     "static/media/Invest.17cccf9b.png": "/js-jwellery/static/media/Invest.17cccf9b.png",
@@ -31,10 +31,10 @@
     "static/media/tran.6750bc2a.png": "/js-jwellery/static/media/tran.6750bc2a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6c7af45e.js",
+    "static/js/runtime-main.3e1c3496.js",
     "static/css/2.9e6e418a.chunk.css",
-    "static/js/2.feba1653.chunk.js",
-    "static/css/main.9f3dd138.chunk.css",
-    "static/js/main.830d8f33.chunk.js"
+    "static/js/2.8d487918.chunk.js",
+    "static/css/main.7c99e8f8.chunk.css",
+    "static/js/main.9da25847.chunk.js"
   ]
 }
