@@ -11,6 +11,7 @@ import Options from "./Components/Pages/Options";
 import ReviewSlider from "./Components/Pages/ReviewSlider";
 import Growth from './Components/Pages/Growth';
 import FooterCard from './Components/Cards/FooterCard';
+import Social from './Components/Cards/Social';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
       <Growth/>
       <Guarantee />
     </div>
+    <Social/>
     <Footer/>
     <FooterCard/>
     </>
