@@ -3,9 +3,23 @@ import {SearchOutlined} from '@ant-design/icons';
 import logo from "../../Images/logo.png";
 import Ring from "../../Images/ring.png";
 import { Link } from 'react-router-dom';
+import {useDispatch,useSelector} from 'react-redux'
+import firebase from 'firebase';
+import {useHistory} from 'react-router-dom';
+import { useEffect } from 'react';
 const Header = () =>{
-    
-  
+    const dispatch = useDispatch();
+	let history = useHistory();
+	const {user} = useSelector((state)=>({...state}));
+	
+	const logOut = () =>{
+		firebase.auth().signOut();
+		dispatch({
+		  type: 'LOGOUT',
+		  payload:null
+		}); 
+		history.push('/login');
+	  }
     return (
       <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid" >
@@ -103,6 +117,24 @@ const Header = () =>{
 				<li class="nav-item"><Link class="nav-link" to="/"> COLLECTIONS </Link></li>
 				<li class="nav-item"><Link class="nav-link" to="/"> INVEST WITH US </Link></li>
 				<li class="nav-item"><Link class="nav-link" to="/"> ABOUT </Link></li>
+				{user && <div>
+					<li class="nav-item dropdown">
+					<p class="nav-link dropdown-toggle" 
+					 id="navbarDropdown" 
+					 role="button" 
+					 data-toggle="dropdown" 
+					 aria-haspopup="true" 
+					 aria-expanded="false">
+						{user.email != null ? user.email : ""}
+					</p>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Favourites</a>
+          				<a class="dropdown-item" href="#">Recently Viewed</a>
+          				<div class="dropdown-divider"></div>
+          				<a class="dropdown-item" onClick={logOut}>Logout</a>
+        			</div>
+      			</li>
+				  </div>}
 				<li><SearchOutlined  className="mr-2 ml-5 mt-3"/></li>
 				<li class="nav-item">
 					<input 
@@ -114,6 +146,7 @@ const Header = () =>{
 					</input>
 				</li>
             </ul>
+			
         </div>
     </div>
 </nav>

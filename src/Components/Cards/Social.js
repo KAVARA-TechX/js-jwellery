@@ -1,10 +1,11 @@
 import React from 'react';
 import './Social.css';
+import { Link } from 'react-router-dom';
 const Social=()=>{
     return(
 <div class="icon-bar">
-  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+  <Link to="/" class="facebook"><i class="fa fa-facebook"></i></Link>
+  <Link to="/" class="instagram"><i class="fa fa-instagram"></i></Link>
 </div>
     )
 }

@@ -1,48 +1,50 @@
-import React, { useRef } from 'react';
-import {Card,Form, Button,Container} from 'react-bootstrap';
-import {useAuth,AuthProvider} from './AuthContext';
-const Register = () =>{
-    const emailRef=useRef()
-    const passwordRef=useRef()
-    const passwordConfirmRef=useRef()
-    const {signup} = useAuth()
+import React,{useState,useEffect} from 'react';
+import {auth} from '../../../firebase';
+import {useSelector } from "react-redux";
+const Register = ({history}) => {
+    const [email,setEmail] = useState("");
 
-    function handleSubmit(e){
-        e.preventDefault()
-        signup(emailRef.current.value,passwordRef.current.value)
+    const { user } = useSelector((state) => ({ ...state }));
+
+  useEffect(() => {
+    if (user && user.token) history.push("/");
+  }, [user]);
+    const handleSubmit  = async(e) =>{
+        e.preventDefault();
+        // console.log("USER EMAIL:- ",email);
+        
+        //redirecting user after sending the registration link
+        const config = {
+            url:'http://localhost:3000/register/complete',
+            handleCodeInApp:true
+        }
+
+        await auth.sendSignInLinkToEmail(email,config);
+        console.log(`Email is sent to ${email}.Cilck the link to complete your registration.`);
+        //save email in localStorage
+        window.localStorage.setItem('emailForRegistration',email);
+        //clear state
+        setEmail("");
     }
+    const registerForm = () => <form onSubmit={handleSubmit}>
+        <input 
+        type="email" 
+        className="form-control" 
+        value={email} 
+        onChange={e => setEmail(e.target.value)}
+        placeholder="Enter your email" 
+        ></input><br></br>
+        <button type="submit" className="btn btn-primary">
+            Register 
+            </button>
+    </form>   
+return (<div className="container p-5 m-5">
+            <div className="row">
+                <div className="col-md-6 offset-md-3">
+                    <h4>Register</h4>
+                    {registerForm()}
+                </div>
+            </div>
+        </div>)}
 
-    return(
-    <AuthProvider>
-    <Container className="d-flex align-items-center justify-content-center" style={{minHeight:"100vh"}}>
-    <div className="w-100" style={{maxWidth:'400px'}}>
-    <div>
-        <Card>
-            <Card.Body>
-                <h2 className="text-center mb-4">Sign up</h2>
-                <Form>
-                    <Form.Group id="email">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" ref={emailRef}/>
-                    </Form.Group>
-                    <Form.Group id="password">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" ref={passwordRef}/>
-                    </Form.Group>
-                    <Form.Group id="password-confirm">
-                        <Form.Label>Password Confirmation</Form.Label>
-                        <Form.Control type="passwordd" ref={passwordConfirmRef}/>
-                    </Form.Group>
-                    <Button className="w-100 mt-3" type="submit">Sign Up</Button>
-                </Form>
-
-            </Card.Body>
-        </Card>
-        <div className="w-100 text-center mt-2">
-            Already have an account? Log in</div>            
-        </div>
-    </div>
-    </Container>
-    </AuthProvider>
-    )}
 export default Register;
