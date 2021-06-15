@@ -4,7 +4,7 @@ import PAY from '../Images/pay.png';
 
 const Footer = () =>{
     return(
-        <footer className="page-footer font-small mt-3" >
+        <footer className="page-footer font-small mt-3 pt-3 pb-5 pt-5" >
             <div className="container">
                 <div className="row ">
                     <div className="col-md-2">

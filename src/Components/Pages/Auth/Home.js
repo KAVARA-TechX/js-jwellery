@@ -16,16 +16,12 @@ const Home = () =>{
         
     <div>
     <BootStrapCarsoul/>
-    <h4 className="text-center mt-4" >Top Products</h4>
       <TopProduct />
-      <Pjwellery/>
       <SolitaireProcess/>
       <ReviewSlider/>
       <Options />
-      <Growth/>
       <Guarantee />
     </div>
-    <Social/>
         </div>
     );
 }

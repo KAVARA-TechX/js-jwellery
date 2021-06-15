@@ -12,7 +12,11 @@ import RegisterComplete from './Components/Pages/Auth/RegisterComplete';
 
 import {auth} from "./firebase";
 import { useDispatch } from 'react-redux';
-import {currentUser} from '../src/Components/functions/auth'
+import {currentUser} from '../src/Components/functions/auth';
+// import UserRoute from './Components/Routes/UserRoute';
+import AdminRoute from './Components/Routes/AdminRoute';
+import AdminDashboard from "./Components/Pages/Admin/AdminDashboard";
+import ProductCreate from './Components/Pages/Admin/ProductCreate';
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -48,6 +52,10 @@ const App = ({history}) => {
       <Route exact path="/login" component={Login}/>
       <Route  exact path="/register" component={Register}/>
       <Route  exact path="/register/complete" component={RegisterComplete}/>
+      <AdminRoute exact path="/admin/dashboard" component={AdminDashboard}/>
+      <AdminRoute exact path="/admin/product" component={ProductCreate}/>
+      <AdminRoute exact path="/admin/products" component={AdminDashboard}/>
+      <AdminRoute exact path="/admin/coupon" component={AdminDashboard}/>
     </Switch>
     
     <Footer/>

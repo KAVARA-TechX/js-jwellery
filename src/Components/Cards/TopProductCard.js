@@ -3,6 +3,9 @@ import Tran from '../../Images/tran.png';
 import {Carousel} from 'react-bootstrap';
 const TopProduct = () =>{
     return(
+      <div className="mt-5 mb-5">
+        
+      <h4 className="text-center">Top product</h4>
       <Carousel>
         <Carousel.Item>
         <div className="container pt-2 pb-2">
@@ -113,7 +116,7 @@ const TopProduct = () =>{
       </div>
         </Carousel.Item>
       </Carousel>
-
+      </div>
     )
 }
 

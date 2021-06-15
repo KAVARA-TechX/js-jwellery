@@ -3,7 +3,8 @@ import {Carousel} from 'react-bootstrap';
 import Tran from '../../Images/review.png';
 const ReviewSlider = () =>{
     return(
-        <Carousel className="mt-5 mb-5">
+        <div >
+            <Carousel className="">
             <Carousel.Item>
                 <div className="card text-center">
                     <div className="card body">
@@ -21,6 +22,7 @@ const ReviewSlider = () =>{
                 </div>
             </Carousel.Item>    
         </Carousel>
+        </div>
     );
 }
 
