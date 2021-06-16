@@ -30,11 +30,7 @@ return (
                 <p  className="text-center">Order your ring</p>
             </div>
         </div>
-        <div class="container">
-        <div class="col-md-12 text-center pt-3 pb-5 tc ">
-        <button className="btn btn-outline-light" style={{borderRadius:"25px"}}>ENQUIRE NOW</button> 
-        </div>
-        </div>
+        
     </div>
 );
 }
