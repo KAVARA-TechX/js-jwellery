@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 h1,h2,h3,h4,h5,h6,p {
-    	font-family: 'Helvetica';
-	color: #4A689F;
+    font-family: 'Helvetica';
 }
-
-
-
 footer{
     background-color: #D7DEE4;
 }
@@ -14,9 +10,6 @@ footer{
 footer h5{
     color: #4A689F;
 }
-
-
-
 footer li{
     color: grey;
 }
@@ -153,42 +146,28 @@ h4{
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
 	
-	.navbar .has-megamenu{position:static !important;}
+	.navbar .has-megamenu{position:static!important;}
 	.navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
 	
 }	
 /* ============ desktop view .end// ============ */
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
-    .navbar .nav-item:hover .nav-link{ color: #4A689F;  }
+    .navbar .nav-item:hover .nav-link{ color: #000;  }
     .navbar .nav-item .dropdown-menu{ margin-top:0; }
-    .navbar-nav{
-        align-items:'center'
-    }
-    .offer{
-        margin-left: 140px;
-    }
 }   
 /* ============ desktop view .end// ============ */
 .navbar-dark .navbar-nav .nav-link{
-    color:#fff;
+    color:#000;
 }
 .navbar-dark .navbar-nav .active>.nav-link,
  .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show,
   .navbar-dark .navbar-nav .show>.nav-link{
-color:#fff;
-}
-
-.sayen{
-    color:#4A689F;
-}
-
-.sayen:hover{
-    color:#fff;
+color:#000;
 }
 /* ============ mobile view ============ */
 @media(max-width: 991px){
-	.navbar.fixed-top .navbar-collapse .navbar.sticky-top .navbar-collapse{
+	.navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
 		overflow-y: auto;
 	    max-height: 90vh;
 	    margin-top:10px;
@@ -218,12 +197,4 @@ color:#fff;
 .carasoulImg{
     width: 1370px;
     max-height: 85vh;
-}
-
-.iconSize{
-    font-size: 28px;
-}
-
-.title{
-    color: #fff;
 }
