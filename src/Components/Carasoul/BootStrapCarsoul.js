@@ -15,9 +15,16 @@ const BootStrapCarsoul=()=>{
             alt="First slide"
             />
           <Carousel.Caption className="textLoc">
-            <h3 style={{color:'white'}}>We Believe,</h3>
-            <h1 style={{color:'white'}}>love can't wait!</h1>
-            <h2 style={{color:'white'}}>Live advice available</h2>
+        
+            <div className="container">
+              <div className="row">
+                <div className="col-sm-4">
+                <button class="btn success">Design Your Ring</button>
+                </div><div className="col-sm-4">
+                <button class="btn success">Design Your Ring</button>
+                </div>
+              </div>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={3000}> 
