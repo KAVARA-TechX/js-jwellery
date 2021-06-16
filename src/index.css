@@ -3,11 +3,6 @@
 h1,h2,h3,h4,h5,h6,p {
     font-family: 'Helvetica';
 }
-
-h1,h2,h3,h4,h5,h6,p {
-    color: #4A689F;
-}
-
 footer{
     background-color: #D7DEE4;
 }
@@ -15,9 +10,6 @@ footer{
 footer h5{
     color: #4A689F;
 }
-
-
-
 footer li{
     color: grey;
 }
@@ -161,31 +153,17 @@ h4{
 /* ============ desktop view .end// ============ */
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
-    .navbar .nav-item:hover .nav-link{ color: #4A689F;  }
+    .navbar .nav-item:hover .nav-link{ color: #000;  }
     .navbar .nav-item .dropdown-menu{ margin-top:0; }
-    .navbar-nav{
-        align-items:'center'
-    }
-    .offer{
-        margin-left: 140px;
-    }
 }   
 /* ============ desktop view .end// ============ */
 .navbar-dark .navbar-nav .nav-link{
-    color:#fff;
+    color:#000;
 }
 .navbar-dark .navbar-nav .active>.nav-link,
  .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show,
   .navbar-dark .navbar-nav .show>.nav-link{
-color:#fff;
-}
-
-.sayen{
-    color:#4A689F;
-}
-
-.sayen:hover{
-    color:#fff;
+color:#000;
 }
 /* ============ mobile view ============ */
 @media(max-width: 991px){
@@ -219,12 +197,4 @@ color:#fff;
 .carasoulImg{
     width: 1370px;
     max-height: 85vh;
-}
-
-.iconSize{
-    font-size: 28px;
-}
-
-.title{
-    color: #fff;
 }
