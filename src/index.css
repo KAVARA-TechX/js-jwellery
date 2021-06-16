@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 h1,h2,h3,h4,h5,h6,p {
-    font-family: 'Helvetica';
+    	font-family: 'Helvetica';
+	color: #4A689F;
 }
 
-h1,h2,h3,h4,h5,h6,p {
-    color: #4A689F;
-}
+
 
 footer{
     background-color: #D7DEE4;
@@ -154,7 +153,7 @@ h4{
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
 	
-	.navbar .has-megamenu{position:static!important;}
+	.navbar .has-megamenu{position:static !important;}
 	.navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
 	
 }	
@@ -189,7 +188,7 @@ color:#fff;
 }
 /* ============ mobile view ============ */
 @media(max-width: 991px){
-	.navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+	.navbar.fixed-top .navbar-collapse .navbar.sticky-top .navbar-collapse{
 		overflow-y: auto;
 	    max-height: 90vh;
 	    margin-top:10px;
