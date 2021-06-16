@@ -1,5 +1,7 @@
 .textLoc .container{
     justify-content: left;
+    margin-left: -15%;
+    margin-top: -22%;
     }
 h1{
     font-family:'Courier New', Courier, monospace;
@@ -24,18 +26,23 @@ h2{
      visibility:hidden;
 }
 
-.btn {
-    border: 2px solid rgb(255, 255, 255);
-    background-color: 'inherit';
-    color: rgb(255, 255, 255);
-    padding: 14px 28px;
-    font-size: 20px;
-    cursor: pointer;
-  }
+
   
+
   /* On mouse-over */
-  .btn:hover {
-              border:2px solid #114063;
-              color:#114063;                                   
-            }
-  
+.btn:hover {
+            border:2px solid #114063;
+            color:#114063;  
+            background-color: 'inherit';                                 
+}
+
+@media(max-width: 991px){
+    .btnLeft{
+        margin-top: 5%;
+        margin-left: 0%;
+    }
+
+    .row{
+        margin-left: 25%;
+    }
+}

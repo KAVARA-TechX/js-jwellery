@@ -6,9 +6,9 @@ import Ring from "../../Images/Dring.png";
 import Shop from "../../Images/shop.png";
 const SolitaireProcess = () =>{
 return (
-    <div style={{backgroundColor: '#092C41'}} className="container-fluid mt-5 mb-5">
+    <div style={{backgroundColor: '#114063'}} className="container-fluid mt-5 mb-5 ">
         <h3 className="text-center text-white pt-4">JS Solitaire Process</h3>
-        <div className="row pt-3 pb-3 text-medium">
+        <div className="row pt-5 pb-5 text-medium">
             <div className="col-sm ">
                 <img src={Message} alt="message" className="center-block"></img>
                 <p  className="text-center">Contact us to <br/>Share your ideas</p>

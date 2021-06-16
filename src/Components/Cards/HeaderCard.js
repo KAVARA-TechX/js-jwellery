@@ -11,7 +11,7 @@ const HeaderCard = () =>{
     return(
         <div>
             <div className="container-fluid mHide" style={{backgroundColor : '#114063',color:'white',fontSize: "14px",fontFamily:"sans-serif"}}>
-            <div className="row pt-3 pb-3 mt-1 mb-1">
+            <div className="row pt-3 pb-3">
                 <div className="tc col-md-4">Free shipping all over india</div>
                 <div className="tc col-md-3">6% off Use Code 30OFF, Ends in EXPIRED</div>
                 <div className="tc col-md-5">Book your consultation| 
@@ -24,7 +24,7 @@ const HeaderCard = () =>{
         <div className="container  mt-1 mb-1 pt-1 p-1">
             <div className="row">
                 <div className="col-md-4">
-                    <img src={logo} alt="JS SOLITAIRE" style={{height:'90px'}} className="w-80"></img>
+                   <Link to="/"> <img src={logo} alt="JS SOLITAIRE" style={{height:'90px'}} className="w-80"></img></Link>
                 </div>
                 <div className="col-md-3 mt-4">
                 
@@ -38,8 +38,10 @@ const HeaderCard = () =>{
 					</Input>
 				</div>
                 <div className="col-md-4 mt-4 " style={{marginLeft:'8%'}}  >
-                <Link to="/cart" style={{color:'#000'}} className="mr-3"><ClockCircleOutlined className="iconSize"/><span style={{color:'#999'}}>Recently Viewd</span></Link>
-                |<Link to="/cart" className="ml-3 mr-3"><HeartOutlined className="iconSize " style={{ color: '#08c'}}/></Link>
+                <Link to="/cart" style={{color:'#000'}} className="mr-3">
+                    <ClockCircleOutlined style={{fontSize: '28px'}}/><span style={{color:'#4A689F'}}>Recently Viewed</span>
+                    </Link>
+                |<Link to="/cart" className="ml-3 mr-3"><HeartOutlined style={{ color: '#08c',fontSize: '28px'}}/></Link>
                 | <Link to="/cart" className="ml-3 mr-3"><Badge 
                 count={0} 
                 showZero 
@@ -49,7 +51,7 @@ const HeaderCard = () =>{
                         backgroundColor:'#fff',
                         boxShadow: '0 0 0 1px #000 inset'
                     }}
-                ><ShoppingCartOutlined className="iconSize "/></Badge></Link>
+                ><ShoppingCartOutlined style={{fontSize: '28px'}}/></Badge></Link>
                   
                 </div>
             </div>

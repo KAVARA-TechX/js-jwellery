@@ -35,7 +35,7 @@ return (
 		  <div class="collapse navbar-collapse" id="main_nav">
 			  <ul class="navbar-nav " >
 				  <li class="nav-item dropdown has-megamenu" >
-					  <div class="nav-link dropdown-toggle cursor-pointer " data-bs-toggle="dropdown">JEWELLERY </div>
+					  <div class="nav-link dropdown-toggle" style={{cursor:'pointer'}} data-bs-toggle="dropdown">JEWELLERY </div>
 					  <div class="dropdown-menu megamenu" role="menu" style={{backgroundColor:"#d4d4d4"}}>
 						  <div class="row g-3">
 							  <div class="col-lg-3 col-6">
@@ -53,7 +53,7 @@ return (
 									  </div>
 									  <div class="col-lg-6">
 									  <ul class="list-unstyled">
-										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Magalsutra</Link></li>
+										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Mangalsutra</Link></li>
 										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Neckless</Link></li>
 										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Neckwear</Link></li>
 										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Nose pin</Link></li>
@@ -65,7 +65,7 @@ return (
 							  </div>
 							  <div class="col-lg-3 col-6">
 								  <div class="col-megamenu text-center">
-										<h6 class="title ">Price Band</h6>
+										<h6 class="title header">Price Band</h6>
 										<ul class="list-unstyled">
 											<li><Link to="/" className="sayen">&lt;4000</Link></li>
 											<li><Link to="/" className="sayen">5k-10k</Link></li>
@@ -79,7 +79,8 @@ return (
 							  </div>
 							  <div class="col-lg-3 col-6">
 									<div class="col-megamenu">
-										<h6 class="title">Delivery time</h6>
+										<h6 class="title title header">Delivery time</h6>
+										<hr/>
 										<ul class="list-unstyled">
 											<li><Link to="/" className="sayen">1-7 DAYS</Link></li>
 											<li><Link to="/" className="sayen">7-14 DAYS</Link></li>
@@ -90,7 +91,7 @@ return (
 							  </div>
 							  <div class="col-lg-3 col-6">
 									<div class="col-megamenu">
-										<h6 class="title">Expert Guidance</h6>
+										<h6 class="title header">Expert Guidance</h6>
 										<ul class="list-unstyled">
 											<li><Link to="/" className="sayen">Metals</Link></li>
 											<li><Link to="/" className="sayen">Ring size guide</Link></li>

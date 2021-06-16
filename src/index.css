@@ -1,20 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
-h1,h2,h3,h4,h5,h6,p {
+h1,h2,h3,h4,h5,h6,p,div,Link,a {
     font-family: 'Helvetica';
 }
 footer{
-    background-color: #D7DEE4;
+    background-color: #fff;
 }
 
 footer h5{
-    color: #4A689F;
+    color: #114063;
 }
 footer li{
-    color: grey;
+    color: #4A689F;
 }
 
-h4{
+.lightBlue{
     color:#33538B;
 }
 
@@ -152,7 +150,7 @@ h4{
 }   
 /* ============ desktop view .end// ============ */
 .navbar-dark .navbar-nav .nav-link{
-    color:#000;
+    color:#fff;
 }
 .navbar-dark .navbar-nav .active>.nav-link,
  .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show,
@@ -173,7 +171,7 @@ color:#000;
 
 .header{
 
-    color: #61819F;
+    color: #fff;
 }
 /* ============ mobile view .end// ============ */
 git 
@@ -192,3 +190,8 @@ git
     width: 1370px;
     max-height: 85vh;
 }
+
+.sayen{
+    color: #4A689F;
+}
+

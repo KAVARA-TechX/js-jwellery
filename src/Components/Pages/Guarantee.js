@@ -6,8 +6,8 @@ import Laser from "../../Images/Laser.png";
 import Diamond from "../../Images/bigDiamond.png";
 const Guarantee = () =>{
 return(
-<div style={{backgroundColor: '#15364C'}} className="container-fluid mt-3">
-        <h3 className="text-center text-white pt-2 mt-2 ">We Guarantee</h3>
+<div style={{backgroundColor: '#114063'}} className="container-fluid mt-5 mb-5">
+        <h3 className="text-center text-white pt-4 mt-2 ">We Guarantee</h3>
         <div className="row pt-5 text-medium pb-5 tc">
             <div className="col-sm">
                 <img src={Garantee} alt="guarantee" className="center-block"></img>

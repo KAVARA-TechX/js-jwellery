@@ -3,8 +3,8 @@ import Invest from "../../Images/Invest.png";
 import Track from "../../Images/Track.png";
 const Options = () =>{
     return(
-        <div className="container-fluid pt-5 pb-5 mt-5 mb-5" style={{backgroundColor:'#D7DEE4'}}>
-            <div className="row">
+        <div className="container-fluid  mt-5 mb-5" style={{backgroundColor:'#114063'}}>
+            <div className="row pt-5 pb-5">
                 <div className="col-md-1">
 
                 </div>
@@ -15,8 +15,8 @@ const Options = () =>{
                         </div>
                     </div>
                     <br/>
-                    <h6 className="text-center">Invest with us</h6>
-                    <button className="btn btn-magenda  center-block" style={{borderRadius:'25px'}}>Read more</button>
+                    <h6 className="text-center text-white">Invest with us</h6>
+                    <button className="btn btn-outline-light  center-block" style={{borderRadius:'25px'}}>Read more</button>
                 </div>
                 <div className="col-md-2">
 
@@ -28,8 +28,8 @@ const Options = () =>{
                         </div>
                     </div>
                     <br/>
-                <h6 className="text-center">Track Your Diamond</h6>
-                <button className="btn btn-magenda  center-block" style={{borderRadius:'25px'}}>Read more</button>
+                <h6 className="text-center text-white">Track Your Diamond</h6>
+                <button className="btn btn-outline-light  center-block" style={{borderRadius:'25px'}}>Read more</button>
                 </div>
                 <div className="col-md-1">
 

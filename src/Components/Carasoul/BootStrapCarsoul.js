@@ -19,9 +19,9 @@ const BootStrapCarsoul=()=>{
             <div className="container">
               <div className="row">
                 <div className="col-sm-4">
-                <button class="btn success">Design Your Ring</button>
-                </div><div className="col-sm-4">
-                <button class="btn success">Design Your Ring</button>
+                <button class="btn btn-outline-light btn-block">Design Your Ring</button>
+                </div><div className="col-sm-4 btnLeft">
+                <button class="btn btn-outline-light btn-block">Browse The Collection</button>
                 </div>
               </div>
             </div>
