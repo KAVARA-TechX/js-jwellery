@@ -1,11 +1,11 @@
 import React from 'react';
-
 import Ring from "../../Images/ring2.png";
 import { Link } from 'react-router-dom';
 import {useDispatch,useSelector} from 'react-redux'
 import firebase from 'firebase';
 import {useHistory} from 'react-router-dom';
 import { useEffect } from 'react';
+
 const Header = () =>{
     const dispatch = useDispatch();
 	let history = useHistory();
@@ -42,21 +42,41 @@ return (
 									  <h6 class="title header">Category</h6>
 									  <div class="row g-3">
 									  <div class="col-lg-6">
-									  <ul class="list-unstyled">
-										  <li><Link to="/" className="sayen" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Ring</Link></li>
+									  <ul class="list-unstyled nav-lis">
+										  <div className="Drop-Down-Cate">
+										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Ring</Link></li>
+										  </div>
+										  <div className="Drop-Down-Cate">
 										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Bracelet</Link></li>
+										  </div>
+										  <div className="Drop-Down-Cate">
 										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Chain</Link></li>
+										  </div>
+										  <div className="Drop-Down-Cate">
 										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Earings</Link></li>
+										  </div>
+										  <div className="Drop-Down-Cate">
 										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Gold Coins</Link></li>
+									  	  </div>
 									  </ul>
 									  </div>
 									  <div class="col-lg-6">
 									  <ul class="list-unstyled">
+									  <div className="Drop-Down-Cate">
 										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Mangalsutra</Link></li>
+									  </div>
+									  <div className="Drop-Down-Cate">
 										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Neckless</Link></li>
+									  </div>
+									  <div className="Drop-Down-Cate">
 										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Neckwear</Link></li>
+									  </div>
+									  <div className="Drop-Down-Cate">	  
 										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Nose pin</Link></li>
+									  </div>
+									  <div className="Drop-Down-Cate">
 										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Pendents</Link></li>
+									  </div>
 									  </ul>
 									  </div>
 									  </div>
@@ -66,13 +86,27 @@ return (
 								  <div class="col-megamenu text-center">
 										<h6 class="title header">Price Band</h6>
 										<ul class="list-unstyled">
+										<div className="Drop-Down-Cate">
 											<li><Link to="/" className="sayen">&lt;4000</Link></li>
+										</div>
+										<div className="Drop-Down-Cate">	
 											<li><Link to="/" className="sayen">5k-10k</Link></li>
+										</div>
+										<div className="Drop-Down-Cate">	
 											<li><Link to="/" className="sayen">10k-20k</Link></li>
+										</div>
+										<div className="Drop-Down-Cate">	
 											<li><Link to="/" className="sayen">20k-30k</Link></li>
+										</div>
+										<div className="Drop-Down-Cate">	
 											<li><Link to="/" className="sayen">30k-40k</Link></li>
+										</div>
+											<div className="Drop-Down-Cate">	
 											<li><Link to="/" className="sayen">40k-40k</Link></li>
+										</div>
+											<div className="Drop-Down-Cate">
 											<li><Link to="/" className="sayen">&gt;40k</Link></li>
+										</div>
 										</ul>
 									</div> 
 							  </div>
@@ -80,10 +114,18 @@ return (
 									<div class="col-megamenu">
 										<h6 class="title title header">Delivery time</h6>
 										<ul class="list-unstyled">
-											<li><Link to="/" className="sayen">1-7 DAYS</Link></li>
+										<div className="Drop-Down-Cate">
+											<li><Link to="/" className="sayen" >1-7 DAYS</Link></li>
+										</div>
+										<div className="Drop-Down-Cate">
 											<li><Link to="/" className="sayen">7-14 DAYS</Link></li>
+										</div>	
+										<div className="Drop-Down-Cate">
 											<li><Link to="/" className="sayen">14-28 DAYS</Link></li>
+										</div>
+										<div className="Drop-Down-Cate">
 											<li><Link to="/" className="sayen">ABOVE 10 DAYS</Link></li>
+										</div>
 										</ul>
 									</div> 
 							  </div>
@@ -91,13 +133,27 @@ return (
 									<div class="col-megamenu">
 										<h6 class="title header">Expert Guidance</h6>
 										<ul class="list-unstyled">
+										<div className="Drop-Down-Cate">
 											<li><Link to="/" className="sayen">Metals</Link></li>
+										</div>
+										<div className="Drop-Down-Cate">
 											<li><Link to="/" className="sayen">Ring size guide</Link></li>
+										</div>
+										<div className="Drop-Down-Cate">
 											<li><Link to="/" className="sayen">Design basics</Link></li>
+										</div>
+										<div className="Drop-Down-Cate">
 											<li><Link to="/" className="sayen">What is bespoke</Link></li>
+										</div>
+										<div className="Drop-Down-Cate">
 											<li><Link to="/" className="sayen">The crafting process</Link></li>
+										</div>
+										<div className="Drop-Down-Cate">	
 											<li><Link to="/" className="sayen">How ring are priced</Link></li>
+										</div>
+										<div className="Drop-Down-Cate">	
 											<li><Link to="/" className="sayen">Ethical soursing</Link></li>
+										</div>
 										</ul>
 									</div> 
 							  </div>
@@ -106,7 +162,9 @@ return (
 							  <div className="col-lg-5">
 							  </div>
 							  <div className="col-lg-3">
+							  <div className="Drop-Down-Cate">
 								  <li><Link to="/" className="sayen">+Create Your own category</Link></li>
+							  </div>
 							  </div>
 							  <div className="col-lg-4">
 							  </div>
@@ -124,7 +182,7 @@ return (
 					  <li class="nav-item dropdown">
 						  <div class="nav-link dropdown-toggle" 
 							id="navbarDropdown" 
-							role="button" 
+							role="button"
 							data-toggle="dropdown" 
 							aria-haspopup="true" 
 							aria-expanded="false"

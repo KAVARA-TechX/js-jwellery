@@ -17,9 +17,9 @@ const HeaderCard = () =>{
                 <div className="tc col-md-3">6% off Use Code 30OFF, Ends in EXPIRED</div>
                 <div className="tc col-md-5">Book your consultation 
                     {user ? ` Hello ${user.email}`
-                    :  <span><span className="ml-3 ">|</span><Link to="/login" className="22px ml-3 mr-3">Login</Link>
+                    :  <span><span className="ml-3 ">|</span><Link to="/login" className="22px ml-3 mr-3 user-auths">Login</Link>
                     </span>}
-                    {user ? "": <span>|<Link to="/register" className="22px ml-3">SignUp</Link></span>} 
+                    {user ? "": <span>|<Link to="/register" className="22px ml-3 user-auths">SignUp</Link></span>} 
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@ const HeaderCard = () =>{
 					type="text"
 					className="form-control"
 					placeholder="Search for"
-					style={{borderRadius:'15px'}}
+					style={{borderRadius:'20px'}}
                     suffix={<SearchOutlined  />}
 					>
 					</Input>
