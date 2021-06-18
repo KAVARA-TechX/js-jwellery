@@ -4,10 +4,10 @@ import PAY from '../Images/pay.png';
 
 const Footer = () =>{
     return(
-        <footer className="page-footer font-small mt-3 pt-3 pb-5 pt-5" >
+        <footer className="page-footer font-small mt-3 pt-3 pb-5 pt-5" style={{backgroundColor:'#fff'}}>
             <div className="container">
                 <div className="row ">
-                    <div className="col-md-2">
+                    <div className="col-sm-2 text-center">
                         <h5 className=" text-uppercase mt-3 mb-4">JEWELLERY</h5>
                         <ul className="list-unstyled">
                             <li>
@@ -27,7 +27,7 @@ const Footer = () =>{
                             </li>
                         </ul>
                     </div>
-                    <div className="col-md-2">
+                    <div className="col-md-2 text-center">
                         <h5 className=" text-uppercase mt-3 mb-4">About us</h5>
                         <ul className="list-unstyled">
                             <li>
@@ -47,7 +47,7 @@ const Footer = () =>{
                             </li>
                         </ul>
                     </div>
-                    <div className="col-md-2">
+                    <div className="col-md-2 text-center">
                         <h5 className=" text-uppercase mt-3 mb-4">Policies</h5>
                         <ul className="list-unstyled">
                             <li>
@@ -64,7 +64,7 @@ const Footer = () =>{
                             </li>
                         </ul>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6 text-center">
                         <h5 className=" text-uppercase mt-3 mb-4">We Accept following payments</h5>
                         <span>
                         <img src={PAY} width="50px" alt="payment"></img>

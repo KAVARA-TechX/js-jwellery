@@ -20,6 +20,7 @@ const Home = () =>{
       <SolitaireProcess/>
       <ReviewSlider/>
       <Options />
+      <Social/>
       <Guarantee />
     </div>
         </div>

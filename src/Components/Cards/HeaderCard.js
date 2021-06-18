@@ -10,20 +10,23 @@ const HeaderCard = () =>{
     const count = 0;
     return(
         <div>
-            <div className="container-fluid mHide" style={{backgroundColor : '#114063',color:'white',fontSize: "14px",fontFamily:"sans-serif"}}>
+            <div className="container-fluid mHide" 
+            style={{backgroundColor : '#114063',color:'white',fontSize: "14px"}}>
             <div className="row pt-3 pb-3">
                 <div className="tc col-md-4">Free shipping all over india</div>
                 <div className="tc col-md-3">6% off Use Code 30OFF, Ends in EXPIRED</div>
-                <div className="tc col-md-5">Book your consultation| 
-                    {user ? ` Hello ${user.email}`:<Link to="/login">Login</Link>}
-                    {user ? "": <span>| <Link to="/register">signUp</Link></span>} 
+                <div className="tc col-md-5">Book your consultation 
+                    {user ? ` Hello ${user.email}`
+                    :  <span><span className="ml-3 ">|</span><Link to="/login" className="22px ml-3 mr-3">Login</Link>
+                    </span>}
+                    {user ? "": <span>|<Link to="/register" className="22px ml-3">SignUp</Link></span>} 
                 </div>
             </div>
         </div>
 
         <div className="container  mt-1 mb-1 pt-1 p-1">
             <div className="row">
-                <div className="col-md-4">
+                <div className="col-md-3">
                    <Link to="/"> <img src={logo} alt="JS SOLITAIRE" style={{height:'90px'}} className="w-80"></img></Link>
                 </div>
                 <div className="col-md-3 mt-4">
@@ -38,11 +41,12 @@ const HeaderCard = () =>{
 					</Input>
 				</div>
                 <div className="col-md-4 mt-4 " style={{marginLeft:'8%'}}  >
-                <Link to="/cart" style={{color:'#000'}} className="mr-3">
-                    <ClockCircleOutlined style={{fontSize: '28px'}}/><span style={{color:'#4A689F'}}>Recently Viewed</span>
+                <Link to="/cart" style={{color:'#000'}} className="22px">
+                    <ClockCircleOutlined 
+                    style={{fontSize: '22px'}}/><span style={{color:'#4A689F'}} className="ml-1 mr-3">Recently Viewed</span>
                     </Link>
-                |<Link to="/cart" className="ml-3 mr-3"><HeartOutlined style={{ color: '#08c',fontSize: '28px'}}/></Link>
-                | <Link to="/cart" className="ml-3 mr-3"><Badge 
+                |<Link to="/cart" className="ml-3 mr-3 22px"><HeartOutlined style={{ color: '#08c',fontSize: '22px'}}/></Link>
+                | <Link to="/cart" className="ml-3 22px"><Badge 
                 count={0} 
                 showZero 
                 offset={[9,2]}
@@ -51,7 +55,7 @@ const HeaderCard = () =>{
                         backgroundColor:'#fff',
                         boxShadow: '0 0 0 1px #000 inset'
                     }}
-                ><ShoppingCartOutlined style={{fontSize: '28px'}}/></Badge></Link>
+                ><ShoppingCartOutlined style={{fontSize: '22px'}}/></Badge></Link>
                   
                 </div>
             </div>

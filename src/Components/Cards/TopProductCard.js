@@ -1,5 +1,5 @@
 import React from 'react';
-import Tran from '../../Images/tran.png';
+import Tran from '../../Images/ring1.jpg';
 import {Carousel} from 'react-bootstrap';
 const TopProduct = () =>{
     return(
@@ -11,7 +11,7 @@ const TopProduct = () =>{
         <div className="container pt-2 pb-2">
         <div className="row">
           <div className="col-sm-3 topProduct">
-            <div className="card ml-3 products-center" style={{width:"10rem",borderRadius:"50%"}}>
+            <div className="card ml-3 products-center" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body products-center">
                 <img src={Tran} alt="tran" className="p-1">
                 </img>
@@ -23,7 +23,7 @@ const TopProduct = () =>{
             <h6 className="pl-5 ">Rs.8,000.00</h6>
           </div>
           <div className="col-sm-3">
-            <div className="card ml-3" style={{width:"10rem",borderRadius:"50%"}}>
+            <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={Tran} alt="tran" className="p-1">
                 </img>
@@ -35,7 +35,7 @@ const TopProduct = () =>{
             <h6 className="pl-5 ">Rs.8,000.00</h6>
           </div>
           <div className="col-sm-3">
-            <div className="card ml-3" style={{width:"10rem",borderRadius:"50%"}}>
+            <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={Tran} alt="tran" className="p-1">
                 </img>
@@ -47,7 +47,7 @@ const TopProduct = () =>{
             <h6 className="pl-5 ">Rs.8,000.00</h6>
           </div>
           <div className="col-sm-3">
-            <div className="card ml-3" style={{width:"10rem",borderRadius:"50%"}}>
+            <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={Tran} alt="tran" className="p-1">
                 </img>
@@ -65,7 +65,7 @@ const TopProduct = () =>{
         <div className="container pt-2 pb-2">
         <div className="row">
         <div className="col-sm-3">
-            <div className="card ml-3" style={{width:"10rem",borderRadius:"50%"}}>
+            <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={Tran} alt="tran" className="p-1">
                 </img>
@@ -77,7 +77,7 @@ const TopProduct = () =>{
             <h6 className="pl-5 ">Rs.8,000.00</h6>
           </div>
           <div className="col-sm-3">
-            <div className="card ml-3" style={{width:"10rem",borderRadius:"50%"}}>
+            <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={Tran} alt="tran" className="p-1">
                 </img>
@@ -89,7 +89,7 @@ const TopProduct = () =>{
             <h6 className="pl-5 ">Rs.8,000.00</h6>
           </div>
           <div className="col-sm-3">
-            <div className="card ml-3" style={{width:"10rem",borderRadius:"50%"}}>
+            <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={Tran} alt="tran" className="p-1">
                 </img>
@@ -101,7 +101,7 @@ const TopProduct = () =>{
             <h6 className="pl-5 ">Rs.8,000.00</h6>
           </div>
           <div className="col-sm-3">
-            <div className="card ml-3" style={{width:"10rem",borderRadius:"50%"}}>
+            <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={Tran} alt="tran" className="p-1">
                 </img>

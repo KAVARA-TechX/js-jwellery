@@ -27,13 +27,17 @@ h2{
 }
 
 
-  
+.btn{
+    background-color: #364993;
+    color: #fff;
+    border:1px solid #364993;
+}  
 
   /* On mouse-over */
 .btn:hover {
-            border:2px solid #114063;
-            color:#114063;  
-            background-color: 'inherit';                                 
+            border:1px solid #364993;
+            color:#364993;  
+            background-color: #ffffff00;                                 
 }
 
 @media(max-width: 991px){
@@ -42,7 +46,25 @@ h2{
         margin-left: 0%;
     }
 
-    .row{
+    .Row{
         margin-left: 25%;
     }
+}
+
+.carousel-indicators{
+    list-style: none;
+}
+.carousel-indicators li, .carousel-indicators li.active{
+    width: 70px;
+    height: 70px;
+    background-color: inherit;
+    position: relative;          
+}
+.carousel-indicators img{
+    position: absolute;
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;            
 }

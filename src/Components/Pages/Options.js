@@ -1,6 +1,9 @@
 import React from 'react';
-import Invest from "../../Images/Invest.png";
-import Track from "../../Images/Track.png";
+import Invest from "../../Images/investwithus.jpg";
+import Track from "../../Images/trackdiamond.jpg";
+const style={
+    
+}
 const Options = () =>{
     return(
         <div className="container-fluid  mt-5 mb-5" style={{backgroundColor:'#114063'}}>
@@ -9,27 +12,30 @@ const Options = () =>{
 
                 </div>
                 <div className="col-md-4">
-                    <div className="card center-block" >
-                        <div className="card-body">
-                            <img src={Invest} alt="invest" className="center-block mt-0" style={{height:"160px"}}></img>
-                        </div>
-                    </div>
+                <img src={Invest} 
+                alt="invest" 
+                className="center-block mt-3 w-100" 
+                style={{height:"230px",borderRadius:'10px'}}>
+                </img>
                     <br/>
-                    <h6 className="text-center text-white">Invest with us</h6>
-                    <button className="btn btn-outline-light  center-block" style={{borderRadius:'25px'}}>Read more</button>
+                    <h6 className="text-center text-white">Invest With Us</h6>
+                    <button 
+                    className="center-block button p-2" 
+                    >Read More</button>
                 </div>
                 <div className="col-md-2">
 
                 </div>
                 <div className="col-md-4">
-                    <div className="card center-block ">
-                        <div className="card-body">
-                            <img src={Track} alt="track" className="center-block mt-0" style={{height:"160px"}}></img>
-                        </div>
-                    </div>
+                <img src={Track} 
+                alt="track" 
+                className="center-block mt-3 w-100" 
+                style={{height:"230px",borderRadius:'10px'}}>
+                </img>
                     <br/>
                 <h6 className="text-center text-white">Track Your Diamond</h6>
-                <button className="btn btn-outline-light  center-block" style={{borderRadius:'25px'}}>Read more</button>
+                <button className="center-block button p-2" 
+                >Read More</button>
                 </div>
                 <div className="col-md-1">
 

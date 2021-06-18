@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Ring from "../../Images/ring.png";
+import Ring from "../../Images/ring2.png";
 import { Link } from 'react-router-dom';
 import {useDispatch,useSelector} from 'react-redux'
 import firebase from 'firebase';
@@ -20,7 +20,7 @@ const Header = () =>{
 		history.push('/login');
 	  }
 return (
-	<nav class="navbar navbar-expand-lg navbar-dark pt-2 pb-2 mt-1 mb-1" style={{backgroundColor : '#114063'}}>
+	<nav class="navbar navbar-expand-lg navbar-dark pt-2 pb-2 mt-1 mb-1" style={{backgroundColor : '#fff'}}>
 	<div class="container">
 		  <button class="navbar-toggler" type="button" 
 			 data-bs-toggle="collapse" 
@@ -28,15 +28,14 @@ return (
 			 aria-expanded="false" 
 			 aria-label="Toggle navigation"
 		  >
-			<span class="navbar-toggler-icon float-right" 
-			style={{color:'#3B99DA',backgroundColor:"#000"}}>
+			<span class="navbar-toggler-icon float-right">
 			</span>
 		  </button>
 		  <div class="collapse navbar-collapse" id="main_nav">
 			  <ul class="navbar-nav " >
 				  <li class="nav-item dropdown has-megamenu" >
 					  <div class="nav-link dropdown-toggle" style={{cursor:'pointer'}} data-bs-toggle="dropdown">JEWELLERY </div>
-					  <div class="dropdown-menu megamenu" role="menu" style={{backgroundColor:"#d4d4d4"}}>
+					  <div class="dropdown-menu megamenu" role="menu" style={{backgroundColor:"#fff"}}>
 						  <div class="row g-3">
 							  <div class="col-lg-3 col-6">
 								  <div class="col-megamenu">
@@ -80,7 +79,6 @@ return (
 							  <div class="col-lg-3 col-6">
 									<div class="col-megamenu">
 										<h6 class="title title header">Delivery time</h6>
-										<hr/>
 										<ul class="list-unstyled">
 											<li><Link to="/" className="sayen">1-7 DAYS</Link></li>
 											<li><Link to="/" className="sayen">7-14 DAYS</Link></li>
@@ -151,7 +149,7 @@ return (
 							aria-haspopup="true" 
 							aria-expanded="false"
 							>
-								Offers
+								OFFERS
 						  </div>
 						  <div class="dropdown-menu" aria-labelledby="dropdownMenu">
 							  <Link class="dropdown-item" to="/">Favourites</Link>
