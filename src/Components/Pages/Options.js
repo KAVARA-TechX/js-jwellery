@@ -6,7 +6,7 @@ const style={
 }
 const Options = () =>{
     return(
-        <div className="container-fluid  mt-5 mb-5" style={{backgroundColor:'#114063'}}>
+        <div className="container-fluid  mt-5 mb-5 pt-3" style={{backgroundColor:'#114063'}}>
             <div className="row pt-5 pb-5">
                 <div className="col-md-1">
 
@@ -24,7 +24,6 @@ const Options = () =>{
                     >Read More</button>
                 </div>
                 <div className="col-md-2">
-
                 </div>
                 <div className="col-md-4">
                 <img src={Track} 

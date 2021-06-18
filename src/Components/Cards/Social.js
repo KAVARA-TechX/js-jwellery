@@ -3,8 +3,8 @@ import './Social.css';
 import { Link } from 'react-router-dom';
 const Social=()=>{
     return(
-      <div className="container-fluid " >
-        <h3 className="text-center " style={{color:'#4A689F'}}>Follow Our Social Media Handlers</h3>
+      <div className="container-fluid mt-5 mb-5 pt-5" >
+        <h3 className="text-center pt-1" style={{color:'#4A689F'}}>Follow Our Social Media Handlers</h3>
             <div className="row ">
                 <div className="col-sm-1">
 

@@ -7,7 +7,7 @@ import SolitaireProcess from "../../Pages/SolitaireProcess";
 import Guarantee from "../../Pages/Guarantee";
 import Options from "../../Pages/Options";
 import ReviewSlider from "../../Pages/ReviewSlider";
-import Growth from '../../Pages/Growth';
+import Covered from '../Covered';
 import Social from '../../Cards/Social';
 
 const Home = () =>{
@@ -17,6 +17,7 @@ const Home = () =>{
     <div>
     <BootStrapCarsoul/>
       <TopProduct />
+      <Covered/>
       <SolitaireProcess/>
       <ReviewSlider/>
       <Options />
