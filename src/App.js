@@ -44,7 +44,7 @@ const App = ({history}) => {
     return()=> unsubscribe();
   },[]);
   return (
-    <div ca>
+    <div >
     <HeaderCard/>
     <Nav />
     <Switch>

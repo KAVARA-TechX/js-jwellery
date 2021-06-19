@@ -17,9 +17,9 @@ const Home = () =>{
     <div>
     <BootStrapCarsoul/>
       <TopProduct />
-      <Covered/>
+      {/* <Covered/> */}
       <SolitaireProcess/>
-      <ReviewSlider/>
+      <ReviewSlider />
       <Options />
       <Social/>
       <Guarantee />

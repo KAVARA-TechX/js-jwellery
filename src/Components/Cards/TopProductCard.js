@@ -29,7 +29,7 @@ const TopProduct = () =>{
             <p  className="lightBlue">truth comes with all our products</p>
             <h6 className="pl-5 ">Rs.8,000.00</h6>
           </div>
-          <div className="col-sm-3">
+          <div className="col-sm-3 mHide">
             <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={product2} alt="tran" className="p-1">
@@ -37,11 +37,11 @@ const TopProduct = () =>{
               </div>
             </div>
             
-            <h5 className="pl-5 lightBlue">Tranquility</h5>
+            <h5 className="pl-5 lightBlue ">Tranquility</h5>
             <p className="lightBlue">truth comes with all our products</p>
             <h6 className="pl-5 ">Rs.8,000.00</h6>
           </div>
-          <div className="col-sm-3">
+          <div className="col-sm-3 mHide">
             <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={product3} alt="tran" className="p-1">
@@ -53,7 +53,7 @@ const TopProduct = () =>{
             <p className="lightBlue">truth comes with all our products</p>
             <h6 className="pl-5 ">Rs.8,000.00</h6>
           </div>
-          <div className="col-sm-3">
+          <div className="col-sm-3 mHide">
             <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={product4} alt="tran" className="p-1">
@@ -83,7 +83,7 @@ const TopProduct = () =>{
             <p className="lightBlue">truth comes with all our products</p>
             <h6 className="pl-5 ">Rs.8,000.00</h6>
           </div>
-          <div className="col-sm-3">
+          <div className="col-sm-3 mHide">
             <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={product6} alt="tran" className="p-1">
@@ -95,7 +95,7 @@ const TopProduct = () =>{
             <p className="lightBlue">truth comes with all our products</p>
             <h6 className="pl-5 ">Rs.8,000.00</h6>
           </div>
-          <div className="col-sm-3">
+          <div className="col-sm-3 mHide">
             <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={product7} alt="tran" className="p-1">
@@ -107,7 +107,7 @@ const TopProduct = () =>{
             <p className="lightBlue">truth comes with all our products</p>
             <h6 className="pl-5 ">Rs.8,000.00</h6>
           </div>
-          <div className="col-sm-3">
+          <div className="col-sm-3 mHide">
             <div className="card ml-3" style={{width:"10rem",borderColor:'transparent'}}>
               <div className="card-body">
                 <img src={product8} alt="tran" className="p-1">
