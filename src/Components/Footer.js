@@ -76,7 +76,7 @@ const Footer = () =>{
                         <div className="mt-2">
 
                         <button type="button" class="btn btn-outline-primary btn-sm" 
-                        style={{float : 'right',marginLeft:'15px',borderRadius:"25px"}} 
+                        style={{float : 'right',marginLeft:'15px',borderRadius:"5px"}} 
                         >
                           Subscribe to our letter
                           </button>

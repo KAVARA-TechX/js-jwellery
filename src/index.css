@@ -1,20 +1,83 @@
 h1,h2,h3,h4,h5,h6,p,div,Link,a {
-    font-family: 'Helvetica';
+    font-family: 'Helvetica' !important; 
+    color: #585858 !important;
 }
+
+button {
+    border-radius: 5px !important;
+}
+/* Header Section*/
+.header-card{
+    background-color: #add8e6;
+}
+
+/* Desktop view view*/
+@media all and (min-width: 992px) {
+    .header-Input{
+        width: 60% !important;
+        margin-left: 18%;
+    }
+    .Logo{
+        margin-left: 10%;
+    }
+}
+/* Mobile view*/
+@media(max-width: 991px){
+    .header-Input{
+        margin-left: 0%;
+    }
+    .Logo{
+        margin-left: 0%;
+    }
+}
+
+/* Top products */
+.top-product-card{
+    width:10rem;
+    border-color:transparent;
+}
+
+
+/* Covered Section */
+.covered-div{
+    width:90%;
+    height:100px;
+    background-color:#add8e6;
+    margin-left:4.5%;
+    margin-top:'3%'
+}
+
+.button{
+    background-color: #364993;
+    color: #fff;
+    border:1px solid #364993;
+}  
+
+  /* On mouse-over */
+.button:hover {
+            border:1px solid #fff;
+            color:#fff;  
+            background-color: #ffffff00;                                 
+}
+
+
+/* Review Section */
+.review-card{
+        border-color:transparent;
+        flex-direction: row;
+}
+.review-card img {
+    width: 30%;
+  }
+.review-text{
+    margin-top: 11%;
+}
+/* Footer Section */
 footer{
     background-color: #fff;
 }
 
-footer h5{
-    color: #114063;
-}
-footer li{
-    color: #4A689F;
-}
 
-.lightBlue{
-    color:#33538B;
-}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -162,7 +225,7 @@ footer li{
 }   
 /* ============ desktop view .end// ============ */
 .navbar-dark .navbar-nav .nav-link{
-    color:rgb(0, 0, 0);
+    color:#585858;
     
 }
 .navbar-dark .navbar-nav .active>.nav-link,
@@ -246,15 +309,4 @@ height: 90px;
     font-size: 16px;
 }
 
-.button{
-    background-color: #364993;
-    color: #fff;
-    border:1px solid #364993;
-}  
 
-  /* On mouse-over */
-.button:hover {
-            border:1px solid #fff;
-            color:#fff;  
-            background-color: #ffffff00;                                 
-}

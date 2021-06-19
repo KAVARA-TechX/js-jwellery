@@ -1,6 +1,5 @@
 import React from "react";
 import './Pjwellery.css';
-import back from "../../Images/PJ1.jpg";
 const Pjwellery = () => {
   return(
       <div className="container-fluid pt-4 pb-5" style={{ backgroundColor:"#D7DEE4"}}>
@@ -10,7 +9,7 @@ const Pjwellery = () => {
                   </div>
                   <div className="col-md-5 mt-4">
                       <div className="parent">
-                          <img src={back} alt="" className="img" />
+                          
                           <div className="top-left text-white">
                               Get Inspired by <br/>
                               rings we've crafted or <br/>
@@ -25,7 +24,7 @@ const Pjwellery = () => {
                 </div>
                 <div className="col-md-5 mt-4">
                     <div className="parent">
-                        <img src={back} alt="" className="img" />
+                        
                         <div className="top-left text-white">
                             Get Inspired by <br/>
                             rings we've crafted or <br/>
@@ -41,7 +40,7 @@ const Pjwellery = () => {
                   </div>
                   <div className="col-md-5 mt-4">
                       <div className="parent">
-                          <img src={back} alt="" className="img" />
+                          
                           <div className="top-left text-white">
                               Get Inspired by <br/>
                               rings we've crafted or <br/>
@@ -56,7 +55,7 @@ const Pjwellery = () => {
                 </div>
                 <div className="col-md-5 mt-4">
                     <div className="parent">
-                        <img src={back} alt="" className="img" />
+                        
                         <div className="top-left text-white">
                             Get Inspired by <br/>
                             rings we've crafted or <br/>

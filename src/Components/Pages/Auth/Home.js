@@ -17,12 +17,12 @@ const Home = () =>{
     <div>
     <BootStrapCarsoul/>
       <TopProduct />
-      {/* <Covered/> */}
+      <Covered/>
       <SolitaireProcess/>
       <ReviewSlider />
-      <Options />
-      <Social/>
+      {/* <Options /> */}
       <Guarantee />
+      <Social/>
     </div>
         </div>
     );

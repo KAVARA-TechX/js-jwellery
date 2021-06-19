@@ -48,7 +48,7 @@ const App = ({history}) => {
     <HeaderCard/>
     <Nav />
     <Switch>
-    <Route exact path="/" component={Home}/>
+    <Route exact path="/js-jwellery/" component={Home}/>
       <Route exact path="/login" component={Login}/>
       <Route  exact path="/register" component={Register}/>
       <Route  exact path="/register/complete" component={RegisterComplete}/>

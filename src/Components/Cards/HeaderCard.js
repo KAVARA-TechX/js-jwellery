@@ -10,9 +10,8 @@ const HeaderCard = () =>{
     const count = 0;
     return(
         <div>
-            <div className="container-fluid mHide" 
-            style={{backgroundColor : '#114063',color:'white',fontSize: "14px"}}>
-            <div className="row pt-3 pb-3">
+            <div className="container-fluid mHide">
+            <div className="row pt-3 pb-3 header-card">
                 <div className="tc col-md-4">Free shipping all over india</div>
                 <div className="tc col-md-3">6% off Use Code 30OFF, Ends in EXPIRED</div>
                 <div className="tc col-md-5">Book your consultation 
@@ -24,23 +23,23 @@ const HeaderCard = () =>{
             </div>
         </div>
 
-        <div className="container  mt-1 mb-1 pt-1">
-            <div className="row">
+        <div className="container-fluid  mt-1 mb-1 pt-1">
+            <div className="row ">
                 <div className="col-md-3">
-                   <Link to="/"> <img src={logo} alt="JS SOLITAIRE" style={{height:'90px'}} className="w-80"></img></Link>
+                   <Link to="/"> <img src={logo} alt="JS SOLITAIRE" style={{height:'90px'}} className="w-80 Logo"></img></Link>
                 </div>
-                <div className="col-md-3 mt-4">
+                <div className="col-md-5 mt-4">
                 
 					<Input 
 					type="text"
-					className="form-control"
+					className="form-control header-Input"
 					placeholder="Search for"
 					style={{borderRadius:'20px'}}
                     suffix={<SearchOutlined  />}
 					>
 					</Input>
 				</div>
-                <div className="col-md-4 mt-4 "  >
+                <div className="col-md-4 mt-4"  >
                 <Link to="/cart" style={{color:'#000'}} >
                     <ClockCircleOutlined className="ml-3"
                     style={{fontSize: '22px'}}/><span style={{color:'#4A689F'}} className="ml-1 mr-3">Recently Viewed</span>
