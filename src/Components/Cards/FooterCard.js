@@ -31,7 +31,7 @@ const FooterCard = () =>{
                     </span>
                 </div>
                 <div className="col-md-3">
-                    <p>Copyright © 2021 All rights reserved JS Solitaire | Site designed by CITEC</p>
+                    <p>Copyright © 2021 All rights reserved JS Solitaire | Site designed by CFT Lab</p>
                 </div>
             </div>
         </div>

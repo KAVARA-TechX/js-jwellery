@@ -39,22 +39,24 @@ const HeaderCard = () =>{
 					>
 					</Input>
 				</div>
-                <div className="col-md-4 mt-4"  >
-                <Link to="/cart" style={{color:'#000'}} >
+                <div className="col-md-4 mt-4 feature-section"   >
+                <Link to="/cart" style={{color:'#585858'}} >
                     <ClockCircleOutlined className="ml-3"
-                    style={{fontSize: '22px'}}/><span style={{color:'#4A689F'}} className="ml-1 mr-3">Recently Viewed</span>
+                    style={{fontSize: '22px'}}/><span style={{color:'#585858'}} className="ml-1 mr-3">Recently 
+                    <Link to="/cart" className="ml-3 mr-3"><span className="mr-3">|</span><HeartOutlined 
+                    style={{ color: '#585858',fontSize: '22px'}}/></Link>
+                    | <Link to="/cart" className="ml-3"><Badge 
+                    count={0} 
+                    showZero 
+                    offset={[9,2]}
+                        style={{
+                            color:'#000',
+                            backgroundColor:'#fff',
+                            boxShadow: '0 0 0 1px #000 inset'
+                        }}
+                    ><ShoppingCartOutlined style={{fontSize: '22px'}}/></Badge></Link>
+                    <br/><span className="ml-5 ">Viewed</span></span>
                     </Link>
-                |<Link to="/cart" className="ml-3 mr-3"><HeartOutlined style={{ color: '#08c',fontSize: '22px'}}/></Link>
-                | <Link to="/cart" className="ml-3"><Badge 
-                count={0} 
-                showZero 
-                offset={[9,2]}
-                    style={{
-                        color:'#000',
-                        backgroundColor:'#fff',
-                        boxShadow: '0 0 0 1px #000 inset'
-                    }}
-                ><ShoppingCartOutlined style={{fontSize: '22px'}}/></Badge></Link>
                   
                 </div>
             </div>

@@ -3,7 +3,7 @@ import {Carousel} from 'react-bootstrap';
 const ReviewSlider = () =>{
     return(
         <div className="pt-5 pb-5">
-            <h3 className="d-flex justify-content-center pb-3">Customer Says</h3>
+            <h3 className="d-flex justify-content-center pb-3">Our Customer Stories</h3>
             <Carousel indicators={false}>
             <Carousel.Item>
             <div className="d-flex justify-content-center">

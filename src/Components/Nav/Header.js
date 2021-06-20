@@ -28,14 +28,14 @@ return (
 			 aria-expanded="false" 
 			 aria-label="Toggle navigation"
 		  >
-			<span class="navbar-toggler-icon" style={{backgroundColor:'#add8e6'}}>
+			<span className="fas fa-bars" style={{color:"#add8e6"}}>
 			</span>
 		  </button>
 		  <div class="collapse navbar-collapse" id="main_nav">
-			  <ul class="navbar-nav " >
+			  <ul class="navbar-nav nav-center">
 				  <li class="nav-item dropdown has-megamenu" >
 					  <div class="nav-link dropdown-toggle" style={{cursor:'pointer'}} data-bs-toggle="dropdown">JEWELLERY </div>
-					  <div class="dropdown-menu megamenu" role="menu" style={{backgroundColor:"#fff"}}>
+					  <div class="dropdown-menu megamenu" role="menu" style={{backgroundColor:"#fff",marginTop:'-10px'}}>
 						  <div class="row g-3">
 							  <div class="col-lg-3 col-6">
 								  <div class="col-megamenu">

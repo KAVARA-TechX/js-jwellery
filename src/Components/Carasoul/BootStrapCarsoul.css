@@ -43,7 +43,10 @@
         margin-top: -145%;
     }
     .btn-top1{
-        margin-top: -100%;
+        margin-top: -115%;
+    }
+    .btn{
+        font-size: 14px;
     }
 }
 

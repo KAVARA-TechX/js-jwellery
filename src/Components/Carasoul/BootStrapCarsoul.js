@@ -3,15 +3,18 @@ import './BootStrapCarsoul.css';
 import Image1 from "../../Images/slider1.jpg";
 import Image2 from "../../Images/slider2.jpg";
 import Image4 from "../../Images/slider3.jpg";
-import indicator from "../../Images/blueIcon.png"
+import indicator from "../../Images/blueIcon.png";
 
 const BootStrapCarsoul=()=>{
     return(
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style={{marginRight:'-4%'}}><img src={indicator} alt="."/></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1" style={{marginRight:'-4%'}}><img src={indicator} alt="."/></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2" style={{marginRight:'-4%'}}><img src={indicator} alt="."/></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" 
+        class="active" style={{marginRight:'-4%'}}><img src={indicator} alt="."/></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1" 
+        style={{marginRight:'-4%'}}><img src={indicator} alt="."/></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2" 
+        style={{marginRight:'-4%'}}><img src={indicator} alt="."/></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -20,7 +23,7 @@ const BootStrapCarsoul=()=>{
           <div className="container">
               <div className="row Row">
                 <div className="col-sm-4">
-                <button class="btn btn-outline-light btn-block pt-1 pb-1 btn-top">DESIGN YOUR RING</button>
+                <button class="btn btn-outline-light btn-block pt-1 pb-1 btn-top">DESIGN YOUR JEWELLERY</button>
                 </div><div className="col-sm-4 btnLeft">
                 <button class="btn btn-outline-light btn-block pt-1 pb-1 btn-top1">BROWSE THE COLLECTION</button>
                 </div>
