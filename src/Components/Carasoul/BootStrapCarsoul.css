@@ -3,21 +3,7 @@
     margin-left: -15%;
     margin-top: -22%;
     }
-h1{
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bolder;
-    font-size: 30px;
-}
 
-h3{
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 40px;
-}
-
-h2{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular';
-}
 
 
 .right.carousel-control, 
@@ -49,6 +35,15 @@ h2{
 
     .Row{
         margin-left: 25%;
+    }
+    .carousel-Img{
+        height: 450px;
+    }
+    .btn-top{
+        margin-top: -145%;
+    }
+    .btn-top1{
+        margin-top: -100%;
     }
 }
 

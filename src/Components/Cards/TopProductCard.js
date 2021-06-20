@@ -11,8 +11,7 @@ import {Carousel} from 'react-bootstrap';
 const TopProduct = () =>{
     return(
       <div className="mt-5 mb-5">
-        
-      <h4 className="text-center ">Top product</h4>
+        <h3 className="text-center ">Top products</h3>
       <Carousel >
         <Carousel.Item>
         <div className="container top-product">

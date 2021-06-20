@@ -11,7 +11,7 @@ button {
     background-color: #add8e6;
 }
 
-/* Desktop view view*/
+/* Desktop view*/
 @media all and (min-width: 992px) {
     .header-Input{
         width: 60% !important;
@@ -19,6 +19,10 @@ button {
     }
     .Logo{
         margin-left: 10%;
+    }
+
+    .dropdown-menu-left{
+        margin-left:-295%;
     }
 }
 /* Mobile view*/
@@ -29,7 +33,11 @@ button {
     .Logo{
         margin-left: 0%;
     }
+    .dropdown-menu-left{
+        margin-left:0%;
+    }
 }
+
 
 /* Top products */
 .top-product-card{
@@ -37,7 +45,32 @@ button {
     border-color:transparent;
 }
 
+.carousel-control-next-icon{
+    background-image: url('./Images/next.png');
+    width: 50px;
+    height: 50px;
+}
 
+.carousel-control-prev-icon{
+    background-image: url('./Images/prev.png');
+    width: 50px;
+    height: 50px;
+}
+
+@media(max-width: 991px){
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* support Modal */
+
+
+.my-float{
+	margin-top:22px;
+}
 /* Covered Section */
 .covered-div{
     width:90%;
@@ -45,6 +78,11 @@ button {
     background-color:#add8e6;
     margin-left:4.5%;
     margin-top:'3%'
+}
+@media(max-width: 991px){
+    .covered-div{
+        height:110px;
+    }
 }
 
 .button{
@@ -55,9 +93,9 @@ button {
 
   /* On mouse-over */
 .button:hover {
-            border:1px solid #fff;
-            color:#fff;  
-            background-color: #ffffff00;                                 
+    border:1px solid #364993;
+    color:#364993;  
+    background-color: #e4dcdc00;                                
 }
 
 
@@ -72,6 +110,18 @@ button {
 .review-text{
     margin-top: 11%;
 }
+@media(max-width: 991px){
+    .review-card img {
+        height: 90px;
+        margin-top: 20%;
+      }
+}
+
+/* Solitaire Section */
+.icon-size{
+    width: 90px;
+    height: 70px;
+    }
 /* Footer Section */
 footer{
     background-color: #fff;
@@ -79,35 +129,35 @@ footer{
 
 
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
-  outline: black;
-  background-size: 100%, 100%;
-  background-image: none;
+/* Banner Section */
+.banner-container {
+    position: relative;
+    text-align: center;
 }
 
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 35px;
-  color: black;
-  margin-left: -70px;
-}
 
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 35px;
-  color: black;
-  margin-left: -50px;
-}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+  }
 
 .center-block {
     display: block;
     margin-right: auto;
     margin-left: auto;
 }
+
+@media(max-width: 991px){
+    .banner-img{
+        height: 350px;
+    }
+
+    .centered {
+        left: 10%;
+      }
+}
+
 
 .text-medium p{
     font-size: 20px;
@@ -143,7 +193,7 @@ footer{
         margin-left: 50%;
     }
     .carousel-control-next-icon{
-        margin-left: 90%;
+        margin-left: 10%;
     }
     .options{
         width: 28rem;
@@ -208,12 +258,7 @@ footer{
 /* ============ desktop view .end// ============ */
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
-    .navbar .nav-item:hover .nav-link{ color:#114063;
-        transform: scale(1.1);
-        transition: all .3s ease-in-out;
-        background-color: #add8e6; opacity: 1;
-        visibility: visible;
-        height: 100%;  }
+    /* .navbar .nav-item:hover .nav-link{ } */
     .navbar .nav-item .dropdown-menu{ margin-top:0; }
     iframe{
         width: 340px; 
@@ -273,12 +318,7 @@ color:#000;
     max-height: 85vh;
 }
 
-.sayen{
-    color: #4A689F;
-}
-.sayen:hover{
-    color: #ffffff;
-}
+
 
 .user-auths:hover{
     transition: all .3s ease-in-out;
@@ -286,24 +326,9 @@ color:#000;
     font-size: 18px;
 }
 
-.Drop-Down-Cate{
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-}
 
-.Drop-Down-Cate:hover{
-    background-color: #add8e6;
-    color: #fff;
-    transform: scale(1.1);
-    transition: all .3s ease-in-out;
-}
 
-.icon-size{
-width: 110px;
-height: 90px;
-}
+
 
 .nav-link{
     font-size: 16px;

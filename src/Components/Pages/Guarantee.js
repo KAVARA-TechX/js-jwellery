@@ -3,7 +3,7 @@ import Garantee from "../../Images/gur1.png";
 import Life from "../../Images/upgrade.png";
 import  Buy from "../../Images/moneyback.png";
 import Laser from "../../Images/laser-icon.png";
-import Diamond from "../../Images/bigDiamond1.png";
+import Diamond from "../../Images/conflictfree.png";
 const Guarantee = () =>{
 return(
 <div style={{backgroundColor: '#add8e6'}} className="container-fluid mt-5 mb-5">

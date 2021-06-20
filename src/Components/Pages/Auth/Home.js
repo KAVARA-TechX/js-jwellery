@@ -9,16 +9,18 @@ import Options from "../../Pages/Options";
 import ReviewSlider from "../../Pages/ReviewSlider";
 import Covered from '../Covered';
 import Social from '../../Cards/Social';
-
+import Banner from '../../Cards/Banner';
 const Home = () =>{
     return(
         <div>
         
     <div>
+    
     <BootStrapCarsoul/>
       <TopProduct />
       <Covered/>
       <SolitaireProcess/>
+      <Banner/>
       <ReviewSlider />
       {/* <Options /> */}
       <Guarantee />

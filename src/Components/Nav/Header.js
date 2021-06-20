@@ -28,7 +28,7 @@ return (
 			 aria-expanded="false" 
 			 aria-label="Toggle navigation"
 		  >
-			<span class="navbar-toggler-icon float-right">
+			<span class="navbar-toggler-icon" style={{backgroundColor:'#add8e6'}}>
 			</span>
 		  </button>
 		  <div class="collapse navbar-collapse" id="main_nav">
@@ -44,38 +44,38 @@ return (
 									  <div class="col-lg-6">
 									  <ul class="list-unstyled nav-lis">
 										  <div className="Drop-Down-Cate">
-										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Ring</Link></li>
+										  <li><Link to="/" className=""><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Ring</Link></li>
 										  </div>
 										  <div className="Drop-Down-Cate">
-										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Bracelet</Link></li>
+										  <li><Link to="/" className=""><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Bracelet</Link></li>
 										  </div>
 										  <div className="Drop-Down-Cate">
-										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Chain</Link></li>
+										  <li><Link to="/" className=""><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Chain</Link></li>
 										  </div>
 										  <div className="Drop-Down-Cate">
-										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Earings</Link></li>
+										  <li><Link to="/" className=""><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Earings</Link></li>
 										  </div>
 										  <div className="Drop-Down-Cate">
-										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Gold Coins</Link></li>
+										  <li><Link to="/" className=""><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Gold Coins</Link></li>
 									  	  </div>
 									  </ul>
 									  </div>
 									  <div class="col-lg-6">
 									  <ul class="list-unstyled">
 									  <div className="Drop-Down-Cate">
-										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Mangalsutra</Link></li>
+										  <li><Link to="/" className=""><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Mangalsutra</Link></li>
 									  </div>
 									  <div className="Drop-Down-Cate">
-										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Neckless</Link></li>
+										  <li><Link to="/" className=""><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Neckless</Link></li>
 									  </div>
 									  <div className="Drop-Down-Cate">
-										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Neckwear</Link></li>
+										  <li><Link to="/" className=""><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Neckwear</Link></li>
 									  </div>
 									  <div className="Drop-Down-Cate">	  
-										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Nose pin</Link></li>
+										  <li><Link to="/" className=""><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Nose pin</Link></li>
 									  </div>
 									  <div className="Drop-Down-Cate">
-										  <li><Link to="/" className="sayen"><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Pendents</Link></li>
+										  <li><Link to="/" className=""><img src={Ring} alt="JS SOLITAIRE" style={{width:'40%'}} />Pendents</Link></li>
 									  </div>
 									  </ul>
 									  </div>
@@ -87,25 +87,25 @@ return (
 										<h6 class="title header">Price Band</h6>
 										<ul class="list-unstyled">
 										<div className="Drop-Down-Cate">
-											<li><Link to="/" className="sayen">&lt;4000</Link></li>
+											<li><Link to="/" className="">&lt;4000</Link></li>
 										</div>
 										<div className="Drop-Down-Cate">	
-											<li><Link to="/" className="sayen">5k-10k</Link></li>
+											<li><Link to="/" className="">5k-10k</Link></li>
 										</div>
 										<div className="Drop-Down-Cate">	
-											<li><Link to="/" className="sayen">10k-20k</Link></li>
+											<li><Link to="/" className="">10k-20k</Link></li>
 										</div>
 										<div className="Drop-Down-Cate">	
-											<li><Link to="/" className="sayen">20k-30k</Link></li>
+											<li><Link to="/" className="">20k-30k</Link></li>
 										</div>
 										<div className="Drop-Down-Cate">	
-											<li><Link to="/" className="sayen">30k-40k</Link></li>
+											<li><Link to="/" className="">30k-40k</Link></li>
 										</div>
 											<div className="Drop-Down-Cate">	
-											<li><Link to="/" className="sayen">40k-40k</Link></li>
+											<li><Link to="/" className="">40k-40k</Link></li>
 										</div>
 											<div className="Drop-Down-Cate">
-											<li><Link to="/" className="sayen">&gt;40k</Link></li>
+											<li><Link to="/" className="">&gt;40k</Link></li>
 										</div>
 										</ul>
 									</div> 
@@ -115,16 +115,16 @@ return (
 										<h6 class="title title header">Delivery time</h6>
 										<ul class="list-unstyled">
 										<div className="Drop-Down-Cate">
-											<li><Link to="/" className="sayen" >1-7 DAYS</Link></li>
+											<li><Link to="/" className="" >1-7 DAYS</Link></li>
 										</div>
 										<div className="Drop-Down-Cate">
-											<li><Link to="/" className="sayen">7-14 DAYS</Link></li>
+											<li><Link to="/" className="">7-14 DAYS</Link></li>
 										</div>	
 										<div className="Drop-Down-Cate">
-											<li><Link to="/" className="sayen">14-28 DAYS</Link></li>
+											<li><Link to="/" className="">14-28 DAYS</Link></li>
 										</div>
 										<div className="Drop-Down-Cate">
-											<li><Link to="/" className="sayen">ABOVE 10 DAYS</Link></li>
+											<li><Link to="/" className="">ABOVE 10 DAYS</Link></li>
 										</div>
 										</ul>
 									</div> 
@@ -134,39 +134,28 @@ return (
 										<h6 class="title header">Expert Guidance</h6>
 										<ul class="list-unstyled">
 										<div className="Drop-Down-Cate">
-											<li><Link to="/" className="sayen">Metals</Link></li>
+											<li><Link to="/" className="">Metals</Link></li>
 										</div>
 										<div className="Drop-Down-Cate">
-											<li><Link to="/" className="sayen">Ring size guide</Link></li>
+											<li><Link to="/" className="">Ring size guide</Link></li>
 										</div>
 										<div className="Drop-Down-Cate">
-											<li><Link to="/" className="sayen">Design basics</Link></li>
+											<li><Link to="/" className="">Design basics</Link></li>
 										</div>
 										<div className="Drop-Down-Cate">
-											<li><Link to="/" className="sayen">What is bespoke</Link></li>
+											<li><Link to="/" className="">What is bespoke</Link></li>
 										</div>
 										<div className="Drop-Down-Cate">
-											<li><Link to="/" className="sayen">The crafting process</Link></li>
+											<li><Link to="/" className="">The crafting process</Link></li>
 										</div>
 										<div className="Drop-Down-Cate">	
-											<li><Link to="/" className="sayen">How ring are priced</Link></li>
+											<li><Link to="/" className="">How ring are priced</Link></li>
 										</div>
 										<div className="Drop-Down-Cate">	
-											<li><Link to="/" className="sayen">Ethical soursing</Link></li>
+											<li><Link to="/" className="">Ethical soursing</Link></li>
 										</div>
 										</ul>
 									</div> 
-							  </div>
-						  </div>
-						  <div class="row g-3">
-							  <div className="col-lg-5">
-							  </div>
-							  <div className="col-lg-3">
-							  <div className="Drop-Down-Cate">
-								  <li><Link to="/" className="sayen">+Create Your own category</Link></li>
-							  </div>
-							  </div>
-							  <div className="col-lg-4">
 							  </div>
 						  </div>
 					  </div>
@@ -175,7 +164,6 @@ return (
 				  <li class="nav-item"><Link class="nav-link" to="/"> SOLITAIRES </Link></li>
 				  <li class="nav-item"><Link class="nav-link" to="/"> GOLD COINS </Link></li>
 				  <li class="nav-item"><Link class="nav-link" to="/"> COLLECTIONS </Link></li>
-				  <li class="nav-item"><Link class="nav-link" to="/"> INVEST WITH US </Link></li>
 				  <li class="nav-item"><Link class="nav-link" to="/"> ABOUT </Link></li>
 				  {user && 
 				  <div>
@@ -209,12 +197,12 @@ return (
 							>
 								OFFERS
 						  </div>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-							  <Link class="dropdown-item" to="/">Favourites</Link>
-								<Link class="dropdown-item" to="/">Recently Viewed</Link>
-								<Link to="/admin/dashboard" class="dropdown-item">Dashboard</Link>
+						  <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu" >
+							  <Link class="dropdown-item" to="/">0% Making Charges on Diamond Jewellery</Link>
+								<Link class="dropdown-item" to="/">Upto 20% off on Platinum JEWELLERY</Link>
+								<Link to="/admin/dashboard" class="dropdown-item">Flat 5% off on Solitaire Jewellery USE CODE-JSO05</Link>
 								<div class="dropdown-divider"></div>
-								<Link class="dropdown-item" onClick={logOut}>Logout</Link>
+								<Link class="dropdown-item">Additional 50% off on your 1st installment</Link>
 						  </div>
 						</li>
 				  </div>

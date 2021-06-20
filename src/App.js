@@ -45,8 +45,10 @@ const App = ({history}) => {
   },[]);
   return (
     <div >
+      
     <HeaderCard/>
     <Nav />
+    
     <Switch>
     <Route exact path="/js-jwellery/" component={Home}/>
       <Route exact path="/login" component={Login}/>

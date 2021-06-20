@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Social=()=>{
     return(
       <div className="pt-5 pb-4">
-        <h3 className="text-center pt-1" style={{color:'#4A689F'}}>Follow Our Social Media Handlers</h3>
+        <h3 className="text-center pt-1" style={{color:'#4A689F'}}>Join Our Channels</h3>
         <div className="container mt-5 mb-5 " >
             <div className="row d-flex">
                 <div className="col-sm-1">
@@ -16,7 +16,7 @@ const Social=()=>{
               scrolling="no" 
               frameBorder="0" 
               allowfullscreen="true" 
-              style={{border:'3px solid blue',borderRadius:'10px'}}
+              
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
                 </div>
@@ -29,7 +29,7 @@ const Social=()=>{
               scrolling="no" 
               frameBorder="0" 
               allowfullscreen="true" 
-              style={{border:'3px solid blue',borderRadius:'10px'}}
+              
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
                 </div>

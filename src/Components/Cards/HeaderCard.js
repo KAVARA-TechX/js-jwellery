@@ -16,9 +16,9 @@ const HeaderCard = () =>{
                 <div className="tc col-md-3">6% off Use Code 30OFF, Ends in EXPIRED</div>
                 <div className="tc col-md-5">Book your consultation 
                     {user ? ` Hello ${user.email}`
-                    :  <span><span className="ml-3">|</span><Link to="/login" className="user-auths ml-3 mr-3">Login</Link>
+                    :  <span><span className="ml-3">|</span><Link to="/login" className="ml-3 mr-3">Login</Link>
                     </span>}
-                    {user ? "": <span>|<Link to="/register" className=" ml-3 user-auths">SignUp</Link></span>} 
+                    {user ? "": <span>|<Link to="/register" className=" ml-3">SignUp</Link></span>} 
                 </div>
             </div>
         </div>
