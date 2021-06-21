@@ -2,7 +2,7 @@ import React from 'react';
 import bannerImg from '../../Images/ring.jpg';
 const Banner = () =>{
     return(
-        <div class="banner-container ">
+        <div class="banner-container mt-5 pt-5">
   <img src={bannerImg} alt="Banner" className="banner-img"/>
   <div class="centered">
       <h4>Love &#38; Engagement</h4>

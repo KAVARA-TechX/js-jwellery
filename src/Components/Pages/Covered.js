@@ -3,7 +3,7 @@ import Showroom from '../../Images/PJ2.jpg';
 import Consultant from '../../Images/Consult.jpg';
 const Covered = () =>{
     return(
-        <div className="container-fluid pb-3 mt-5 mb-5">
+        <div className="container-fluid pb-3 mt-5 mb-5 pt-5">
             <h3 className="text-center">We've got you Covered</h3>
             <div className="row">
             <div className='col-sm-6 mt-5'>

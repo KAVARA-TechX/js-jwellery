@@ -18,20 +18,20 @@ const FooterCard = () =>{
                 <div className="col-md-2">
                     <span>
                     <span className="mr-2">Join Our channels</span>
-                    <i class="fab fa-facebook-f" style={{fontSize: '2em', color: '#'}}></i>
-                    <i class="fab fa-instagram ml-2" style={{fontSize: '2em', color: '#'}}></i>
+                    <i class="fab fa-facebook-f" ></i>
+                    <i class="fab fa-instagram ml-2" ></i>
                     </span>
                 </div>
                 <div className="col-md-3">
                     <span>
-                    <i class="fab fa-cc-mastercard" style={{fontSize: '2em', color: '#'}}></i>
-                    <i class="fab fa-cc-visa ml-2" style={{fontSize: '2em', color: '#'}} ></i>
-                    <i class="fab fa-cc-paypal ml-2" style={{fontSize: '2em', color: '#'}}></i>
-                    <i class="fab fa-google-pay ml-2" style={{fontSize: '2em', color: '#'}}></i>
+                    <i class="fab fa-cc-mastercard" ></i>
+                    <i class="fab fa-cc-visa ml-2"  ></i>
+                    <i class="fab fa-cc-paypal ml-2" ></i>
+                    <i class="fab fa-google-pay ml-2" ></i>
                     </span>
                 </div>
                 <div className="col-md-3">
-                    <p>Copyright © 2021 All rights reserved JS Solitaire | Site designed by CFT Lab</p>
+                    <p>Copyright © 2021 All rights reserved JS Solitaire |<br className="dHide"/> Site designed by CFT Lab</p>
                 </div>
             </div>
         </div>

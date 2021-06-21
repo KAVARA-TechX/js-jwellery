@@ -38,6 +38,7 @@ button {
     }
     .feature-section{
         margin-left: 12%;
+        width: 80% !important;
     }
     .dropdown-menu-left{
         margin-left:0%;
@@ -52,15 +53,28 @@ button {
 }
 
 .carousel-control-next-icon{
-    background-image: url('./Images/next.png');
-    width: 50px;
-    height: 50px;
+    background-image: url('./Images/prev1.png');
+    width: 40px;
+    height: 40px;
 }
 
 .carousel-control-prev-icon{
-    background-image: url('./Images/prev.png');
-    width: 50px;
-    height: 50px;
+    background-image: url('./Images/prev1.png');
+    transform: rotate(180deg);
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+      top: 110%;
+}
+
+.carousel-control-prev{
+    left: 40%;
+}
+.carousel-control-next{
+    right: 40%;
 }
 
 @media(max-width: 991px){
@@ -68,6 +82,12 @@ button {
     .carousel-control-prev-icon{
         width: 30px;
         height: 30px;
+    }
+    .carousel-control-prev{
+        left: 28%;
+    }
+    .carousel-control-next{
+        right: 37%;
     }
 }
 
@@ -118,7 +138,7 @@ button {
 @media(max-width: 991px){
     .review-card img {
         height: 90px;
-        margin-top: 2%;
+        margin-top: 20%;
       }
 }
 
@@ -150,25 +170,33 @@ button {
 
 @media(max-width: 991px){
     .centered{
-        top: 5%;
-        margin-left: -8%;
+        top: 15%;
+        left: 10%;
     }
     .banner-img{
         width: 100%;
         height: 300px;
     }
-
-    .centered {
-        left: 10%;
-      }
 }    
 /* Footer Section */
 footer{
     background-color: #fff;
 }
 
+.fab{
+    font-size: 2em;
+}
 
+@media(max-width: 991px){
+    .fab{
+        font-size: 1em;
+    }   
+}
 
+dHide{
+    display: none;
+}
+/*  */
 
 
 
