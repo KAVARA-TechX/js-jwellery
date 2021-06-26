@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import AdminNav from "../../Nav/AdminNav";
+import { useSelector } from "react-redux";
 import ProductCreateForm from "../../Forms/ProductCreateForm";
+import {createProduct} from "../../functions/product";
 import {LoadingOutlined} from '@ant-design/icons';
 const initialState = {
   title: "",
@@ -15,16 +17,24 @@ const initialState = {
 const ProductCreate = () => {
   const [values, setValues] = useState(initialState);
 
-
+//redux
+const {user} = useSelector((state)=>({...state}));
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(values);
+    createProduct(values,user.token)
+    .then(res=>{
+      console.log(res)
+    })
+    .catch(err=>{
+      console.log(err)
+    })
   };
 
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
-    // console.log(e.target.name, " ----- ", e.target.value);
+    //console.log(e.target.name, " ----- ", e.target.value);
   };
 
 
