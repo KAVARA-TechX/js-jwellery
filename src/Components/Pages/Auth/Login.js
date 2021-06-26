@@ -17,7 +17,7 @@ const Login = ({ history }) => {
   const { user } = useSelector((state) => ({ ...state }));
 
   useEffect(() => {
-    if (user && user.token) history.push("/");
+    if (user && user.token) history.push("/js-jwellery");
   }, [user]);
 
   const dispatch = useDispatch();
