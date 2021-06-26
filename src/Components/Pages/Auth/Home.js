@@ -16,7 +16,7 @@ const Home = () =>{
         
     <div>
     
-    <BootStrapCarsoul/>
+      <BootStrapCarsoul/>
       <TopProduct />
       <Covered/>
       <SolitaireProcess/>

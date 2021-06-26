@@ -1,6 +1,14 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import AdminNav from '../../Nav/AdminNav';
+import { getProductByCount } from '../../functions/product';
 const AdminDashboard =  () =>{
+    const[products,setProducts]=useState([]);
+    const[loading,setLoading]=useState(false);
+    useEffect(()=>{
+        getProductByCount(100)
+        .then((res)=>console.log(res.data))
+        .catch((err)=>console.log(err));
+    },[]);
     return (
         <div className="container-fluid">
         <div className="row">

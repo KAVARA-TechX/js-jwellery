@@ -5,10 +5,12 @@ import ProductCreateForm from "../../Forms/ProductCreateForm";
 import {createProduct} from "../../functions/product";
 import {LoadingOutlined} from '@ant-design/icons';
 import { toast } from "react-toastify";
+import FileUpload from "../../Forms/FileUpload";
 const initialState = {
   title: "",
   description: "",
   price: "",
+  images:[],
   categories: [],
   category: "",
   subs: "",
@@ -17,7 +19,7 @@ const initialState = {
 
 const ProductCreate = () => {
   const [values, setValues] = useState(initialState);
-
+  const [loading, setLoading]=useState(false)
 //redux
 const {user} = useSelector((state)=>({...state}));
 
@@ -50,9 +52,12 @@ const {user} = useSelector((state)=>({...state}));
         </div>
         <div className="col-md-10">
           <h4>Product create</h4>
-          <hr />
+          <hr/>
           
         {/* {JSON.stringify(values.images)} */}
+        <div className="p-3">
+          <FileUpload values={values} setValues={setValues} setLoading={setLoading}/>
+        </div>
           <ProductCreateForm
             handleSubmit={handleSubmit}
             handleChange={handleChange}
