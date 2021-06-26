@@ -26,7 +26,7 @@ const HeaderCard = () =>{
         <div className="container-fluid  mt-1 mb-1 pt-1">
             <div className="row ">
                 <div className="col-md-3">
-                   <Link to="/"> <img src={logo} alt="JS SOLITAIRE" style={{height:'80px'}} className="w-50 Logo"></img></Link>
+                   <Link to="/js-jwellery/"> <img src={logo} alt="JS SOLITAIRE" style={{height:'90px'}} className="w-80 Logo"></img></Link>
                 </div>
                 <div className="col-md-5 mt-4">
                 
