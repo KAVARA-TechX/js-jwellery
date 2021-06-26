@@ -1,13 +1,14 @@
 import React,{useState,useEffect} from 'react';
 import {auth} from '../../../firebase';
 import {useSelector } from "react-redux";
+import {toast} from 'react-toastify';
 const Register = ({history}) => {
     const [email,setEmail] = useState("");
 
     const { user } = useSelector((state) => ({ ...state }));
 
   useEffect(() => {
-    if (user && user.token) history.push("/");
+    if (user && user.token) history.push("/js-jwellery");
   }, [user]);
     const handleSubmit  = async(e) =>{
         e.preventDefault();
@@ -20,6 +21,7 @@ const Register = ({history}) => {
         }
 
         await auth.sendSignInLinkToEmail(email,config);
+        toast.success(`Email is sent to ${email}.Cilck the link to complete your registration.`);
         console.log(`Email is sent to ${email}.Cilck the link to complete your registration.`);
         //save email in localStorage
         window.localStorage.setItem('emailForRegistration',email);

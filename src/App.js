@@ -17,6 +17,10 @@ import {currentUser} from '../src/Components/functions/auth';
 import AdminRoute from './Components/Routes/AdminRoute';
 import AdminDashboard from "./Components/Pages/Admin/AdminDashboard";
 import ProductCreate from './Components/Pages/Admin/ProductCreate';
+
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -48,7 +52,7 @@ const App = ({history}) => {
       
     <HeaderCard/>
     <Nav />
-    
+    <ToastContainer/>
     <Switch>
     <Route exact path="/js-jwellery/" component={Home}/>
       <Route exact path="/login" component={Login}/>

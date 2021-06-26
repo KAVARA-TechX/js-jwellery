@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import ProductCreateForm from "../../Forms/ProductCreateForm";
 import {createProduct} from "../../functions/product";
 import {LoadingOutlined} from '@ant-design/icons';
+import { toast } from "react-toastify";
 const initialState = {
   title: "",
   description: "",
@@ -25,10 +26,13 @@ const {user} = useSelector((state)=>({...state}));
     console.log(values);
     createProduct(values,user.token)
     .then(res=>{
-      console.log(res)
+      toast.success("Product is created");
+      setValues(initialState);
+      console.log(res);
     })
     .catch(err=>{
-      console.log(err)
+      toast.error(err);
+      console.log(err);
     })
   };
 

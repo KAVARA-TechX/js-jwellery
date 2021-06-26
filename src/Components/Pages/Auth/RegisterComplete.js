@@ -3,6 +3,7 @@ import {auth} from '../../../firebase';
 import axios from 'axios';
 import { useDispatch,useSelector } from "react-redux";
 import { createOrUpdateUser } from '../../functions/auth';
+import { toast } from 'react-toastify';
 
 const RegisterComplete = ({history}) =>{
     const [email,setEmail] = useState("");
@@ -21,10 +22,12 @@ const RegisterComplete = ({history}) =>{
         e.preventDefault(); 
         //validation
         if(!email  || !password){
+            toast.error("Email and password is required");
             console.log("Email and password is required");
             return;
         } 
         if(password.length < 6){
+            toast.error("password is too short");
             console.log("password is too short");
             return;
         }
@@ -57,7 +60,7 @@ const RegisterComplete = ({history}) =>{
                 )
                 .catch();
                 //redirect
-                history.push("/");
+                history.push("/js-jwellery");
             }
         }catch (error) {
             console.log(error);
