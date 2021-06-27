@@ -17,20 +17,19 @@ const Login = ({ history }) => {
   const { user } = useSelector((state) => ({ ...state }));
 
   useEffect(() => {
-    if (user && user.token) history.push("/js-jwellery");
+    if (user && user.token){
+      if(user.role === "admin"){
+        history.push("/admin/dashboard");
+      }else{
+        history.push("/js-jwellery");
+      }
+    }
   }, [user]);
 
   const dispatch = useDispatch();
 
   
-const roleBasedRedirect=(res)=>{
-  if(res.data.role==="admin"){
-    history.push("/admin/dashboard");
-  }
-  else{
-    history.push("/user/history");
-  }
-}
+
 
   const handleSubmit = async (e) => {
     setLoading(true);
@@ -54,13 +53,12 @@ const roleBasedRedirect=(res)=>{
                 _id:res.data._id,
               },
             });
-            roleBasedRedirect(res);
           }
         )
         .catch((err)=>console.log(err));
 
         
-        history.push("/js-jwellery");
+        // history.push("/js-jwellery");
       } catch (error) {
         console.log(error);
         setLoading(false);
@@ -89,7 +87,7 @@ const roleBasedRedirect=(res)=>{
           }
         )
         .catch();
-        history.push("/js-jwellery");
+        // history.push("/js-jwellery");
       })
       .catch((err) => {
         console.log(err);

@@ -10,7 +10,7 @@ const AdminDashboard =  () =>{
         .catch((err)=>console.log(err));
     },[]);
     return (
-        <div className="container-fluid">
+        <div className="container-fluid mb-5 pb-5">
         <div className="row">
         <div className="col-md-2"><AdminNav/></div>
         <div className="col-md-9">

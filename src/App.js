@@ -20,7 +20,7 @@ import ProductCreate from './Components/Pages/Admin/ProductCreate';
 
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Coupon from './Components/Pages/Admin/Coupon';
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -61,7 +61,7 @@ const App = ({history}) => {
       <AdminRoute exact path="/admin/dashboard" component={AdminDashboard}/>
       <AdminRoute exact path="/admin/product" component={ProductCreate}/>
       <AdminRoute exact path="/admin/products" component={AdminDashboard}/>
-      <AdminRoute exact path="/admin/coupon" component={AdminDashboard}/>
+      <AdminRoute exact path="/admin/coupon" component={Coupon}/>
     </Switch>
     
     <Footer/>

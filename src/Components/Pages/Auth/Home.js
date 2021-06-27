@@ -10,12 +10,14 @@ import ReviewSlider from "../../Pages/ReviewSlider";
 import Covered from '../Covered';
 import Social from '../../Cards/Social';
 import Banner from '../../Cards/Banner';
+
+import HeaderCard from '../../Cards/HeaderCard';
+
 const Home = () =>{
     return(
         <div>
         
-    <div>
-    
+    <HeaderCard/>
       <BootStrapCarsoul/>
       <TopProduct />
       <Covered/>
@@ -25,7 +27,7 @@ const Home = () =>{
       {/* <Options /> */}
       <Guarantee />
       <Social/>
-    </div>
+      
         </div>
     );
 }

@@ -4,7 +4,7 @@ import axios from 'axios';
 import {useSelector} from 'react-redux';
 import { Avatar, Badge } from 'antd';
 const FileUpload = ({ values, setValues, setLoading }) =>{
-const {user} = useSelector((state) =>({...state}));
+    const {user} = useSelector((state) =>({...state}));
 
     const fileUploadAndResize = (e) => {
         //console.log(e.target.files);
@@ -23,7 +23,7 @@ const {user} = useSelector((state) =>({...state}));
                         }
                     })
                     .then((res)=>{
-                        console.log("Image Upload data:- ",res);
+                        //console.log("Image Upload data:- ",res);
                         allUploadedFiles.push(res.data);
                         setLoading(false);
                         setValues(({...values,images:allUploadedFiles}));
@@ -62,24 +62,26 @@ const {user} = useSelector((state) =>({...state}));
             console.log(error);});
     }
     return(
-        
+        <div>
         <div className="row">
         {values.images &&
           values.images.map((image) => (
-            <Badge count="x" 
+            <div className="col-sm-2">
+                <Badge count="x" 
             key={image.public_id}
             onClick={() => handleRemove(image.public_id)}
             style={{cursor:'pointer'}}
             >
-            <Avatar
-            src={image.url}
-            size={100}
-            shape="square"
-            className="ml-3"
+                <Avatar
+              src={image.url}
+              size={100}
+              shape="square"
+              className="ml-3"
             />
             </Badge>
+            </div>
           ))}
-      </div>,
+      </div>
         <div className="row">
             <label className="btn btn-outline-primary">Choose File
             <input
@@ -90,7 +92,8 @@ const {user} = useSelector((state) =>({...state}));
             onChange={fileUploadAndResize}
             />
             </label>
-        </div>   
+        </div>
+        </div>
     );
 }
 
