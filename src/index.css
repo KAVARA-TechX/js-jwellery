@@ -49,7 +49,7 @@ button {
 /* Top products */
 .top-product-card{
     width:10rem;
-    border-color:transparent;
+    border-color:transparent !important;
 }
 
 .carousel-control-next-icon{
@@ -126,7 +126,7 @@ button {
 
 /* Review Section */
 .review-card{
-        border-color:transparent;
+        border-color:transparent !important;
         flex-direction: row;
 }
 .review-card img {

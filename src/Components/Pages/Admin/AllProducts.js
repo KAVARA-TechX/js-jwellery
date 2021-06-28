@@ -13,8 +13,13 @@ const AllProducts = () => {
 
   useEffect(() => {
     loadAllProducts();
-  }, []);
+  }, [user.token]);
 
+  const handleClick = (e) =>{
+    e.preventDefault();
+    document.body.classList.toggle('sb-sidenav-toggled');
+    localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));   
+}
   const loadAllProducts = () => {
     setLoading(true);
     getProductByCount(100)
@@ -31,19 +36,16 @@ const AllProducts = () => {
  
 
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2">
-          <AdminNav />
-        </div>
-
-        <div className="col">
-          {loading ? (
+    <div class="d-flex" id="wrapper">
+            <AdminNav/>
+            <div id="page-content-wrapper">
+                <i class="fas fa-bars" id="sidebarToggle" onClick={handleClick}></i>       
+                <div class="container-fluid">
+                {loading ? (
             <h4 className="text-danger">Loading...</h4>
           ) : (
             <h4>All Products</h4>
           )}
-          <div className="row">
             {products.map((product) => (
               <div key={product._id} className="col-md-4 pb-3">
                 <AdminProductCard
@@ -51,10 +53,10 @@ const AllProducts = () => {
                 />
               </div>
             ))}
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    
   );
 };
 

@@ -18,15 +18,20 @@ const Coupon = () =>{
             setPerc(0);
         });
     }
+
+    const handleClick = (e) =>{
+        e.preventDefault();
+        document.body.classList.toggle('sb-sidenav-toggled');
+        localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));   
+    }
     return(
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-md-2">
-                    <AdminNav />
-                </div>
-                <div className="col-md-10">
-                    <h4>Coupons</h4>
-                    <form onSubmit={handleSubmit}>
+        <div class="d-flex" id="wrapper">
+            <AdminNav/>
+            <div id="page-content-wrapper">
+                <i class="fas fa-bars" id="sidebarToggle" onClick={handleClick}></i>
+                <h4 class="mt-4">Coupons</h4>        
+                <div class="container-fluid">
+                <form onSubmit={handleSubmit}>
                         <div className="form-group">
                         <label>Percentage</label>
                         <input

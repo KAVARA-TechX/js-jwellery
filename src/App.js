@@ -21,6 +21,7 @@ import ProductCreate from './Components/Pages/Admin/ProductCreate';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Coupon from './Components/Pages/Admin/Coupon';
+import AllProducts from './Components/Pages/Admin/AllProducts'
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -50,8 +51,6 @@ const App = ({history}) => {
   return (
     <div >
       
-    <HeaderCard/>
-    <Nav />
     <ToastContainer/>
     <Switch>
     <Route exact path="/js-jwellery/" component={Home}/>
@@ -60,7 +59,7 @@ const App = ({history}) => {
       <Route  exact path="/register/complete" component={RegisterComplete}/>
       <AdminRoute exact path="/admin/dashboard" component={AdminDashboard}/>
       <AdminRoute exact path="/admin/product" component={ProductCreate}/>
-      <AdminRoute exact path="/admin/products" component={AdminDashboard}/>
+      <AdminRoute exact path="/admin/products" component={AllProducts}/>
       <AdminRoute exact path="/admin/coupon" component={Coupon}/>
     </Switch>
     

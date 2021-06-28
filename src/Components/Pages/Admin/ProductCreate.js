@@ -16,6 +16,7 @@ const initialState = {
   images:[],
 };
 
+
 const ProductCreate = () => {
   const [values, setValues] = useState(initialState);
   const [loading, setLoading]=useState(false)
@@ -36,71 +37,74 @@ const {user} = useSelector((state)=>({...state}));
     //console.log(e.target.name, " ----- ", e.target.value);
   };
 
+  const handleClick = (e) =>{
+    e.preventDefault();
+    document.body.classList.toggle('sb-sidenav-toggled');
+    localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));   
+}
 
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2">
-          <AdminNav />
-        </div>
-        <div className="col-md-10">
-        {loading ?<h4 className="text-danger"><LoadingOutlined /></h4> : <h4>Product create</h4>}
-          <hr/>
-          
-        {/* {JSON.stringify(values.images)} */}
-        <div className="p-3">
-        <FileUpload values={values} setValues={setValues} setLoading={setLoading}/>
-          </div>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label>Title</label>
-            <input 
-            type="text"
-            name="title"
-            className="form-control"
-            values={values.title}
-            onChange={handleChange}/>
-            <label>Description</label>
-            <input 
-            type="text"
-            name="description"
-            className="form-control"
-            values={values.description}
-            onChange={handleChange}/>
-            <label>Price</label>
-            <input 
-            type="Number"
-            name="price"
-            className="form-control"
-            values={values.price}
-            onChange={handleChange}/>
-            <label>Category</label>
-            <input 
-            type="text"
-            name="category"
-            className="form-control"
-            values={values.category}
-            onChange={handleChange}/>
-            <label>Subs</label>
-            <input 
-            type="text"
-            name="subs"
-            className="form-control"
-            values={values.subs}
-            onChange={handleChange}/>
-            <label>Quantity</label>
-            <input 
-            type="number"
-            name="quantity"
-            className="form-control"
-            values={values.title}
-            onChange={handleChange}/>
-          </div>
-          <button >Submit</button>          
-        </form>
-        </div>
-      </div>
+    <div class="d-flex" id="wrapper">
+            <AdminNav/>
+            <div id="page-content-wrapper">
+                <i class="fas fa-bars" id="sidebarToggle" onClick={handleClick}></i>
+                {loading ?<h4 className="text-danger"><LoadingOutlined /></h4> : <h4>Product create</h4>}       
+                <div class="container-fluid">
+                <FileUpload values={values} setValues={setValues} setLoading={setLoading}/>
+  
+  <form onSubmit={handleSubmit}>
+    <div className="form-group">
+      <label>Title</label>
+      <input 
+      type="text"
+      name="title"
+      className="form-control"
+      values={values.title}
+      onChange={handleChange}/>
+      <label>Description</label>
+      <input 
+      type="text"
+      name="description"
+      className="form-control"
+      values={values.description}
+      onChange={handleChange}/>
+      <label>Price</label>
+      <input 
+      type="Number"
+      name="price"
+      className="form-control"
+      values={values.price}
+      onChange={handleChange}/>
+      <label>Category</label>
+      <input 
+      type="text"
+      name="category"
+      className="form-control"
+      values={values.category}
+      onChange={handleChange}/>
+      <label>Subs</label>
+      <input 
+      type="text"
+      name="subs"
+      className="form-control"
+      values={values.subs}
+      onChange={handleChange}/>
+      <label>Quantity</label>
+      <input 
+      type="number"
+      name="quantity"
+      className="form-control"
+      values={values.title}
+      onChange={handleChange}/>
     </div>
+    <button >Submit</button>          
+  </form>
+                </div>
+            </div>
+        </div>
+    
+    
+    
   );
 };
 
