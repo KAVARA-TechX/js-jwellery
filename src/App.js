@@ -30,24 +30,25 @@ const App = ({history}) => {
       if(user){
         const idTokenResult = await user.getIdTokenResult();
         console.log(user);
-  currentUser(idTokenResult.token)
-        .then((res)=>{
-            dispatch({
-              type: "LOGGED_IN_USER",
-              payload: {
-                name:res.data.name,
-                email: res.data.email,
-                token: idTokenResult.token,
-                role:res.data.role,
-                _id:res.data._id,
-              },
-            });
-          })
-        .catch(err=>console.log(err));
-        }
-      });
-    return()=> unsubscribe();
-  },[]);
+        currentUser(idTokenResult.token)
+            .then((res)=>{
+                dispatch({
+                    type:'LOGGED_IN_USER',
+                    payload:{
+                      name: res.data.name,
+                      email: res.data.email,
+                      role:res.data.role,
+                      _id: res.data._id,
+                      token:idTokenResult.token
+                    },
+                  });
+            })
+            .catch((err) => console.log(err));
+      }
+    });
+    //
+    return unsubscribe;
+  },[history,dispatch]);
   return (
     <div >
       

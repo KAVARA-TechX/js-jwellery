@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const createOrUpdateUser = async(authtoken) =>{
     return await axios.post(
-        'http://localhost:8000/api/create-or-update-user',
+        'https://js-solitaire.herokuapp.com/api/create-or-update-user',
         {},
         {
         headers:{
@@ -14,7 +14,7 @@ export const createOrUpdateUser = async(authtoken) =>{
 
 export const currentUser = async(authtoken) =>{
     return await axios.post(
-        'http://localhost:8000/api/current-user',
+        'https://js-solitaire.herokuapp.com/api/current-user',
         {},
         {
         headers:{
@@ -26,7 +26,7 @@ export const currentUser = async(authtoken) =>{
 
 export const currentAdmin = async(authtoken) =>{
     return await axios.post(
-        'http://localhost:8000/api/current-admin',
+        'https://js-solitaire.herokuapp.com/api/current-admin',
         {},
         {
         headers:{
@@ -38,7 +38,7 @@ export const currentAdmin = async(authtoken) =>{
 
 export const createCoupon = async(percentage,description,code,authtoken) =>{
     return await axios.post(
-        'http://localhost:8000/api/coupon',
+        'https://js-solitaire.herokuapp.com/api/coupon',
         {percentage,description,code},
         {
         headers:{
