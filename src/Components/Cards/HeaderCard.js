@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import logo from "../../Images/logo.png";
+import Dlogo from "../../Images/logo.png";
+import mlogo from "../../Images/favicon.png";
 import {SearchOutlined,
     ShoppingCartOutlined,HeartOutlined,ClockCircleOutlined} from '@ant-design/icons';
 import {Badge,Input} from 'antd'
@@ -16,9 +17,9 @@ const HeaderCard = () =>{
                 <div className="tc col-md-3">6% off Use Code 30OFF, Ends in EXPIRED</div>
                 <div className="tc col-md-5">Book your consultation 
                     {user ? ` Hello ${user.email}`
-                    :  <span><span className="ml-3">|</span><Link to="/login" className="ml-3 mr-3">Login</Link>
+                    :  <span><span className="ml-3">|</span><Link to="/login" className="ml-3 mr-3"><span>Login</span></Link>
                     </span>}
-                    {user ? "": <span>|<Link to="/register" className=" ml-3">SignUp</Link></span>} 
+                    {user ? "": <span>|<Link to="/register" className=" ml-3"><span>SignUp</span></Link></span>} 
                 </div>
             </div>
         </div>
@@ -26,7 +27,9 @@ const HeaderCard = () =>{
         <div className="container-fluid  mt-1 mb-1 pt-1">
             <div className="row ">
                 <div className="col-md-3">
-                   <Link to="/js-jwellery/"> <img src={logo} alt="JS SOLITAIRE" style={{height:'90px'}} className="w-80 Logo"></img></Link>
+                   <Link to="/js-jwellery/"> 
+                   <img src={Dlogo} alt="JS SOLITAIRE" style={{height:'90px'}} className="w-80 Logo mHide"></img>
+                   <img src={mlogo} alt="JS SOLITAIRE" style={{height:'200px'}} className="w-80 Logo dHide"></img></Link>
                 </div>
                 <div className="col-md-5 mt-4">
                 

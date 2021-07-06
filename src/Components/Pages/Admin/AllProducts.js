@@ -39,13 +39,14 @@ const AllProducts = () => {
     <div class="d-flex" id="wrapper">
             <AdminNav/>
             <div id="page-content-wrapper">
-                <i class="fas fa-bars" id="sidebarToggle" onClick={handleClick}></i>       
-                <div class="container-fluid">
+                <i className="fas fa-bars ml-3" id="sidebarToggle" onClick={handleClick}></i>       
+                <div className="container-fluid">
                 {loading ? (
             <h4 className="text-danger">Loading...</h4>
           ) : (
             <h4>All Products</h4>
           )}
+          <div className="row">
             {products.map((product) => (
               <div key={product._id} className="col-md-4 pb-3">
                 <AdminProductCard
@@ -53,6 +54,7 @@ const AllProducts = () => {
                 />
               </div>
             ))}
+            </div>
                 </div>
             </div>
         </div>

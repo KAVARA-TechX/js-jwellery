@@ -25,12 +25,12 @@ const Coupon = () =>{
         localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));   
     }
     return(
-        <div class="d-flex" id="wrapper">
+        <div className="d-flex" id="wrapper">
             <AdminNav/>
             <div id="page-content-wrapper">
-                <i class="fas fa-bars" id="sidebarToggle" onClick={handleClick}></i>
-                <h4 class="mt-4">Coupons</h4>        
-                <div class="container-fluid">
+                <i className="fas fa-bars ml-2" id="sidebarToggle" onClick={handleClick}></i>
+                <h4 className="mt-4 ml-2">Coupons</h4>        
+                <div className="container-fluid">
                 <form onSubmit={handleSubmit}>
                         <div className="form-group">
                         <label>Percentage</label>
@@ -56,7 +56,7 @@ const Coupon = () =>{
                         />
                         
                         </div>
-                        <button>Submit</button>
+                        <button className="btn btn-outline-primary">Submit</button>
                     </form>
                 </div>
             </div>

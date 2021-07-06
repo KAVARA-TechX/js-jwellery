@@ -14,8 +14,8 @@ const AdminDashboard =  () =>{
         <div class="d-flex" id="wrapper">
             <AdminNav/>
             <div id="page-content-wrapper ">
-                <i class="fas fa-bars" id="sidebarToggle" onClick={handleClick}></i>
-                <h4 class="mt-4">Orders</h4>        
+                <i className="fas fa-bars ml-2" id="sidebarToggle" onClick={handleClick}></i>
+                <h4 className="mt-4 ml-2">Orders</h4>        
                 <div class="container-fluid">
                     User Orders Table
                 </div>

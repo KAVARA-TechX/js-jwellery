@@ -1,6 +1,7 @@
 import React from 'react';
 import Showroom from '../../Images/PJ2.jpg';
 import Consultant from '../../Images/Consult.jpg';
+import {Link} from 'react-router-dom';
 const Covered = () =>{
     return(
         <div className="container-fluid pb-3 mt-5 mb-5 pt-5">
@@ -13,10 +14,11 @@ const Covered = () =>{
                 <br className="mHide"/>
                 Test out different jwelleries, styles,diamond shapes/sizes.
                 </p>
-                <button 
+                <button
                     className="center-block button p-2"
-                     
-                    >VIRTUAL TRY ON</button>
+                    ><Link to="/virtual-try" style={{color:"#fff"}}>
+                    VIRTUAL TRY ON
+                    </Link></button>
                 </div>
             </div>
             <div className='col-sm-6 mt-5'>
@@ -25,10 +27,11 @@ const Covered = () =>{
                 <p className="text-center pt-3">Remotely connect with our design consultants who can 
                 <br className="mHide"/>
                 offer guidance and insight from the comfort of your home.</p>
-                <button 
+                <button
                     className="center-block button p-2"
-                     
-                    >BOOK A VIRTUAL CONSULATATION</button>
+                    ><Link to="/virtual-consultation" style={{color:"#fff"}}>
+                    BOOK A VIRTUAL CONSULATATION
+                    </Link></button>
                 </div>
             </div>
         </div>

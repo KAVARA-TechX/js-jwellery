@@ -1,4 +1,4 @@
-h1,h2,h3,h4,h5,h6,p,div,Link,a {
+h1,h2,h3,h4,h5,h6,p,div,span{
     font-family: 'Helvetica' !important; 
     color: #585858 !important;
 }
@@ -27,6 +27,7 @@ button {
     .dropdown-menu-left{
         margin-left:-295%;
     }
+    
 }
 /* Mobile view*/
 @media(max-width: 991px){
@@ -34,14 +35,25 @@ button {
         margin-left: 0%;
     }
     .Logo{
-        margin-left: 12%;
+        display: block;
+  margin-left: auto;
+  margin-right: auto;
+        width: 30% !important;
+        height: 60px !important;
     }
     .feature-section{
         margin-left: 12%;
         width: 80% !important;
     }
+    nav{
+        float: right;
+        margin-top: -190px;
+    }
     .dropdown-menu-left{
         margin-left:0%;
+    }
+    .mobile-header{
+        margin-top: 0px;
     }
 }
 
@@ -53,13 +65,13 @@ button {
 }
 
 .carousel-control-next-icon{
-    background-image: url('./Images/prev1.png');
+    background-image: url('./Images/prev1.png') !important;
     width: 40px;
     height: 40px;
 }
 
 .carousel-control-prev-icon{
-    background-image: url('./Images/prev1.png');
+    background-image: url('./Images/prev1.png') !important;
     transform: rotate(180deg);
     width: 40px;
     height: 40px;
@@ -67,14 +79,14 @@ button {
 
 .carousel-control-prev,
 .carousel-control-next{
-      top: 110%;
+      top: 110% !important;
 }
 
 .carousel-control-prev{
-    left: 40%;
+    left: 40% !important;
 }
 .carousel-control-next{
-    right: 40%;
+    right: 40% !important;
 }
 
 @media(max-width: 991px){
@@ -84,10 +96,10 @@ button {
         height: 30px;
     }
     .carousel-control-prev{
-        left: 28%;
+        left: 28% !important;
     }
     .carousel-control-next{
-        right: 37%;
+        right: 37% !important;
     }
 }
 
@@ -117,6 +129,12 @@ button {
     border:1px solid #364993;
 }  
 
+
+
+.button a:hover{
+    color: #364993;
+}
+
 .button:hover {
     border:1px solid #364993;
     color:#364993;  
@@ -127,7 +145,7 @@ button {
 /* Review Section */
 .review-card{
         border-color:transparent !important;
-        flex-direction: row;
+        flex-direction: row !important;
 }
 .review-card img {
     width: 30%;
@@ -137,8 +155,8 @@ button {
 }
 @media(max-width: 991px){
     .review-card img {
-        height: 90px;
-        margin-top: 20%;
+        height: 90px ;
+        margin-top: 20% !important;
       }
 }
 
@@ -193,9 +211,7 @@ footer{
     }   
 }
 
-dHide{
-    display: none;
-}
+
 /*  */
 
 
@@ -205,10 +221,7 @@ dHide{
     color: #fff;
 }
 
-.btn-magenda{
-    color: #fff;
-    background-color: #436081;
-}
+
 @media only screen and (min-device-width: 300px) and (max-device-width:350px){
     .col-sm-3{
         margin-left: 20%;
@@ -311,6 +324,9 @@ dHide{
     .offer{
         margin-left: 112px;
     }
+    .dHide{
+        display: none;
+    }
 }   
 /* ============ desktop view .end// ============ */
 .navbar-dark .navbar-nav .nav-link{
@@ -322,6 +338,9 @@ dHide{
   .navbar-dark .navbar-nav .show>.nav-link{
 color:#000;
 }
+
+
+
 /* ============ mobile view ============ */
 @media(max-width: 991px){
     
@@ -332,6 +351,9 @@ color:#000;
 	}
     .mHide{
         display: none;
+    }
+    .dHide{
+        display: block;
     }
     .leftt{
         margin-left:0%;
@@ -380,3 +402,58 @@ color:#000;
 }
 
 
+
+
+/* Education Header */
+
+
+
+
+.navigation {
+    overflow: hidden;
+    background-color: #add8e6;
+    /* position: fixed; */
+    /* top: 40%; */
+    width: 100%;
+  }
+  
+  .navigation a {
+    float: left;
+    display: block;
+    color: #585858;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .navigation a:hover {
+    background-color: #585858;
+    color: #add8e6;
+  }
+  
+  .main {
+    padding: 16px;
+    margin-top: 30px;
+  }
+  .active{
+      border-bottom: 2px solid #585858;
+  }
+
+.changed{
+    position: fixed !important;
+}
+
+
+
+/* side nav in education section */
+.sideNav{
+    list-style-type: none;
+    width: 260px;
+}
+
+.sideNav li a{
+    display: block;
+    background-color: black;
+    padding: 5px 10px;
+}
