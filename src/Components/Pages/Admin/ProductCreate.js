@@ -47,8 +47,10 @@ const {user} = useSelector((state)=>({...state}));
     <div class="d-flex" id="wrapper">
             <AdminNav/>
             <div id="page-content-wrapper">
-                <i class="fas fa-bars" id="sidebarToggle" onClick={handleClick}></i>
-                {loading ?<h4 className="text-danger"><LoadingOutlined /></h4> : <h4>Product create</h4>}       
+                <i className="fas fa-bars ml-2" id="sidebarToggle" onClick={handleClick}></i>
+                {loading ?<h4 className="text-danger ml-2"><LoadingOutlined /></h4> 
+                : <h4 className="ml-2">Product create</h4>
+                }       
                 <div class="container-fluid">
                 <FileUpload values={values} setValues={setValues} setLoading={setLoading}/>
   

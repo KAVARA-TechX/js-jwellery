@@ -21,7 +21,17 @@ import ProductCreate from './Components/Pages/Admin/ProductCreate';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Coupon from './Components/Pages/Admin/Coupon';
-import AllProducts from './Components/Pages/Admin/AllProducts'
+import AllProducts from './Components/Pages/Admin/AllProducts';
+import VirtualConsultation from './Components/Pages/virtualConsultation';
+import Education from './Components/Pages/Education/Education';
+import Shapes from './Components/Pages/Education/Shapes';
+import Anatomy from './Components/Pages/Education/Anatomy';
+import Certification from './Components/Pages/Education/Certification';
+import PerfactDiamond from './Components/Pages/Education/PerfactDiamond';
+import Sourcing from './Components/Pages/Education/Sourcing';
+import ConflictFree from './Components/Pages/Education/ConflictFree'
+import PerfactJewellery from './Components/Pages/Education/PerfactJewellery';
+import DiamondCare from './Components/Pages/Education/DiamondCare';
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -57,7 +67,17 @@ const App = ({history}) => {
     <Route exact path="/" component={Home}/>
       <Route exact path="/login" component={Login}/>
       <Route  exact path="/register" component={Register}/>
+      <Route exact path="/virtual-consultation" component={VirtualConsultation}/>
       <Route  exact path="/register/complete" component={RegisterComplete}/>
+      <Route exact path="/education" component={Education} />
+      <Route exact path="/education/shapes" component={Shapes} />
+      <Route exact path="/education/anatomy" component={Anatomy} />
+      <Route exact path="/education/certification" component={Certification} />
+      <Route exact path="/education/perfect-diamond" component={PerfactDiamond} />
+      <Route exact path="/education/sourcing" component={Sourcing}/>
+      <Route exact path="/education/conflict-free" component={ConflictFree}/>
+      <Route exact path="/education/choose-perfect-diamond" component={PerfactJewellery}/>
+      <Route exact path="/education/diamond-care" component={DiamondCare}/>
       <AdminRoute exact path="/admin/dashboard" component={AdminDashboard}/>
       <AdminRoute exact path="/admin/product" component={ProductCreate}/>
       <AdminRoute exact path="/admin/products" component={AllProducts}/>

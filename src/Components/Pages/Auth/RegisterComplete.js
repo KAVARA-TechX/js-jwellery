@@ -1,10 +1,10 @@
 import React,{useState,useEffect} from 'react';
 import {auth} from '../../../firebase';
-import axios from 'axios';
 import { useDispatch,useSelector } from "react-redux";
 import { createOrUpdateUser } from '../../functions/auth';
 import { toast } from 'react-toastify';
-
+import Nav from '../../Nav/Header';
+import HeaderCard from '../../Cards/HeaderCard';
 const RegisterComplete = ({history}) =>{
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
@@ -85,13 +85,17 @@ const RegisterComplete = ({history}) =>{
             </button>
     </form>
     return(
-        <div className="container p-5">
+        <div>
+            <HeaderCard/>
+            <Nav/>
+            <div className="container p-5">
             <div className="row">
                 <div className="col-md-6 offset-md-3">
-                    <h4>Register </h4>
+                    <h4>Complete Registeration </h4>
                     {CompleteregisterationForm()}
                 </div>
             </div>
+        </div>
         </div>
     );
 }

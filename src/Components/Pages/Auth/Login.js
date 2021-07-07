@@ -5,8 +5,8 @@ import axios from 'axios';
 import { useDispatch,useSelector } from "react-redux";
 import { GoogleOutlined } from "@ant-design/icons";
 import {createOrUpdateUser} from "../../functions/auth";
-
-
+import Nav from '../../Nav/Header';
+import HeaderCard from '../../Cards/HeaderCard';
 
 
 const Login = ({ history }) => {
@@ -133,7 +133,10 @@ const Login = ({ history }) => {
   );
 
   return (
-    <div className="container p-5">
+    <div>
+      <HeaderCard/>
+      <Nav/>
+      <div  className="container-fluid">
       <div className="row">
         <div className="col-md-6 offset-md-3">
           <h4>Login</h4>
@@ -150,6 +153,7 @@ const Login = ({ history }) => {
             Login with Google
           </Button>
         </div>
+      </div>
       </div>
     </div>
   );

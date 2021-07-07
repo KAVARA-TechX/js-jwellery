@@ -2,6 +2,8 @@ import React,{useState,useEffect} from 'react';
 import {auth} from '../../../firebase';
 import {useSelector } from "react-redux";
 import {toast} from 'react-toastify';
+import Nav from '../../Nav/Header';
+import HeaderCard from '../../Cards/HeaderCard';
 const Register = ({history}) => {
     const [email,setEmail] = useState("");
 
@@ -28,7 +30,7 @@ const Register = ({history}) => {
         //clear state
         setEmail("");
     }
-    const registerForm = () => <form onSubmit={handleSubmit}>
+    const registerForm = () => (<form onSubmit={handleSubmit}>
         <input 
         type="email" 
         className="form-control" 
@@ -39,14 +41,21 @@ const Register = ({history}) => {
         <button type="submit" className="btn btn-primary">
             Register 
             </button>
-    </form>   
-return (<div className="container p-5 m-5">
-            <div className="row">
-                <div className="col-md-6 offset-md-3">
-                    <h4>Register</h4>
-                    {registerForm()}
-                </div>
-            </div>
-        </div>)}
+    </form>);   
+return (
+    <div>
+      <HeaderCard/>
+      <Nav/>
+      <div  className="container-fluid">
+      <div className="row">
+        <div className="col-md-6 offset-md-3">
+        <h4>Register</h4>
+        {registerForm()}
+        </div>
+      </div>
+    </div>
+    </div>
+  );
+}
 
 export default Register;
