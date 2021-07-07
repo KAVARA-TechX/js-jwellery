@@ -1,5 +1,4 @@
 {
-  "homepage": "https://kavara-techx.github.io/js-jwellery/",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -11,12 +10,13 @@
     "axios": "^0.21.1",
     "bootstrap": "^5.0.1",
     "firebase": "^8.6.7",
+    "firebase-tools": "^9.14.0",
     "mdbreact": "^5.0.2",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",
     "react-floating-action-button": "^1.0.5",
-    "react-image-file-resizer": "^0.4.7",
+    "react-image-file-resizer": "^0.3.7",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^1.1.5",
@@ -27,8 +27,6 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,8 +37,5 @@
       "react-app",
       "react-app/jest"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^1.1.0"
   }
 }

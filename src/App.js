@@ -54,7 +54,7 @@ const App = ({history}) => {
       
     <ToastContainer/>
     <Switch>
-    <Route exact path="/js-jwellery/" component={Home}/>
+    <Route exact path="/" component={Home}/>
       <Route exact path="/login" component={Login}/>
       <Route  exact path="/register" component={Register}/>
       <Route  exact path="/register/complete" component={RegisterComplete}/>

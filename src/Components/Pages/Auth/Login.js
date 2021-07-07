@@ -21,7 +21,7 @@ const Login = ({ history }) => {
       if(user.role === "admin"){
         history.push("/admin/dashboard");
       }else{
-        history.push("/js-jwellery");
+        history.push("/");
       }
     }
   }, [user]);

@@ -8,7 +8,7 @@ const Register = ({history}) => {
     const { user } = useSelector((state) => ({ ...state }));
 
   useEffect(() => {
-    if (user && user.token) history.push("/js-jwellery");
+    if (user && user.token) history.push("/");
   }, [user]);
     const handleSubmit  = async(e) =>{
         e.preventDefault();
@@ -16,7 +16,7 @@ const Register = ({history}) => {
         
         //redirecting user after sending the registration link
         const config = {
-            url:'http://localhost:3000/register/complete',
+            url:'https://js-solitaire-7eb96.web.app/register/complete',
             handleCodeInApp:true
         }
 
