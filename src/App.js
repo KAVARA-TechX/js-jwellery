@@ -32,6 +32,14 @@ import Sourcing from './Components/Pages/Education/Sourcing';
 import ConflictFree from './Components/Pages/Education/ConflictFree'
 import PerfactJewellery from './Components/Pages/Education/PerfactJewellery';
 import DiamondCare from './Components/Pages/Education/DiamondCare';
+import RingType from './Components/Pages/Education/RingType';
+import SettingType from './Components/Pages/Education/SettingType';
+import RingSize from './Components/Pages/Education/RingSize';
+import RingMetal from './Components/Pages/Education/RingMetal';
+import RingBudget from './Components/Pages/Education/RingBudget';
+import PerfactJewel from './Components/Pages/Education/PerfactRing';
+
+
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -78,6 +86,12 @@ const App = ({history}) => {
       <Route exact path="/education/conflict-free" component={ConflictFree}/>
       <Route exact path="/education/choose-perfect-diamond" component={PerfactJewellery}/>
       <Route exact path="/education/diamond-care" component={DiamondCare}/>
+      <Route exact path="/education/ring-type" component={RingType}/>
+      <Route exact path="/education/setting-type" component={SettingType}/>
+      <Route exact path="/education/ring-size" component={RingSize}/>
+      <Route exact path="/education/metal" component={RingMetal}/>
+      <Route exact path="/education/budget" component={RingBudget}/>
+      <Route exact path="/education/perfact-diamond-ring" component={PerfactJewel}/>
       <AdminRoute exact path="/admin/dashboard" component={AdminDashboard}/>
       <AdminRoute exact path="/admin/product" component={ProductCreate}/>
       <AdminRoute exact path="/admin/products" component={AllProducts}/>

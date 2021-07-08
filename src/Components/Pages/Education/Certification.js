@@ -7,11 +7,11 @@ import cert1 from '../../../Images/diamondCertification1.jpg';
 const Certification = () =>{
     return(
         <div>
-            <Nav/>
             <HeaderCard />
+            <Nav/>
             <div class="navigation">
-            <Link to="/education"className="active" style={{marginLeft:"15%"}} >Loose Diamond</Link>
-                <Link to="/education">Diamond Rings</Link>
+                <Link to="/education"className="active" style={{marginLeft:"15%"}} >Loose Diamond</Link>
+                <Link to="/education/ring-type">Diamond Rings</Link>
                 <Link to="/education/choose-perfect-diamond">Choose Your Perfect Diamond Jewellery</Link>
                 <Link to="/education/diamond-care" >Diamond Care</Link>
             </div>
@@ -19,15 +19,15 @@ const Certification = () =>{
                 <div className="container">
                     <div className="row">       
                         <div className=" col-md-3" >
-                            <ul className="sideNav">
-                                <li><Link>4C's</Link></li>
-                                <li><Link>Shapes</Link></li>
-                                <li><Link>Anatomy</Link></li>
-                                <li><Link>Certification</Link></li>
-                                <li><Link>Perfact Diamond</Link></li>
-                                <li><Link>Ethical Sorucing Diamonds</Link></li>
-                                <li><Link>Conflict Free Diamonds</Link></li>
-                            </ul>
+                        <ul className="sideNav">
+                            <li><Link to="/education">4C's</Link></li>
+                            <li><Link to="/education/shapes">Shapes</Link></li>
+                            <li><Link to="/education/anatomy">Anatomy</Link></li>
+                            <li><Link to="/education/certification">Certification</Link></li>
+                            <li><Link to="/education/perfect-diamond">Perfact Diamond</Link></li>
+                            <li><Link to="/education/sourcing">Ethical Sorucing Diamonds</Link></li>
+                            <li><Link to="/education/conflict-free">Conflict Free Diamonds</Link></li>
+                        </ul>
                         </div>
                         <div className="col-md-9">
                             <h4 className="text-center">Diamond Certification</h4>

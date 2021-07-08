@@ -30,12 +30,12 @@ const RingType = () =>{
                 <div className="row">       
                     <div className=" col-md-3" >
                         <ul className="sideNav">
-                            <li><Link>Ring Types</Link></li>
-                            <li><Link>Setting Type</Link></li>
-                            <li><Link>Ring Sizing</Link></li>
-                            <li><Link>Metal</Link></li>
-                            <li><Link>Budget</Link></li>
-                            <li><Link>Perfact Diamond</Link></li>
+                            <li><Link to="/education/ring-type">Ring Types</Link></li>
+                            <li><Link to="/education/setting-type">Setting Type</Link></li>
+                            <li><Link to="/education/ring-size">Ring Sizing</Link></li>
+                            <li><Link to="/education/metal">Metal</Link></li>
+                            <li><Link to="/education/budget">Budget</Link></li>
+                            <li><Link to="/education/perfact-diamond-ring">Perfact Diamond</Link></li>
                         </ul>
                     </div>
                     <div className="col-md-9">

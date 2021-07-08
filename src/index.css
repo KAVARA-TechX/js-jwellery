@@ -452,8 +452,12 @@ color:#000;
     width: 260px;
 }
 
+.sideNav li{
+    margin-bottom: 2px;
+}
 .sideNav li a{
     display: block;
-    background-color: black;
+    color: #585858;
+    background-color: #add8e6;
     padding: 5px 10px;
 }
