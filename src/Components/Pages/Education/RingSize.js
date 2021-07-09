@@ -11,7 +11,7 @@ const RingSize = () =>{
             <Nav/>
             <div className="navigation">
                 <Link to="/education" style={{marginLeft:"15%"}} >Loose Diamond</Link>
-                <Link to="/education/ring-type" className="active">Diamond Rings</Link>
+                <Link to="/education/ring-type" className="live">Diamond Rings</Link>
                 <Link to="/education/choose-perfect-diamond">Choose Your Perfect Diamond Jewellery</Link>
                 <Link to="/education/diamond-care" >Diamond Care</Link>
             </div>

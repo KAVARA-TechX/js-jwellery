@@ -15,7 +15,7 @@ return(
         <div class="navigation">
             <Link to="/education" style={{marginLeft:"15%"}} >Loose Diamond</Link>
             <Link to="/education/ring-type">Diamond Rings</Link>
-            <Link to="/education/choose-perfect-diamond" className="active">Choose Your Perfect Diamond Jewellery</Link>
+            <Link to="/education/choose-perfect-diamond" className="live">Choose Your Perfect Diamond Jewellery</Link>
             <Link to="/education/diamond-care" >Diamond Care</Link>
         </div>
         <div class="main">

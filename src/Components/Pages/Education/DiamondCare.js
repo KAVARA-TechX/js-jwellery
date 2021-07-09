@@ -12,7 +12,7 @@ const DiamondCare = () =>{
                 <Link to="/education" style={{marginLeft:"15%"}} >Loose Diamond</Link>
                 <Link to="/education/ring-type">Diamond Rings</Link>
                 <Link to="/education/choose-perfect-diamond">Choose Your Perfect Diamond Jewellery</Link>
-                <Link to="/education/diamond-care"className="active" >Diamond Care</Link>
+                <Link to="/education/diamond-care"className="live" >Diamond Care</Link>
             </div>
             <div className="main">
                 <div className="container">

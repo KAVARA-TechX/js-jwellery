@@ -38,8 +38,10 @@ import RingSize from './Components/Pages/Education/RingSize';
 import RingMetal from './Components/Pages/Education/RingMetal';
 import RingBudget from './Components/Pages/Education/RingBudget';
 import PerfactJewel from './Components/Pages/Education/PerfactRing';
-
-
+import SingleProductCard from "./Components/Cards/SingleProductCard";
+import Cart from './Components/Pages/Cart';
+import AboutUs from './Components/Pages/AboutUs';
+import WishList from './Components/Pages/Wishlist';
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -92,10 +94,15 @@ const App = ({history}) => {
       <Route exact path="/education/metal" component={RingMetal}/>
       <Route exact path="/education/budget" component={RingBudget}/>
       <Route exact path="/education/perfact-diamond-ring" component={PerfactJewel}/>
+      <Route exact path="/shop/single-product" component={SingleProductCard}/>
+      <Route exact path="/cart" component={Cart}/>
+      <Route exact path="/wishlist" component={WishList}/>
+      <Route exact path="/About-us" component={AboutUs}/>
       <AdminRoute exact path="/admin/dashboard" component={AdminDashboard}/>
       <AdminRoute exact path="/admin/product" component={ProductCreate}/>
       <AdminRoute exact path="/admin/products" component={AllProducts}/>
       <AdminRoute exact path="/admin/coupon" component={Coupon}/>
+
     </Switch>
     
     <Footer/>

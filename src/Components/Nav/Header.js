@@ -44,7 +44,7 @@ return (
 									  <div class="col-lg-6">
 									  <ul class="list-unstyled nav-lis">
 										  <div className="Drop-Down-Cate">
-										  <li><Link to="/" className=""><span><img src={Ring} alt="JS SOLITAIRE" style={{width:'30%'}} />Ring</span></Link></li>
+										  <li><Link to="/shop/single-product" className=""><span><img src={Ring} alt="JS SOLITAIRE" style={{width:'30%'}} />Ring</span></Link></li>
 										  </div>
 										  <div className="Drop-Down-Cate">
 										  <li><Link to="/" className=""><span><img src={Ring} alt="JS SOLITAIRE" style={{width:'30%'}} />Bracelet</span></Link></li>
@@ -160,11 +160,11 @@ return (
 						  </div>
 					  </div>
 				  </li>
-				  <li class="nav-item"> <Link class="nav-link" to="/education"><span>EDUCATION</span> </Link> </li>
 				  <li class="nav-item"><Link class="nav-link" to="/"> <span>SOLITAIRES</span> </Link></li>
-				  <li class="nav-item"><Link class="nav-link" to="/"> <span>GOLD COINS</span> </Link></li>
+				  <li class="nav-item"><Link class="nav-link" to="/"> <span>COINS</span> </Link></li>
 				  <li class="nav-item"><Link class="nav-link" to="/"> <span>COLLECTIONS</span> </Link></li>
-				  <li class="nav-item"><Link class="nav-link" to="/"> <span>ABOUT</span> </Link></li>
+				  <li class="nav-item"> <Link class="nav-link" to="/education"><span>EDUCATION</span> </Link> </li>
+				  <li class="nav-item"><Link class="nav-link" to="/About-us"> <span>KNOW THE BRAND</span> </Link></li>
 				  {user && 
 				  <div>
 					  <li class="nav-item dropdown">

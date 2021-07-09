@@ -46,7 +46,7 @@ const HeaderCard = () =>{
                 <Link to="/cart" style={{color:'#585858'}} >
                     <ClockCircleOutlined className="ml-3"
                     style={{fontSize: '22px'}}/><span style={{color:'#585858'}} className="ml-1 mr-3">Recently 
-                    <Link to="/cart" className="ml-3 mr-3"><span className="mr-3">|</span><HeartOutlined 
+                    <Link to="/wishlist" className="ml-3 mr-3"><span className="mr-3">|</span><HeartOutlined 
                     style={{ color: '#585858',fontSize: '22px'}}/></Link>
                     | <Link to="/cart" className="ml-3"><Badge 
                     count={0} 
