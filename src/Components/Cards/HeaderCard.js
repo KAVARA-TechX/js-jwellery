@@ -43,7 +43,7 @@ const HeaderCard = () =>{
 					</Input>
 				</div>
                 <div className="col-md-4 mt-4 feature-section"   >
-                <Link to="/cart" style={{color:'#585858'}} >
+                <Link to="/shop" style={{color:'#585858'}} >
                     <ClockCircleOutlined className="ml-3"
                     style={{fontSize: '22px'}}/><span style={{color:'#585858'}} className="ml-1 mr-3">Recently 
                     <Link to="/wishlist" className="ml-3 mr-3"><span className="mr-3">|</span><HeartOutlined 

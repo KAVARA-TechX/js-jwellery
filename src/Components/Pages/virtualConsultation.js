@@ -1,29 +1,21 @@
 import React, {useState}from 'react';
 import Nav from '../Nav/Header';
 import HeaderCard from '../Cards/HeaderCard';
+import Checkbox from 'antd/lib/checkbox/Checkbox';
 const VirtualConsultation = () =>{
-    const [date,setDate] = useState("");
-    const [timeSlot,setTimeSlot] = useState("");
     const [name,setName] = useState("");
     const [email,setEmail] = useState("");
     const [phone,setPhone] = useState();
-    const [specialrequest,setSpecialRequest] = useState("");
-    const [notes,setNotes] = useState("");
 
     
     const handleSubmit = (e) => {
         e.preventDefault();   
-        if(date == "" || timeSlot == "" || name == "" || email == "" || phone == 0 || specialrequest =="" 
-            || notes == ""){
+        if(name == "" || email == "" || phone == 0 ){
                 alert("All fields are required");
             }else{
-                console.log(date);
-        console.log(timeSlot);
         console.log(name);
         console.log(email);
         console.log(phone);
-        console.log(specialrequest);
-        console.log(notes);
             }
     }
     return(  
@@ -31,28 +23,14 @@ const VirtualConsultation = () =>{
             <HeaderCard/>
             <Nav/>
             <div className="container">
-                <h4>Virtual consultation Form</h4>
+                <div className="row">
+                <div className="col-md-3">
+                </div>
+                <div className="col-md-6">
+                <h4 className="text-center">Contact Us</h4>
+                <h5 className="text-center">Begin by scheduling a complimentary consultation at one of our London showrooms, via email, chat, 
+                  phone or Whatsapp, where you can share your ideas with one of our expert design consultants</h5>
                 <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                      <label>Choose a Date</label>
-                      <input
-                        type="date"
-                        name="title"
-                        className="form-control"
-                        value={date}
-                        onChange={e=>setDate(e.target.value)}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>TimeSlot</label>
-                      <input
-                        type="text"
-                        name="TimeSlot"
-                        className="form-control"
-                        value={timeSlot}
-                        onChange={e=>setTimeSlot(e.target.value)}
-                      />
-                    </div>
                     <div className="form-group">
                       <label>Name</label>
                       <input
@@ -84,28 +62,33 @@ const VirtualConsultation = () =>{
                       />
                     </div>
                     <div className="form-group">
-                      <label>Special Request</label>
-                      <input
-                        type="text"
-                        name="specialrequest"
-                        className="form-control"
-                        value={specialrequest}
-                        onChange={e=>setSpecialRequest(e.target.value)}
-                      />
-                    </div>
+                      <label>Purpose of enquiry</label>
+                    <select className="form-select">
+                      <option>New product Query</option>
+                      <option>Returning customer</option>
+                      <option>Resizing or aftercare</option>
+                    </select>
+                    </div> 
                     <div className="form-group">
-                      <label>Notes</label>
-                      <input
-                        type="text"
-                        name="notes"
-                        className="form-control"
-                        value={notes}
-                        onChange={e=>setNotes(e.target.value)}
-                      />
-                    </div>      
-                    <br/>
-                    <button className="btn btn-outline-info mb-5">Save</button>
+                      <textarea className="form-control"placeholder="Enter any questions,requirements or ideas you may have" />
+                      </div>   
+                      <p><b>Safeguarding your privacy</b> <i class="fas fa-info ml-2"></i></p>
+                      <Checkbox>
+                    By checking this box, I confirm that I have read and agree to the Terms of Use, 
+                    Privacy Policy, and Cookie Policy.*
+                  </Checkbox>
+                  <br/>
+                  <Checkbox>
+                  By checking this box, I authorise JS solitaire to contact me with updates on our products.
+                  </Checkbox>
+                  <br/><br/>
+                    <button className="button btn-block mb-5">Get in touch</button>
                 </form>
+                </div>
+                <div className="col-md-3">
+                  
+                </div>
+                </div>
             </div>
         </div>
     );

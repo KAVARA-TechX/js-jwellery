@@ -160,7 +160,7 @@ return (
 						  </div>
 					  </div>
 				  </li>
-				  <li class="nav-item"><Link class="nav-link" to="/"> <span>SOLITAIRES</span> </Link></li>
+				  <li class="nav-item"><Link class="nav-link" to="/shop"> <span>SOLITAIRES</span> </Link></li>
 				  <li class="nav-item"><Link class="nav-link" to="/"> <span>COINS</span> </Link></li>
 				  <li class="nav-item"><Link class="nav-link" to="/"> <span>COLLECTIONS</span> </Link></li>
 				  <li class="nav-item"> <Link class="nav-link" to="/education"><span>EDUCATION</span> </Link> </li>

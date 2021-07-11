@@ -42,6 +42,7 @@ import SingleProductCard from "./Components/Cards/SingleProductCard";
 import Cart from './Components/Pages/Cart';
 import AboutUs from './Components/Pages/AboutUs';
 import WishList from './Components/Pages/Wishlist';
+import Shop from './Components/Pages/Shop';
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -98,6 +99,7 @@ const App = ({history}) => {
       <Route exact path="/cart" component={Cart}/>
       <Route exact path="/wishlist" component={WishList}/>
       <Route exact path="/About-us" component={AboutUs}/>
+      <Route exact path="/shop" component={Shop}/>
       <AdminRoute exact path="/admin/dashboard" component={AdminDashboard}/>
       <AdminRoute exact path="/admin/product" component={ProductCreate}/>
       <AdminRoute exact path="/admin/products" component={AllProducts}/>
