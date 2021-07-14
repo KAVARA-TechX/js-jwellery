@@ -5,7 +5,7 @@ import Dlogo from "../../Images/logo.png";
 import mlogo from "../../Images/favicon.png";
 import {SearchOutlined,
     ShoppingCartOutlined,HeartOutlined,ClockCircleOutlined} from '@ant-design/icons';
-import {Badge,Input} from 'antd'
+import {Badge,Input} from 'antd';
 const HeaderCard = () =>{
     const {user} = useSelector((state)=>({...state}));
     const count = 0;
@@ -28,7 +28,7 @@ const HeaderCard = () =>{
             <div className="row ">
                 <div className="col-md-3">
                    <Link to="/"> 
-                   <img src={Dlogo} alt="JS SOLITAIRE" style={{height:'90px'}} className="w-80 Logo mHide"></img>
+                   <img src={Dlogo} alt="JS SOLITAIRE" style={{height:'72px'}} className="w-68 Logo mHide"></img>
                    <img src={mlogo} alt="JS SOLITAIRE" style={{height:'200px'}} className="w-80 Logo dHide"></img></Link>
                 </div>
                 <div className="col-md-5 mt-4">

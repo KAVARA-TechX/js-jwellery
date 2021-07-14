@@ -95,11 +95,11 @@ const App = ({history}) => {
       <Route exact path="/education/metal" component={RingMetal}/>
       <Route exact path="/education/budget" component={RingBudget}/>
       <Route exact path="/education/perfact-diamond-ring" component={PerfactJewel}/>
-      <Route exact path="/shop/single-product" component={SingleProductCard}/>
       <Route exact path="/cart" component={Cart}/>
       <Route exact path="/wishlist" component={WishList}/>
       <Route exact path="/About-us" component={AboutUs}/>
       <Route exact path="/shop" component={Shop}/>
+      <Route exact path="/shop/single-product" component={SingleProductCard}/>
       <AdminRoute exact path="/admin/dashboard" component={AdminDashboard}/>
       <AdminRoute exact path="/admin/product" component={ProductCreate}/>
       <AdminRoute exact path="/admin/products" component={AllProducts}/>

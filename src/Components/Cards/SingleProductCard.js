@@ -27,45 +27,40 @@ const SingleProductCard = () =>{
                             <img src={product} alt="Single Product" width="350" height="450"/>
                         </div>
                         <div className="col-md-6" >
-                           <p>ROSE GOLD DIAMOND RING PAIR </p>
+                           <h5>ROSE GOLD DIAMOND RING PAIR </h5>
                            <StarRating
                     rating={4.3}
                     starRatedColor = "red"
-                    starDimension = "20px"
+                    starDimension = "16px"
                     starSpacing = "2px"
                     ediiting={false}
                     />(4)
                     <br/>
-                           <p><b>PRICE &#x20B9; 12924.90</b></p>
+                           <h5><b>PRICE &#x20B9; 12924.90</b></h5>
                            <span>(Incl. all taxces) <a href="#details">price breakUp</a></span>
                            <p>*Weight and Price may vary subject to the stock available.</p>
                            <p>18 Karat Yellow Gold Pendant with an Emerald and Uncut Diamonds
                             <HeartOutlined className="float-right" 
-                            style={{fontSize:'24px',padding:'3px',border:'1px solid black'}}/>
+                            style={{fontSize:'24px'}}/>
                             <ShareAltOutlined className="float-right" 
-                            style={{fontSize:'24px',padding:'3px',border:'1px solid black'}}/>
+                            style={{fontSize:'24px'}}/>
                             </p>
                            <a href="#details">Product details</a>
                            <div className="row">
                                 <div className="col-md-6 col-sm-6">
-                                    <p>Gross Weight</p>
-                                    <p className="text-center" 
-                                    style={{padding:'6px',border:'1px solid black'}}>3.747g</p>
-                                </div>
-                                <div className="col-md-6 col-sm-6">
                                     <p>Net Qty.</p>
-                                    <p>1</p>
+                                    <p className="text-center" 
+                                    style={{padding:'6px',border:'1px solid black'}}>1</p>
                                 </div>
                            </div>
                            <div className="row">
-                               <div className="col-md-4 col-sm-6">
+                               <div className="col-md-6 col-sm-6">
                                    <button className="button">BuyNow</button>
                                </div>
-                               <div className="col-md-4 col-sm-6">
+                               <div className="col-md-6 col-sm-6">
                                <button className="button">Add To Cart</button>
                                </div>
-                               <div className="col-md-4 col-sm-4" style={{cursor:'pointer'}}>
-                               <RatingModal>
+                               {/* <RatingModal>
                             <StarRating 
                             name={"ProductId"}
                             numberOfStars={5}
@@ -74,8 +69,7 @@ const SingleProductCard = () =>{
                             isSelectable={true}
                             starRatedColor="red"
                             />
-                            </RatingModal>
-                               </div>
+                            </RatingModal> */}
                            </div>
                         </div>
                     </div>

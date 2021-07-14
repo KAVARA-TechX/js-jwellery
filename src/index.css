@@ -469,6 +469,7 @@ color:#000;
 
 /* Cart */
 .cart-card{
+    border: transparent !important;
     flex-direction: row !important;
 }
 
@@ -489,3 +490,19 @@ margin-top: 11%;
 }
 
 .contained {  height: 200px; overflow-y: scroll; overflow-x: hidden;}
+
+
+.new-meows{
+    padding: 10px;
+    margin : 10px;
+    width: 97%;
+    display: flex;
+    justify-content:space-between;
+ 
+  }
+  .new-meows button{
+     width: 80px;
+  }
+ .new-meows input{
+     width: calc(100% - 80px)
+  }

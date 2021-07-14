@@ -64,18 +64,18 @@ const Cart = () =>{
                         </div>
                         <div className="col-lg-1"></div>
                         <div className="col-lg-4" >
-                        <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Apply Coupon"
-                    />
+                        <div class="new-meows">
+        <input type="text" class="form-control"  placeholder="Apply Coupon"/>
+        <button type="button" class="button ml-3">Submit</button>    
+</div>
                     <br/>
                     <p><b>Order Summary</b></p>
                     <div className="card">
-                        <span style={{paddingLeft:'10px',paddingRight:'10px',paddingTop:'10px'}}>Subtotal<p className="float-right">₹16,261</p></span>
-                        <span style={{paddingLeft:'10px',paddingRight:'10px'}}>You Saved<p className="float-right">₹2,104</p></span>
+                        <span style={{paddingLeft:'10px',paddingRight:'10px',paddingTop:'10px'}}>Subtotal<p className="float-right">₹14,369</p></span>
                         <span style={{paddingLeft:'10px',paddingRight:'10px'}}>Coupon Discount<p className="float-right">Apply Coupon</p></span>
+                        <span style={{paddingLeft:'10px',paddingRight:'10px'}}>You Saved<p className="float-right">₹2,104</p></span>
                         <span style={{paddingLeft:'10px',paddingRight:'10px'}}>Delivery Charge (Standard)<p className="float-right">FREE</p></span>
+                        <span style={{paddingLeft:'10px',paddingRight:'10px'}}>GST<p className="float-right">₹1892.00</p></span>
                         <span style={{paddingLeft:'10px',paddingRight:'10px'}}><b>Total Cost</b><p className="float-right"><b>₹16,261</b></p></span>
                     </div>
                     <br/>
