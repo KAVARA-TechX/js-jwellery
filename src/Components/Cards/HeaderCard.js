@@ -8,14 +8,13 @@ import {SearchOutlined,
 import {Badge,Input} from 'antd';
 const HeaderCard = () =>{
     const {user} = useSelector((state)=>({...state}));
-    const count = 0;
     return(
         <div>
             <div className="container-fluid mHide">
             <div className="row pt-3 pb-3 header-card">
                 <div className="tc col-md-4">Free shipping all over india</div>
                 <div className="tc col-md-3">6% off Use Code 30OFF, Ends in EXPIRED</div>
-                <div className="tc col-md-5">Book your consultation 
+                <div className="tc col-md-5"><Link to="/virtual-consultation"><span>Book your consultation</span></Link> 
                     {user ? ` Hello ${user.email}`
                     :  <span><span className="ml-3">|</span><Link to="/login" className="ml-3 mr-3"><span>Login</span></Link>
                     </span>}
@@ -47,7 +46,7 @@ const HeaderCard = () =>{
                     <ClockCircleOutlined className="ml-3"
                     style={{fontSize: '22px'}}/><span style={{color:'#585858'}} className="ml-1 mr-3">Recently 
                     <Link to="/wishlist" className="ml-3 mr-3"><span className="mr-3">|</span><HeartOutlined 
-                    style={{ color: '#585858',fontSize: '22px'}}/></Link>
+                    style={{fontSize: '22px'}}/></Link>
                     | <Link to="/cart" className="ml-3"><Badge 
                     count={0} 
                     showZero 

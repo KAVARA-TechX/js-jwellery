@@ -4,8 +4,6 @@ import {Switch,Route} from 'react-router-dom';
 import Login from './Components/Pages/Auth/Login';
 import Register from './Components/Pages/Auth/Register';
 import Home from './Components/Pages/Auth/Home';
-import Nav from "./Components/Nav/Header";
-import HeaderCard from './Components/Cards/HeaderCard';
 import Footer from './Components/Footer';
 import FooterCard from './Components/Cards/FooterCard';
 import RegisterComplete from './Components/Pages/Auth/RegisterComplete';
@@ -42,7 +40,11 @@ import SingleProductCard from "./Components/Cards/SingleProductCard";
 import Cart from './Components/Pages/Cart';
 import AboutUs from './Components/Pages/AboutUs';
 import WishList from './Components/Pages/Wishlist';
-import Shop from './Components/Pages/Shop';
+import Shop from './Components/Pages/Shop/Shop';
+import Coins from './Components/Pages/Shop/Coins';
+import Collections from './Components/Pages/Shop/Collections';
+import Solitaires from './Components/Pages/Shop/Solitaires';
+import UserDashboard from './Components/Pages/UserDashboard';
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -75,11 +77,14 @@ const App = ({history}) => {
       
     <ToastContainer/>
     <Switch>
-    <Route exact path="/" component={Home}/>
+      {/* Auth Routes */}
+      <Route exact path="/" component={Home}/>
       <Route exact path="/login" component={Login}/>
       <Route  exact path="/register" component={Register}/>
-      <Route exact path="/virtual-consultation" component={VirtualConsultation}/>
       <Route  exact path="/register/complete" component={RegisterComplete}/>
+      
+      {/* Education page routes */}
+      
       <Route exact path="/education" component={Education} />
       <Route exact path="/education/shapes" component={Shapes} />
       <Route exact path="/education/anatomy" component={Anatomy} />
@@ -95,15 +100,31 @@ const App = ({history}) => {
       <Route exact path="/education/metal" component={RingMetal}/>
       <Route exact path="/education/budget" component={RingBudget}/>
       <Route exact path="/education/perfact-diamond-ring" component={PerfactJewel}/>
-      <Route exact path="/cart" component={Cart}/>
-      <Route exact path="/wishlist" component={WishList}/>
-      <Route exact path="/About-us" component={AboutUs}/>
+      
+      
+      {/* Shop page routes */}
+
       <Route exact path="/shop" component={Shop}/>
+      <Route exact path="/shop/coins" component={Coins}/>
+      <Route exact path="/shop/collections" component={Collections}/>
+      <Route exact path="/shop/solitaires" component={Solitaires}/>
       <Route exact path="/shop/single-product" component={SingleProductCard}/>
+      
+      {/* Admin Routes */}
+      
       <AdminRoute exact path="/admin/dashboard" component={AdminDashboard}/>
       <AdminRoute exact path="/admin/product" component={ProductCreate}/>
       <AdminRoute exact path="/admin/products" component={AllProducts}/>
       <AdminRoute exact path="/admin/coupon" component={Coupon}/>
+
+      {/* User Routes */}
+      <Route exact path="/user/dashboard" component={UserDashboard} />
+      <Route exact path="/cart" component={Cart}/>
+      <Route exact path="/wishlist" component={WishList}/>
+      <Route exact path="/About-us" component={AboutUs}/>
+
+      {/* Others */}
+      <Route exact path="/virtual-consultation" component={VirtualConsultation}/>
 
     </Switch>
     

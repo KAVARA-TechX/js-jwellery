@@ -1,22 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Nav from '../Nav/Header';
 import HeaderCard from './HeaderCard';
 import { Tabs } from "antd";
 import product from '../../Images/perfactRing.jpg';
-import {Link} from 'react-router-dom';
 import { ShareAltOutlined,HeartOutlined } from "@ant-design/icons";
 import TopProduct from "./TopProductCard";
 import StarRating from "react-star-ratings";
-import RatingModal from '../Modal/RatingModal';
 const {TabPane} = Tabs;
 const SingleProductCard = () =>{
-    const [star,setStar] = useState(5);
     
-    const onStarClick = (newRating, name) => {
-        setStar(newRating);
-        console.table(newRating, name);
-        
-      };
     return(
         <div>
             <HeaderCard/>

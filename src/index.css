@@ -11,6 +11,8 @@ button {
     background-color: #add8e6;
 }
 
+
+
 /* Desktop view*/
 @media all and (min-width: 992px) {
     .header-Input{
@@ -25,7 +27,7 @@ button {
     }
 
     .dropdown-menu-left{
-        margin-left:-295%;
+        margin-left:-140px !important;
     }
     
 }
@@ -57,6 +59,11 @@ button {
     }
 }
 
+/* Navbar */
+.navbar{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
 
 /* Top products */
 .top-product-card{
@@ -319,7 +326,9 @@ footer{
 @media all and (min-width: 992px) {
     /* .navbar .nav-item:hover .nav-link{ } */
     .navbar .nav-item .dropdown-menu{ display: none; }
+    .col-md-2 .filter .dropdown-menu{display: none;}
     .navbar .nav-item:hover .nav-link{ color: #fff;  }
+    .col-md-2 .filter:hover .dropdown-menu{display: block;}
     .navbar .nav-item:hover .dropdown-menu{ display: block; }
     .navbar .nav-item .dropdown-menu{ margin-top:0; }
     iframe{
@@ -506,3 +515,22 @@ margin-top: 11%;
  .new-meows input{
      width: calc(100% - 80px)
   }
+
+.solitaires::after{
+    margin-left: 90px !important;
+}
+
+.solitaires1::after{
+    margin-left: 160px !important;
+}
+.solitaires2::after{
+    margin-left: 115px !important;
+}
+.solitaires3::after{
+    margin-left: 140px !important;
+}
+.solitaires4::after{
+    margin-left: 155px !important;
+}
+
+

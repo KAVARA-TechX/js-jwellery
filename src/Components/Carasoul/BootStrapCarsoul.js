@@ -4,7 +4,7 @@ import Image1 from "../../Images/slider1.jpg";
 import Image2 from "../../Images/slider2.jpg";
 import Image4 from "../../Images/slider3.jpg";
 import indicator from "../../Images/conflictfree.png";
-
+import {Link} from 'react-router-dom';
 const BootStrapCarsoul=()=>{
     return(
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -23,9 +23,9 @@ const BootStrapCarsoul=()=>{
           <div className="container">
               <div className="row Row">
                 <div className="col-sm-4">
-                <button class="btn btn-outline-light btn-block pt-1 pb-1 btn-top">DESIGN YOUR JEWELLERY</button>
+                <Link class="btn btn-outline-light btn-block pt-1 pb-1 btn-top" to="/design">DESIGN YOUR JEWELLERY</Link>
                 </div><div className="col-sm-4 btnLeft">
-                <button class="btn btn-outline-light btn-block pt-1 pb-1 btn-top1">BROWSE THE COLLECTION</button>
+                <Link class="btn btn-outline-light btn-block pt-1 pb-1 btn-top1" to="/shop/collections">BROWSE THE COLLECTION</Link>
                 </div>
               </div>
             </div>

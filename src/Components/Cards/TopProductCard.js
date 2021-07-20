@@ -72,7 +72,7 @@ const TopProduct = () =>{
           <div className="col-sm-3 ">
             <div className="card ml-3 products-center top-product-card" >
               <div className="card-body products-center">
-                <img src={product1} alt="tran" className="p-1">
+                <img src={product8} alt="tran" className="p-1">
                 </img>
               </div>
             </div>
@@ -84,7 +84,7 @@ const TopProduct = () =>{
           <div className="col-sm-3 mHide">
             <div className="card ml-3 top-product-card">
               <div className="card-body">
-                <img src={product2} alt="tran" className="p-1">
+                <img src={product6} alt="tran" className="p-1">
                 </img>
               </div>
             </div>
@@ -96,7 +96,7 @@ const TopProduct = () =>{
           <div className="col-sm-3 mHide">
             <div className="card ml-3 top-product-card">
               <div className="card-body">
-                <img src={product3} alt="tran" className="p-1">
+                <img src={product7} alt="tran" className="p-1">
                 </img>
               </div>
             </div>
@@ -108,7 +108,7 @@ const TopProduct = () =>{
           <div className="col-sm-3 mHide">
             <div className="card ml-3 top-product-card">
               <div className="card-body">
-                <img src={product4} alt="tran" className="p-1">
+                <img src={product8} alt="tran" className="p-1">
                 </img>
               </div>
             </div>

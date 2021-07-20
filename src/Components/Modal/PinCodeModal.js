@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import { Modal,Button } from "antd";
+import { Modal } from "antd";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
-import { useHistory,useParams } from "react-router-dom";
 
 const PinCodeModal = ({ children }) =>{
     const { user } = useSelector((state) => ({ ...state }));
   const [modalVisible, setModalVisible] = useState(false);
-  let history = useHistory();
-  let {slug} = useParams();
   const handleModal = () => {
     if (user && user.token) {
       setModalVisible(true);
@@ -23,7 +20,7 @@ const PinCodeModal = ({ children }) =>{
     return(
         <div>
       <div onClick={handleModal}>
-        <p>Check Delivery Date</p>
+        <p style={{cursor:'pointer'}}>Check Delivery Date</p>
       </div>
       <Modal
         title="Check for availability"
