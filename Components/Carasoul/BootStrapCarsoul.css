@@ -1,0 +1,78 @@
+.textLoc .container{
+    justify-content: left;
+    margin-left: -15%;
+    margin-top: -22%;
+    }
+
+
+
+.right.carousel-control, 
+.left.carousel-control 
+{
+     visibility:hidden;
+}
+
+
+.btn{
+    background-color: #364993;
+    color: #fff;
+    border:1px solid #364993;
+}  
+
+  /* On mouse-over */
+.btn:hover {
+            border:1px solid #364993;
+            color:#364993;  
+            background-color: #e4dcdc00;
+            border: 1px solid;                            
+}
+
+@media(max-width: 991px){
+    .btnLeft{
+        margin-top: 5%;
+        margin-left: 0%;
+    }
+
+    .Row{
+        margin-left: 25%;
+    }
+    .carousel-Img{
+        height: 450px;
+    }
+    .btn-top{
+        margin-top: -145%;
+    }
+    .btn-top1{
+        margin-top: -115%;
+    }
+    .btn{
+        font-size: 14px;
+    }
+    .carousel-indicators{
+        margin-left: 25%;
+    }
+    .carousel-indicators li{
+        margin-right: -4%;
+    }
+}
+
+.carousel-indicators{
+    list-style: none;
+}
+.carousel-indicators li{
+    margin-right: -3%;
+}
+.carousel-indicators li, .carousel-indicators li.active{
+    width: 60px;
+    height: 60px;
+    background-color: inherit;
+    position: relative;          
+}
+.carousel-indicators img{
+    position: absolute;
+    width: 50%;
+    border-radius: 50%;
+    height: 50%;
+    top: 0;
+    left: 0;            
+}
