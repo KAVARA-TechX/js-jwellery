@@ -160,9 +160,9 @@ return (
 						  </div>
 					  </div>
 				  </li>
-				  <li class="nav-item"><Link class="nav-link" to="/shop"> <span>SOLITAIRES</span> </Link></li>
-				  <li class="nav-item"><Link class="nav-link" to="/"> <span>COINS</span> </Link></li>
-				  <li class="nav-item"><Link class="nav-link" to="/"> <span>COLLECTIONS</span> </Link></li>
+				  <li class="nav-item"><Link class="nav-link" to="/shop/solitaires"> <span>SOLITAIRES</span> </Link></li>
+				  <li class="nav-item"><Link class="nav-link" to="/shop/coins"> <span>COINS</span> </Link></li>
+				  <li class="nav-item"><Link class="nav-link" to="/shop/collections"> <span>COLLECTIONS</span> </Link></li>
 				  <li class="nav-item"> <Link class="nav-link" to="/education"><span>EDUCATION</span> </Link> </li>
 				  <li class="nav-item"><Link class="nav-link" to="/About-us"> <span>KNOW THE BRAND</span> </Link></li>
 				  {user && 
