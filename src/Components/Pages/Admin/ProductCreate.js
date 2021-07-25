@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AdminNav from "../../Nav/AdminNav";
 import { useSelector } from "react-redux";
-import ProductCreateForm from "../../Forms/ProductCreateForm";
 import {createProduct} from "../../functions/product";
 import {LoadingOutlined} from '@ant-design/icons';
-import { toast } from "react-toastify";
 import FileUpload from "../../Forms/FileUpload";
 const initialState = {
   title: "",

@@ -3,7 +3,6 @@ import AdminNav from "../../Nav/AdminNav";
 import { getProductByCount } from "../../functions/product";
 import AdminProductCard from "../../Cards/AdminProductCard";
 import { useSelector } from "react-redux";
-import { toast } from "react-toastify";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);

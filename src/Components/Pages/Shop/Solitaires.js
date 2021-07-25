@@ -3,7 +3,6 @@ import HeaderCard from '../../Cards/HeaderCard';
 import ProductCard from '../../Cards/ProductCard';
 import Nav from '../../Nav/Header';
 import ring from '../../../Images/pro08.jpg';
-import {Link} from 'react-router-dom';
 import { Pagination } from 'antd';
 const Solitaires = () =>{
     const [page,setPage] = useState(1);
@@ -18,9 +17,9 @@ const Solitaires = () =>{
                         <p className="dropdown-toggle solitaires1 pt-3" id="dropdownMenuButton" 
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">price</p>
                         <div class="dropdown-menu" style={{marginLeft:'20px',marginTop:'-15px'}} aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" >Action</a>
+                            <a class="dropdown-item" >Another action</a>
+                            <a class="dropdown-item" >Something else here</a>
                         </div>
                         </div>
                     </div>
@@ -29,9 +28,9 @@ const Solitaires = () =>{
                         <p className="dropdown-toggle solitaires2 pt-3" id="dropdownMenuButton" 
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">product type</p>
                         <div class="dropdown-menu" style={{marginLeft:'20px',marginTop:'-15px'}} aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" >Action</a>
+                            <a class="dropdown-item" >Another action</a>
+                            <a class="dropdown-item" >Something else here</a>
                         </div>
                         </div>
                     </div>
@@ -40,9 +39,9 @@ const Solitaires = () =>{
                         <p className="dropdown-toggle solitaires pt-3" id="dropdownMenuButton" 
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weight Ranges</p>
                         <div class="dropdown-menu" style={{marginLeft:'20px',marginTop:'-15px'}} aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" >Action</a>
+                            <a class="dropdown-item" >Another action</a>
+                            <a class="dropdown-item" >Something else here</a>
                         </div>
                         </div>
                     </div>
@@ -51,9 +50,9 @@ const Solitaires = () =>{
                         <p className="dropdown-toggle solitaires3 pt-3" id="dropdownMenuButton" 
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Matarial</p>
                         <div class="dropdown-menu" style={{marginLeft:'20px',marginTop:'-15px'}} aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" >Action</a>
+                            <a class="dropdown-item" >Another action</a>
+                            <a class="dropdown-item" >Something else here</a>
                         </div>
                         </div>
                     </div>
@@ -62,9 +61,9 @@ const Solitaires = () =>{
                         <p className="dropdown-toggle solitaires4 pt-3" id="dropdownMenuButton" 
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Metal</p>
                         <div class="dropdown-menu" style={{marginLeft:'20px',marginTop:'-15px'}} aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" >Action</a>
+                            <a class="dropdown-item" >Another action</a>
+                            <a class="dropdown-item" >Something else here</a>
                         </div>
                         </div>
                     </div>
@@ -73,9 +72,9 @@ const Solitaires = () =>{
                         <p className="dropdown-toggle solitaires pt-3" id="dropdownMenuButton" 
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">See More Filters</p>
                         <div class="dropdown-menu" style={{marginLeft:'20px',marginTop:'-15px'}} aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" >Action</a>
+                            <a class="dropdown-item" >Another action</a>
+                            <a class="dropdown-item" >Something else here</a>
                         </div>
                         </div>
                     </div>

@@ -47,3 +47,7 @@ export const createCoupon = async(percentage,description,code,authtoken) =>{
     }
     );
 };
+
+export const getCouponsByCount = async(count)=>{
+    return await axios.get(`http://localhost:8000/api/coupons/${count}`);
+}

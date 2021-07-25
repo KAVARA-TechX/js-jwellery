@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import {Link} from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Dlogo from "../../Images/logo.png";
@@ -6,14 +6,23 @@ import mlogo from "../../Images/favicon.png";
 import {SearchOutlined,
     ShoppingCartOutlined,HeartOutlined,ClockCircleOutlined} from '@ant-design/icons';
 import {Badge,Input} from 'antd';
+import { getCouponsByCount } from '../functions/auth';
 const HeaderCard = () =>{
     const {user} = useSelector((state)=>({...state}));
+
+    const [description,setDescription] = useState("");
+    
+    useEffect(()=>{
+        getCouponsByCount(1).then((res)=>{
+            setDescription(res.data[0].description);
+        }).catch(err=>console.log(err));
+    },[]);
     return(
         <div>
             <div className="container-fluid mHide">
             <div className="row pt-3 pb-3 header-card">
                 <div className="tc col-md-4">Free shipping all over india</div>
-                <div className="tc col-md-3">6% off Use Code 30OFF, Ends in EXPIRED</div>
+                <div className="tc col-md-3">{description}</div>
                 <div className="tc col-md-5"><Link to="/virtual-consultation"><span>Book your consultation</span></Link> 
                     {user ? ` Hello ${user.email}`
                     :  <span><span className="ml-3">|</span><Link to="/login" className="ml-3 mr-3"><span>Login</span></Link>

@@ -16,8 +16,8 @@ const TopProduct = () =>{
         <div className="container top-product">
         <div className="row">
           <div className="col-sm-3 ">
-            <div className="card ml-3 products-center top-product-card" >
-              <div className="card-body products-center">
+            <div className="card ml-3  top-product-card" >
+              <div className="card-body ">
                 <img src={product1} alt="tran" className="p-1">
                 </img>
               </div>
@@ -70,9 +70,9 @@ const TopProduct = () =>{
         <div className="container top-product">
         <div className="row">
           <div className="col-sm-3 ">
-            <div className="card ml-3 products-center top-product-card" >
-              <div className="card-body products-center">
-                <img src={product8} alt="tran" className="p-1">
+            <div className="card ml-3  top-product-card" >
+              <div className="card-body ">
+                <img src={product5} alt="tran" className="p-1">
                 </img>
               </div>
             </div>
@@ -84,7 +84,7 @@ const TopProduct = () =>{
           <div className="col-sm-3 mHide">
             <div className="card ml-3 top-product-card">
               <div className="card-body">
-                <img src={product6} alt="tran" className="p-1">
+                <img src={product5} alt="tran" className="p-1">
                 </img>
               </div>
             </div>
@@ -96,7 +96,7 @@ const TopProduct = () =>{
           <div className="col-sm-3 mHide">
             <div className="card ml-3 top-product-card">
               <div className="card-body">
-                <img src={product7} alt="tran" className="p-1">
+                <img src={product5} alt="tran" className="p-1">
                 </img>
               </div>
             </div>
@@ -108,7 +108,7 @@ const TopProduct = () =>{
           <div className="col-sm-3 mHide">
             <div className="card ml-3 top-product-card">
               <div className="card-body">
-                <img src={product8} alt="tran" className="p-1">
+                <img src={product5} alt="tran" className="p-1">
                 </img>
               </div>
             </div>

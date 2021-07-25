@@ -4,6 +4,8 @@ import {useSelector } from "react-redux";
 import {toast} from 'react-toastify';
 import Nav from '../../Nav/Header';
 import HeaderCard from '../../Cards/HeaderCard';
+import register from "../../../Images/lookbok.jpg";
+
 const Register = ({history}) => {
     const [email,setEmail] = useState("");
 
@@ -48,7 +50,10 @@ return (
       <Nav/>
       <div  className="container-fluid">
       <div className="row">
-        <div className="col-md-6 offset-md-3">
+        <div className="col-md-6">
+          <img src={register} height="400px" className="w-100" alt="Register"/>
+        </div>
+        <div className="col-md-6">
         <h4>Register</h4>
         {registerForm()}
         </div>

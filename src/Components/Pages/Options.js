@@ -1,9 +1,7 @@
 import React from 'react';
 import Invest from "../../Images/investwithus.jpg";
 import Track from "../../Images/trackdiamond.jpg";
-const style={
-    
-}
+
 const Options = () =>{
     return(
         <div className="container-fluid  mt-5 mb-5 pt-3" style={{backgroundColor:'#114063'}}>

@@ -1,10 +1,8 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import HeaderCard from '../Cards/HeaderCard';
 import Nav from '../Nav/Header';
-import {useSelector} from 'react-redux';
 import {Link}from 'react-router-dom';
 const UserDashboard = ({history}) =>{
-    const {user} = useSelector((state)=> ({...state}));
 
     // useEffect(()=>{
     //     if(!user){

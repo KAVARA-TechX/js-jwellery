@@ -15,7 +15,7 @@ const AboutUs = () =>{
             </div>
             <p>THIS SECTION WILL CONTAIN INFORMATION ABOUT JS SOLITAIRE</p>
             <br/>
-            <iframe src="https://www.youtube.com/embed/tZFXPnyh2VQ" className="w-100"/>
+            <iframe title="information" src="https://www.youtube.com/embed/tZFXPnyh2VQ" className="w-100"/>
             <br/>
             <p>THIS WILL CONTAIN OTHER INFO</p>
         </div>

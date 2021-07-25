@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { createCoupon } from "../../functions/auth";
 import AdminNav from "../../Nav/AdminNav";
 import { useSelector } from "react-redux";

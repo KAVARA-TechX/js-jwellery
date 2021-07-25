@@ -1,13 +1,12 @@
 import React, { useState,useEffect } from "react";
 import { auth,googleAuthProvider } from "../../../firebase";
 import { Button } from "antd";
-import axios from 'axios';
 import { useDispatch,useSelector } from "react-redux";
-import { GoogleOutlined } from "@ant-design/icons";
+import login from "../../../Images/feedbackuser3.jpg";
 import {createOrUpdateUser} from "../../functions/auth";
 import Nav from '../../Nav/Header';
 import HeaderCard from '../../Cards/HeaderCard';
-
+import {Link} from 'react-router-dom';
 
 const Login = ({ history }) => {
   const [email, setEmail] = useState("");
@@ -138,20 +137,17 @@ const Login = ({ history }) => {
       <Nav/>
       <div  className="container-fluid">
       <div className="row">
-        <div className="col-md-6 offset-md-3">
-          <h4>Login</h4>
+      <div className="col-md-6">
+          <img src={login} alt="Login"/>
+        </div>
+        <div className="col-md-6">
+          {loading ? <h4 className="text-danger">Loading</h4>: <h4>Login</h4>}
           {loginForm()}
-          <Button
-            onClick={googleLogin}
-            type="danger"
-            className="mb-3"
-            block
-            shape="round"
-            icon={<GoogleOutlined />}
-            size="large"
-          >
-            Login with Google
-          </Button>
+            <i class="fab fa-google" onClick={googleLogin} 
+            style={{color:"#fff",backgroundColor:'red',padding:'8px',borderRadius:'25px',fontSize:'20px',cursor:'pointer'}}></i>
+            <i class="fab fa-facebook-f ml-2" onClick={googleLogin} 
+            style={{color:"#fff",backgroundColor:'blue',padding:'7px 10px',borderRadius:'25px',fontSize:'20px',cursor:'pointer'}}></i>
+            <Link to="/password-reset" className="ml-4" style={{textDecoration: 'underline'}}>Forgot password?</Link>
         </div>
       </div>
       </div>
