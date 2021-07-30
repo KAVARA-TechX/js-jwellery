@@ -2,12 +2,12 @@ import React from "react";
 import Nav from '../Nav/Header';
 import HeaderCard from './HeaderCard';
 import { Tabs } from "antd";
-import product from '../../Images/perfactRing.jpg';
+import productImg from '../../Images/perfactRing.jpg';
 import { ShareAltOutlined,HeartOutlined } from "@ant-design/icons";
 import TopProduct from "./TopProductCard";
 import StarRating from "react-star-ratings";
 const {TabPane} = Tabs;
-const SingleProductCard = () =>{
+const SingleProductCard = ({product}) =>{
     
     return(
         <div>
@@ -16,10 +16,10 @@ const SingleProductCard = () =>{
             <div className="container mt-5 mb-5">
                     <div className="row">       
                         <div className="col-md-6" >
-                            <img src={product} alt="Single Product" width="350" height="450"/>
+                            <img src={productImg} alt="Single Product" width="350" height="450"/>
                         </div>
                         <div className="col-md-6" >
-                           <h5>ROSE GOLD DIAMOND RING PAIR </h5>
+                           <h5>{product.title}</h5>
                            <StarRating
                     rating={4.3}
                     starRatedColor = "red"
@@ -28,10 +28,10 @@ const SingleProductCard = () =>{
                     ediiting={false}
                     />(4)
                     <br/>
-                           <h5><b>PRICE &#x20B9; 12924.90</b></h5>
+                           <h5><b>PRICE &#x20B9; {product.price}</b></h5>
                            <span>(Incl. all taxces) <a href="#details">price breakUp</a></span>
                            <p>*Weight and Price may vary subject to the stock available.</p>
-                           <p>18 Karat Yellow Gold Pendant with an Emerald and Uncut Diamonds
+                           <p>{product.description}
                             <HeartOutlined className="float-right" 
                             style={{fontSize:'24px'}}/>
                             <ShareAltOutlined className="float-right" 

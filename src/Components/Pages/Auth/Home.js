@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from "react";
 
-import TopProduct from '../../Cards/TopProductCard';
+import TopProductCard from '../../Cards/TopProductCard';
 import BootStrapCarsoul from "../../Carasoul/BootStrapCarsoul";
 // import Pjwellery from "../../PersonalizedJwellery/Pjwellery";
 import SolitaireProcess from "../../Pages/SolitaireProcess"; 
@@ -15,7 +15,7 @@ import OfferBanner from '../../Cards/OfferBanner';
 import HeaderCard from '../../Cards/HeaderCard';
 
 import Nav from "../../Nav/Header";
-import { getCouponsByCount } from "../../functions/auth";
+import { getProductByCount } from "../../functions/product";
 
 const Home = () =>{
     
@@ -27,7 +27,7 @@ const Home = () =>{
     <Nav  />
       <BootStrapCarsoul/>
       <h3 className="text-center ">Top products</h3>
-      <TopProduct />
+      <TopProductCard/>
       <Covered/>
       <SolitaireProcess/>
       <OfferBanner/>

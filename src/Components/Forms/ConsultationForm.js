@@ -1,16 +1,20 @@
 import React,{useState} from 'react';
+import {createConsulatation} from '../functions/auth';
+import {toast} from 'react-toastify';
 const ConsultationForm = () =>{
     const [name,setName] = useState("");
     const [email,setEmail] = useState("");
     const [phone,setPhone] = useState();
     const handleSubmit = (e) => {
-        e.preventDefault();   
+        // e.preventDefault();   
         if(name === "" || email === "" || phone === 0 ){
-                alert("All fields are required");
+                toast.error("All fields are required");
             }else{
-        console.log(name);
-        console.log(email);
-        console.log(phone);
+              createConsulatation(name,email,phone).then(res =>{
+                toast.success("Your Query has been submitted we will connect with you soon.");
+              }).catch(error => {
+                console.log(error);
+              });
             }
     }
     return(

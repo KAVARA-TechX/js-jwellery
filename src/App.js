@@ -45,6 +45,7 @@ import Coins from './Components/Pages/Shop/Coins';
 import Collections from './Components/Pages/Shop/Collections';
 import Solitaires from './Components/Pages/Shop/Solitaires';
 import UserDashboard from './Components/Pages/UserDashboard';
+import Product from './Components/Pages/Product';
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -79,6 +80,7 @@ const App = ({history}) => {
     <Switch>
       {/* Auth Routes */}
       <Route exact path="/" component={Home}/>
+      <Route exact path="/product/:slug" component={Product}/>
       <Route exact path="/login" component={Login}/>
       <Route  exact path="/register" component={Register}/>
       <Route  exact path="/register/complete" component={RegisterComplete}/>
