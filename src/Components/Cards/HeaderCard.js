@@ -8,7 +8,7 @@ import {SearchOutlined,
 import {Badge,Input} from 'antd';
 import { getCouponsByCount } from '../functions/auth';
 const HeaderCard = () =>{
-    const {user} = useSelector((state)=>({...state}));
+    const {user,cart} = useSelector((state)=>({...state}));
 
     const [description,setDescription] = useState("");
     
@@ -57,7 +57,7 @@ const HeaderCard = () =>{
                     <Link to="/wishlist" className="ml-3 mr-3"><span className="mr-3">|</span><HeartOutlined 
                     style={{fontSize: '22px'}}/></Link>
                     | <Link to="/cart" className="ml-3"><Badge 
-                    count={0} 
+                    count={cart.length} 
                     showZero 
                     offset={[9,2]}
                         style={{

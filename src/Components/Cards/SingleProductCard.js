@@ -1,14 +1,49 @@
-import React from "react";
+import React, {useState} from "react";
 import Nav from '../Nav/Header';
 import HeaderCard from './HeaderCard';
-import { Tabs } from "antd";
+import { Tabs,Tooltip } from "antd";
 import productImg from '../../Images/perfactRing.jpg';
 import { ShareAltOutlined,HeartOutlined } from "@ant-design/icons";
 import TopProduct from "./TopProductCard";
 import StarRating from "react-star-ratings";
+import _ from 'lodash';
+import {toast} from "react-toastify";
+import {useSelector,useDispatch} from 'react-redux';
 const {TabPane} = Tabs;
 const SingleProductCard = ({product}) =>{
-    
+    const [tooltip,setTooltip] = useState("Click to add");
+    const dispatch = useDispatch();
+
+    const {user,cart} = useSelector((state)=> ({...state}));
+    const handleCart = () =>{
+        //create Cart array
+        let cart = [];
+        if(typeof window != undefined){
+            //if cart is in localStorage GET it
+            if(localStorage.getItem('cart')){
+                cart = JSON.parse(localStorage.getItem('cart'));
+            }
+            //push new product to cart
+            cart.push({
+                ...product,
+                count: 1,
+            });
+            //removing duplicates using lodash functions
+            let unique = _.uniqWith(cart,_.isEqual);
+            //save to local storage
+            localStorage.setItem('cart',JSON.stringify(unique));
+            toast.success("Successfully Added to your cart");
+            //show tooltip
+            setTooltip("Added");
+
+
+            //Add to redux
+            dispatch({
+                type:"ADD_TO_CART",
+                payload:unique,
+            })
+        }
+    }
     return(
         <div>
             <HeaderCard/>
@@ -50,7 +85,8 @@ const SingleProductCard = ({product}) =>{
                                    <button className="button">BuyNow</button>
                                </div>
                                <div className="col-md-6 col-sm-6">
-                               <button className="button">Add To Cart</button>
+                               {/* <Tooltip title={tooltip}><button className="button" onClick={handleCart}>Add To Cart</button></Tooltip> */}
+                               <button className="button" onClick={handleCart}>Add To Cart</button>
                                </div>
                                {/* <RatingModal>
                             <StarRating 

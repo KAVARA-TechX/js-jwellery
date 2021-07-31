@@ -7,7 +7,7 @@ import {createOrUpdateUser} from "../../functions/auth";
 import Nav from '../../Nav/Header';
 import HeaderCard from '../../Cards/HeaderCard';
 import {Link} from 'react-router-dom';
-
+import {toast} from 'react-toastify';
 const Login = ({ history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,52 +16,62 @@ const Login = ({ history }) => {
   const { user } = useSelector((state) => ({ ...state }));
 
   useEffect(() => {
-    if (user && user.token){
-      if(user.role === "admin"){
-        history.push("/admin/dashboard");
-      }else{
-        history.push("/");
-      }
+    let intended = history.location.state;
+    if(intended){ return;}else{
+
+        if (user && user.token) history.push("/");
     }
-  }, [user]);
+  }, [user, history]);
 
-  const dispatch = useDispatch();
+  let dispatch = useDispatch();
 
-  
-
+  const roleBasedRedirect = (res) => {
+      //check for intended redirect
+      let intended = history.location.state;
+      console.log("Location :-  ",intended.from);
+      if(intended){
+        history.push(intended.from);
+      }else{
+        if (res.data.role === "admin") {
+            history.push("/admin/dashboard");
+          } else {
+            history.push("/user/history");
+          }
+      }
+  };
 
   const handleSubmit = async (e) => {
-    setLoading(true);
     e.preventDefault();
+    setLoading(true);
     // console.table(email, password);
     try {
-        const result = await auth.signInWithEmailAndPassword(email, password);
-        // console.log(result);
-        const { user } = result;
-        const idTokenResult = await user.getIdTokenResult();
-  
-        createOrUpdateUser(idTokenResult.token)
-        .then((res)=>{
-            dispatch({
-              type: "LOGGED_IN_USER",
-              payload: {
-                name:res.data.name,
-                email: res.data.email,
-                token: idTokenResult.token,
-                role:res.data.role,
-                _id:res.data._id,
-              },
-            });
-          }
-        )
-        .catch((err)=>console.log(err));
+      const result = await auth.signInWithEmailAndPassword(email, password);
+      // console.log(result);
+      const { user } = result;
+      const idTokenResult = await user.getIdTokenResult();
 
-        
-        // history.push("/js-jwellery");
-      } catch (error) {
-        console.log(error);
-        setLoading(false);
-      }
+      createOrUpdateUser(idTokenResult.token)
+        .then((res) => {
+          dispatch({
+            type: "LOGGED_IN_USER",
+            payload: {
+              name: res.data.name,
+              email: res.data.email,
+              token: idTokenResult.token,
+              role: res.data.role,
+              _id: res.data._id,
+            },
+          });
+          roleBasedRedirect(res);
+        })
+        .catch((err) => console.log(err));
+
+      // history.push("/");
+    } catch (error) {
+      console.log(error);
+      toast.error(error.message);
+      setLoading(false);
+    }
   };
 
   const googleLogin = async () => {
@@ -70,26 +80,26 @@ const Login = ({ history }) => {
       .then(async (result) => {
         const { user } = result;
         const idTokenResult = await user.getIdTokenResult();
-        
         createOrUpdateUser(idTokenResult.token)
-        .then((res)=>{
+          .then((res) => {
             dispatch({
               type: "LOGGED_IN_USER",
               payload: {
-                name:res.data.name,
+                name: res.data.name,
                 email: res.data.email,
                 token: idTokenResult.token,
-                role:res.data.role,
-                _id:res.data._id,
+                role: res.data.role,
+                _id: res.data._id,
               },
             });
-          }
-        )
-        .catch();
-        // history.push("/js-jwellery");
+            roleBasedRedirect(res);
+          })
+          .catch((err) => console.log(err));
+        // history.push("/");
       })
       .catch((err) => {
         console.log(err);
+        toast.error(err.message);
       });
   };
 
