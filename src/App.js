@@ -40,6 +40,7 @@ import SingleProductCard from "./Components/Cards/SingleProductCard";
 import Cart from './Components/Pages/Cart';
 import AboutUs from './Components/Pages/AboutUs';
 import WishList from './Components/Pages/Wishlist';
+import RecentView from './Components/Pages/RecentView';
 import Shop from './Components/Pages/Shop/Shop';
 import Coins from './Components/Pages/Shop/Coins';
 import Collections from './Components/Pages/Shop/Collections';
@@ -124,6 +125,7 @@ const App = ({history}) => {
       <Route exact path="/cart" component={Cart}/>
       <Route exact path="/wishlist" component={WishList}/>
       <Route exact path="/About-us" component={AboutUs}/>
+      <Route exact path="/Recently-Viewed" component={RecentView}/>
 
       {/* Others */}
       <Route exact path="/virtual-consultation" component={VirtualConsultation}/>

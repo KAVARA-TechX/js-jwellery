@@ -50,7 +50,7 @@ return (
 									  <div className="col-lg-6">
 									  <ul className="list-unstyled nav-lis">
 										  <div className="Drop-Down-Cate">
-										  <li><Link to="/shop/single-product" className=""><span><img src={Ring} alt="JS SOLITAIRE" style={{width:'30%'}} />Ring</span></Link></li>
+										  <li><Link to="/shop" className=""><span><img src={Ring} alt="JS SOLITAIRE" style={{width:'30%'}} />Ring</span></Link></li>
 										  </div>
 										  <div className="Drop-Down-Cate">
 										  <li><Link to="/" className=""><span><img src={Ring} alt="JS SOLITAIRE" style={{width:'30%'}} />Bracelet</span></Link></li>

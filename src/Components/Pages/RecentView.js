@@ -2,12 +2,12 @@ import React from 'react';
 import HeaderCard from '../Cards/HeaderCard';
 import Nav from '../Nav/Header';
 import ring from '../../Images/diamond-ring3.png';
-const WishList = () =>{
+const RecentView = () =>{
     return(
         <div>
             <HeaderCard/>
             <Nav/>
-            <p className="text-center pt-3 fs-3 fw-bold">Your Wishlist</p>
+            <p className="text-center pt-3 fs-3 fw-bold">Recently Viewed</p>
             <br/>
             <div className="container">
                 <div className="row">
@@ -53,4 +53,4 @@ const WishList = () =>{
     );
 }
 
-export default WishList;
+export default RecentView;
