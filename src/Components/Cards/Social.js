@@ -12,7 +12,7 @@ const Social=()=>{
                 <div className="col-sm-4 leftt mt-3 d-flex justify-content-center">
                 <iframe 
                 title="Facebook"
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=3910545909068222" 
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FJSSolitaire&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=3910545909068222" 
               scrolling="no" 
               frameBorder="0" 
               allowFullScreen={true} 

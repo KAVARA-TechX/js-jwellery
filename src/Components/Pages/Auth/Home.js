@@ -21,7 +21,6 @@ const Home = () =>{
     
     return(
         <div>
-        
     <HeaderCard/>
     
     <Nav  />

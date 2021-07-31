@@ -145,7 +145,7 @@ const Login = ({ history }) => {
     <div>
       <HeaderCard/>
       <Nav/>
-      <div  className="container-fluid">
+      <div  className="container-fluid mt-5 mb-5 pt-5 pb-5">
       <div className="row">
       <div className="col-md-6">
           <img src={login} alt="Login"/>

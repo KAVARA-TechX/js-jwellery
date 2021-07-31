@@ -3,8 +3,8 @@ import { Menu,Checkbox,Pagination } from "antd";
 import HeaderCard from '../../Cards/HeaderCard';
 import Nav from '../../Nav/Header';
 import SubMenu from 'antd/lib/menu/SubMenu';
-import ProductCard from '../../Cards/ProductCard';
-import ring from '../../../Images/goldring3.png';
+import CoinProductCard from '../../Cards/CoinProductCard';
+import coin from '../../../Images/GoldCoin.jpg';
 import {Link} from 'react-router-dom';
 const Coins = ()=>{
     const [page,setPage] = useState(1);
@@ -285,13 +285,13 @@ const Coins = ()=>{
                     <div className="col-md-9">
                     <div className="row">
                         <div className="col-md-4">
-                        <ProductCard ring={ring}/>
+                        <CoinProductCard coin={coin}/>
                         </div>
                         <div className="col-md-4">
-                        <ProductCard ring={ring}/>
+                        <CoinProductCard coin={coin}/>
                         </div>
                         <div className="col-md-4">
-                        <ProductCard ring={ring}/>
+                        <CoinProductCard coin={coin}/>
                         </div>
                     </div>
                     <br/><br/>

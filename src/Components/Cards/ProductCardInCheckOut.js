@@ -3,7 +3,7 @@ import ProductImage from '../../Images/perfactRing.jpg';
 import PinCodeModal from '../Modal/PinCodeModal';
 
 
-const ProductCardInCheckOut = ({p}) =>{
+const ProductCardInCheckOut = ({product}) =>{
     return(
         <div class="card cart-card">
                         <img src={ProductImage}

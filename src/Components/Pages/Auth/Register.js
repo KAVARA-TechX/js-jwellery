@@ -48,7 +48,7 @@ return (
     <div>
       <HeaderCard/>
       <Nav/>
-      <div  className="container-fluid">
+      <div  className="container-fluid mt-5 mb-5 pt-5 pb-5">
       <div className="row">
         <div className="col-md-6">
           <img src={register} height="400px" className="w-100" alt="Register"/>
