@@ -8,9 +8,9 @@ export const createProduct =async (product,authtoken)=>{
     });
 }
 export const getSingleProduct = async (slug)=>{
-    return await axios.get(`http://localhost:8000/api/product/${slug}`);
+    return await axios.get(`https://js-solitaire.herokuapp.com//api/product/${slug}`);
 }
 
 export const getProductByCount =async (count)=>{
-    return await axios.get(`https://js-solitaire.herokuapp.com/api/product/${count}`);
+    return await axios.get(`https://js-solitaire.herokuapp.com/api/products/${count}`);
 }

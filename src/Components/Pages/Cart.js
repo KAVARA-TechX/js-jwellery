@@ -12,10 +12,10 @@ const Cart = () =>{
     var total = 0;
     var gst = 1892.00;
     var saved = 2104;
-
+    var totalItems=0;
     const saveOrderToDb = () =>{
-
     }
+    
 
     return(
         <div>
@@ -27,14 +27,16 @@ const Cart = () =>{
                 <div className="row"> 
                       
                 <div className="col-lg-7" >
-                    <p>Total({cart.length} item): &#x20B9; {cart.map((c,i)=>{
+                    <p>{cart.map((p)=>{
+                        totalItems += parseInt(p.count);
+                    })}Total( {totalItems} item): &#x20B9; {cart.map((c,i)=>{
                         total += (c.count * c.price)
                         })} 
                         {total}
                     </p>
                     {cart.map((product)=>
                 (
-				<ProductCardInCheckOut key={product._id} product={product} />
+				<ProductCardInCheckOut key={product._id} p={product} />
 				))}
                 </div>
                 <div className="col-lg-1"></div>
@@ -46,17 +48,17 @@ const Cart = () =>{
                     <br/>
                     <p><b>Order Summary</b></p>
                     <div className="card">
-                        <span style={{paddingLeft:'10px',paddingRight:'10px',paddingTop:'10px'}}>Subtotal<p className="float-right">₹{total}</p></span>
+                        <span style={{paddingLeft:'10px',paddingRight:'10px',paddingTop:'10px'}}>Subtotal<p className="float-right">₹{cart.length ? total : ""}</p></span>
                         <span style={{paddingLeft:'10px',paddingRight:'10px'}}>Coupon Discount<p className="float-right">Apply Coupon</p></span>
-                        <span style={{paddingLeft:'10px',paddingRight:'10px'}}>You Saved<p className="float-right">₹{saved}</p></span>
+                        <span style={{paddingLeft:'10px',paddingRight:'10px'}}>You Saved<p className="float-right">₹{cart.length? saved : ""}</p></span>
                         <span style={{paddingLeft:'10px',paddingRight:'10px'}}>Delivery Charge (Standard)<p className="float-right">FREE</p></span>
-                        <span style={{paddingLeft:'10px',paddingRight:'10px'}}>GST<p className="float-right">₹{gst}</p></span>
-                        <span style={{paddingLeft:'10px',paddingRight:'10px'}}><b>Total Cost</b><p className="float-right"><b>₹{total + gst - saved}</b></p></span>
+                        <span style={{paddingLeft:'10px',paddingRight:'10px'}}>GST<p className="float-right">₹{cart.length? gst : ""}</p></span>
+                        <span style={{paddingLeft:'10px',paddingRight:'10px'}}><b>Total Cost</b><p className="float-right"><b>₹{cart.length? total + gst - saved : ""}</b></p></span>
                     </div>
                     <br/>
                     {
                         user ? <button className="button btn-block" onClick={saveOrderToDb} disabled={!cart.length}>Checkout Securely</button>
-                            :<button className="button btn-block"><Link  to={{
+                            :<button className="button btn-block"><Link style={{color:'white'}} to={{
                                 pathname: '/login',
                                 state: {from: 'cart'},
                             }}

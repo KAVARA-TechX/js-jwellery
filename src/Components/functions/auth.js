@@ -49,13 +49,21 @@ export const createCoupon = async(percentage,description,code,authtoken) =>{
 };
 
 export const getCouponsByCount = async(count)=>{
-    return await axios.get(`http://localhost:8000/api/coupons/${count}`);
+    return await axios.get(`https://js-solitaire.herokuapp.com/api/coupons/${count}`);
 }
 
 export const createConsulatation = async(name,email,phone)=>{
-    return await axios.post(`http://localhost:8000/api/consult`,{name,email,phone});
+    return await axios.post(`https://js-solitaire.herokuapp.com/api/consult`,{name,email,phone});
 }
 
 export const createQuery = async(name,email,phone,purpose_of_enquiry,description)=>{
-    return await axios.post(`http://localhost:8000/api/query`,{name,email,phone,purpose_of_enquiry,description});
+    return await axios.post(`https://js-solitaire.herokuapp.com/api/query`,{name,email,phone,purpose_of_enquiry,description});
 }
+
+export const getConsultation = async(count)=>{
+    return await axios.get(`https://js-solitaire.herokuapp.com/api/consult/${count}`);
+} 
+
+export const getQuery = async(count)=>{
+    return await axios.get(`http://localhost:8000/api/query/${count}`);
+} 

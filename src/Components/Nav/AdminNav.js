@@ -22,10 +22,11 @@ const AdminNav = () =>{
             <div class="sidebar-heading ">Admin</div>
             <div class="list-group list-group-flush">
                 <Link to="/admin/dashboard" class="list-group-item list-group-item-action list-group-item-light p-3">User Orders</Link>
-                <Link to="/admin/product" class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Create Product</Link>
-                <Link to="/admin/products" class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">All Products</Link>
-                <Link to="/admin/dashboard" class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">User Queries</Link>
-                <Link to="/admin/coupon" class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Create Offer</Link>
+                <Link to="/admin/product" class="list-group-item list-group-item-action list-group-item-light p-3" >Create Product</Link>
+                <Link to="/admin/products" class="list-group-item list-group-item-action list-group-item-light p-3" >All Products</Link>
+                <Link to="/admin/query" class="list-group-item list-group-item-action list-group-item-light p-3" >User Queries</Link>
+                <Link to="/admin/consultation" class="list-group-item list-group-item-action list-group-item-light p-3" >Consultation</Link>
+                <Link to="/admin/coupon" class="list-group-item list-group-item-action list-group-item-light p-3" >Create Offer</Link>
                 <Link class="list-group-item list-group-item-action list-group-item-light p-3" onClick={logOut}>Logout</Link>
             </div>
         </div>

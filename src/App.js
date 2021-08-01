@@ -47,6 +47,8 @@ import Collections from './Components/Pages/Shop/Collections';
 import Solitaires from './Components/Pages/Shop/Solitaires';
 import UserDashboard from './Components/Pages/UserDashboard';
 import Product from './Components/Pages/Product';
+import Query from './Components/Pages/Admin/Query';
+import Consultation from './Components/Pages/Admin/Consultation';
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -119,6 +121,8 @@ const App = ({history}) => {
       <AdminRoute exact path="/admin/product" component={ProductCreate}/>
       <AdminRoute exact path="/admin/products" component={AllProducts}/>
       <AdminRoute exact path="/admin/coupon" component={Coupon}/>
+      <AdminRoute exact path="/admin/query" component={Query}/>
+      <AdminRoute exact path="/admin/consultation" component={Consultation}/>
 
       {/* User Routes */}
       <Route exact path="/user/dashboard" component={UserDashboard} />

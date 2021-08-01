@@ -139,7 +139,7 @@ button {
 
 
 .button a:hover{
-    color: #364993;
+    color: #364993 !important;
 }
 
 .button:hover {
