@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import Nav from '../../Nav/Header';
 import HeaderCard from '../../Cards/HeaderCard';
 import ProductCard from '../../Cards/ProductCard';
-import ring from '../../../Images/goldring3.png';
-import { Pagination } from 'antd';
+import ring from '../../../Images/Collection.jpg';
+import { Checkbox,Menu, Pagination } from 'antd';
+import {Link} from "react-router-dom";
+const {SubMenu} = Menu;
 const Collections = () =>{
     const [page,setPage] = useState(1);
 
@@ -14,18 +16,70 @@ const Collections = () =>{
             <div className="container-fluid mt-5">
                 <div className="row">
                     <div className="col-md-3">
-                        <h5>Choose A Collection</h5>
+                        <h5>Filter</h5>
+                        <Menu mode="inline">
+                            <SubMenu key="1" title="Choose A Collection">
+                            <Checkbox
+                        value="Aveer"
+                        name="Aveer"
+                        >Aveer
+                        </Checkbox>
+                        <br/>
+                        <Checkbox
+                        value="Aveer"
+                        name="Aveer"
+                        >Ekatvam
+                        </Checkbox>
+                        <br/>
+                        <Checkbox
+                        value="Aveer"
+                        name="Aveer"
+                        >Virasat
+                        </Checkbox>
+                        <br/>
+                        <Checkbox
+                        value="Aveer"
+                        name="Aveer"
+                        >Ahalya
+                        </Checkbox>
+                        <br/>
+                        <Checkbox
+                        value="Aveer"
+                        name="Aveer"
+                        >Padmavat
+                        </Checkbox>
+                        <br/>
+                        <Checkbox
+                        value="Aveer"
+                        name="Aveer"
+                        >Preen
+                        </Checkbox>
+                        <br/>
+                        <Checkbox
+                        value="Aveer"
+                        name="Aveer"
+                        >Mirayah
+                        </Checkbox>
+                        <br/>
+                            </SubMenu>
+                        </Menu>
                     </div>
                     <div className="col-md-9">
                     <div className="row">
                         <div className="col-md-4">
-                        <ProductCard ring={ring}/>
+                            <Link to="/shop/collections/single-collection">
+                                <ProductCard ring={ring}/>
+                            </Link>
                         </div>
                         <div className="col-md-4">
-                        <ProductCard ring={ring}/>
+                        <Link to="/shop/collections/single-collection">
+                                <ProductCard ring={ring}/>
+                            </Link>
                         </div>
                         <div className="col-md-4">
-                        <ProductCard ring={ring}/>
+                        <Link to="/shop/collections/single-collection">
+                                <ProductCard ring={ring}/>
+                            </Link>
                         </div>
                     </div>
                     <br/><br/>

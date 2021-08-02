@@ -17,7 +17,7 @@ const FileUpload = ({ values, setValues, setLoading }) =>{
             for (let i = 0; i < files.length; i++) {
                 Resizer.imageFileResizer(files[i],720,720,'JPEG',100,0,
                 (url)=>{
-                    axios.post(`http://localhost:8000/api/uploadimages`,{image: url},{
+                    axios.post(`https://js-solitaire.herokuapp.com/api/uploadimages`,{image: url},{
                         headers:{
                             authtoken : user ? user.token : "",
                         }
@@ -44,7 +44,7 @@ const FileUpload = ({ values, setValues, setLoading }) =>{
 
     const handleRemove = (public_id) =>{
         setLoading(true);
-        axios.post(`http://localhost:8000/api/removeimage`,{public_id},{
+        axios.post(`https://js-solitaire.herokuapp.com/api/removeimage`,{public_id},{
             headers : {
                 authtoken: user ? user.token : "",
             }
@@ -66,9 +66,11 @@ const FileUpload = ({ values, setValues, setLoading }) =>{
         <div className="row">
         {values.images &&
           values.images.map((image) => (
-            <div className="col-sm-2">
-                <Badge count="x" 
+            <div 
             key={image.public_id}
+            
+            className="col-sm-2">
+                <Badge count="x" 
             onClick={() => handleRemove(image.public_id)}
             style={{cursor:'pointer'}}
             >

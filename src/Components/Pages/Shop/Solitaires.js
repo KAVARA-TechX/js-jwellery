@@ -424,13 +424,19 @@ const Solitaires = () =>{
                     <div className="col-md-9">
                         <div className="row">
                             <div className="col-md-4">
+                        <Link to="/shop/solitaires/single-Solitaire">
                         <ProductCard ring={ring}/>
+                        </Link>
                             </div>
                     <div className="col-md-4">
+                    <Link to="/shop/solitaires/single-Solitaire">
                         <ProductCard ring={ring}/>
+                        </Link>
                     </div>
                     <div className="col-md-4">
+                    <Link to="/shop/solitaires/single-Solitaire">
                         <ProductCard ring={ring}/>
+                        </Link>
                     </div>
                         </div>
                     </div>

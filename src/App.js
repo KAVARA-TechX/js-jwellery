@@ -49,6 +49,10 @@ import UserDashboard from './Components/Pages/UserDashboard';
 import Product from './Components/Pages/Product';
 import Query from './Components/Pages/Admin/Query';
 import Consultation from './Components/Pages/Admin/Consultation';
+import SingleCollections from './Components/Cards/SingleCollections';
+import SingleCoinsCard from './Components/Cards/SingleCoinsCard';
+import SingleRingsCard from './Components/Cards/SingleRingsCard';
+import SingleSolitaires from './Components/Cards/SingleSolitaires';
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -114,6 +118,10 @@ const App = ({history}) => {
       <Route exact path="/shop/collections" component={Collections}/>
       <Route exact path="/shop/solitaires" component={Solitaires}/>
       <Route exact path="/shop/single-product" component={SingleProductCard}/>
+      <Route exact path="/shop/collections/single-collection" component={SingleCollections}/>
+      <Route exact path="/shop/solitaires/single-Solitaire" component={SingleSolitaires}/>
+      <Route exact path="/shop/coins/single-coin" component={SingleCoinsCard}/>
+      <Route exact path="/shop/rings/single-ring" component={SingleRingsCard}/>
       
       {/* Admin Routes */}
       

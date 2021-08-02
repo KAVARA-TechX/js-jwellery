@@ -1121,13 +1121,19 @@ const Shop = () =>{
                 <div className="col-md-9">
                     <div className="row">
                         <div className="col-md-4">
-                        <ProductCard ring={ring}/>
+                        <Link to="/shop/rings/single-ring">
+                                <ProductCard ring={ring}/>
+                            </Link>
                         </div>
                         <div className="col-md-4">
-                        <ProductCard ring={ring}/>
+                        <Link to="/shop/rings/single-ring">
+                                <ProductCard ring={ring}/>
+                            </Link>
                         </div>
                         <div className="col-md-4">
-                        <ProductCard ring={ring}/>
+                        <Link to="/shop/rings/single-ring">
+                                <ProductCard ring={ring}/>
+                            </Link>
                         </div>
                     </div>
                     <br/><br/>

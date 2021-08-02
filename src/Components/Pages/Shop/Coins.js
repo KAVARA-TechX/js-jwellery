@@ -267,14 +267,6 @@ const Coins = ()=>{
                             onChange={handleMetal}
                             className="p-2 pl-4 pr-4"
                             name="product-metal"
-                            value="Platinum">
-                                Platinum
-                            </Checkbox>
-                            <br/>
-                            <Checkbox
-                            onChange={handleMetal}
-                            className="p-2 pl-4 pr-4"
-                            name="product-metal"
                             value="Silver">
                                 Silver
                             </Checkbox>
@@ -285,13 +277,19 @@ const Coins = ()=>{
                     <div className="col-md-9">
                     <div className="row">
                         <div className="col-md-4">
+                        <Link to="/shop/coins/single-coin">
                         <CoinProductCard coin={coin}/>
+                        </Link>
                         </div>
                         <div className="col-md-4">
+                        <Link to="/shop/coins/single-coin">
                         <CoinProductCard coin={coin}/>
+                        </Link>
                         </div>
                         <div className="col-md-4">
+                        <Link to="/shop/coins/single-coin">
                         <CoinProductCard coin={coin}/>
+                        </Link>
                         </div>
                     </div>
                     <br/><br/>

@@ -65,5 +65,5 @@ export const getConsultation = async(count)=>{
 } 
 
 export const getQuery = async(count)=>{
-    return await axios.get(`http://localhost:8000/api/query/${count}`);
+    return await axios.get(`https://js-solitaire.herokuapp.com/api/query/${count}`);
 } 
