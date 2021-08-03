@@ -8,7 +8,7 @@ const ReviewSlider = () =>{
             <Carousel.Item>
             <div className="d-flex justify-content-center">
                     <div className="card review-card ">
-                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" 
+                        <img  style={{width:'40%', height:'220px'}} src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" 
                         className="card-img-top rounded-circle" alt="..."/>
                         <div className="card-body">
                           <h5 className="card-title">Impeccable service from start to finish</h5>
@@ -22,7 +22,7 @@ const ReviewSlider = () =>{
             <Carousel.Item>
                 <div className="d-flex justify-content-center">
                     <div className="card review-card ">
-                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" 
+                        <img style={{width:'40%', height:'220px'}} src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" 
                         className="card-img-top rounded-circle" alt="..."/>
                         <div className="card-body">
                           <h5 className="card-title">Impeccable service from start to finish</h5>

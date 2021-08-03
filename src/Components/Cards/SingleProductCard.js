@@ -1,107 +1,132 @@
-import React, {useState} from "react";
-import Nav from '../Nav/Header';
-import HeaderCard from './HeaderCard';
-import { Tabs,Tooltip } from "antd";
-import productImg from '../../Images/perfactRing.jpg';
-import { ShareAltOutlined,HeartOutlined } from "@ant-design/icons";
-import TopProduct from "./TopProductCard";
+import React, { useState } from "react";
+import { Card, Tabs, Tooltip } from "antd";
+import { HeartOutlined, ShoppingCartOutlined,ShareAltOutlined } from "@ant-design/icons";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import _ from "lodash";
+import { useSelector, useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import { useHistory } from "react-router-dom";
 import StarRating from "react-star-ratings";
-import _ from 'lodash';
-import {toast} from "react-toastify";
-import {useSelector,useDispatch} from 'react-redux';
-const {TabPane} = Tabs;
-const SingleProductCard = ({product}) =>{
-    const [tooltip,setTooltip] = useState("Click to add");
-    const dispatch = useDispatch();
-
-    const {user,cart} = useSelector((state)=> ({...state}));
-    const handleCart = () =>{
-        //create Cart array
-        let cart = [];
-        if(typeof window != undefined){
-            //if cart is in localStorage GET it
-            if(localStorage.getItem('cart')){
-                cart = JSON.parse(localStorage.getItem('cart'));
-            }
-            //push new product to cart
-            cart.push({
-                ...product,
-                count: 1,
-            });
-            //removing duplicates using lodash functions
-            let unique = _.uniqWith(cart,_.isEqual);
-            //save to local storage
-            localStorage.setItem('cart',JSON.stringify(unique));
-            toast.success("Successfully Added to your cart");
-            //show tooltip
-            setTooltip("Added");
+import TopProductCard from "./TopProductCard";
+import HeaderCard from "./HeaderCard";
+import Header from "../Nav/Header";
 
 
-            //Add to redux
-            dispatch({
-                type:"ADD_TO_CART",
-                payload:unique,
-            })
-        }
+const { TabPane } = Tabs;
+
+// this is childrend component of Product page
+const SingleProductCard = ({ product, onStarClick, star }) => {
+  const [tooltip, setTooltip] = useState("Click to add");
+
+  // redux
+  const { user } = useSelector((state) => ({ ...state }));
+  const dispatch = useDispatch();
+  // router
+  let history = useHistory();
+
+  const { title, images, description, _id } = product;
+
+  const handleCart = () => {
+    // create cart array
+    let cart = [];
+    if (typeof window !== "undefined") {
+      // if cart is in local storage GET it
+      if (localStorage.getItem("cart")) {
+        cart = JSON.parse(localStorage.getItem("cart"));
+      }
+      // push new product to cart
+      cart.push({
+        ...product,
+        count: 1,
+      });
+      // remove duplicates
+      let unique = _.uniqWith(cart, _.isEqual);
+      // save to local storage
+      // console.log('unique', unique)
+      localStorage.setItem("cart", JSON.stringify(unique));
+      // show tooltip
+      setTooltip("Added");
+
+      // add to reeux state
+      dispatch({
+        type: "ADD_TO_CART",
+        payload: unique,
+      });
+      // show cart items in side drawer
+      dispatch({
+        type: "SET_VISIBLE",
+        payload: true,
+      });
     }
-    return(
-        <div>
-            <HeaderCard/>
-            <Nav/>
-            <div className="container mt-5 mb-5">
-                    <div className="row">       
-                        <div className="col-md-6" >
-                            <img src={productImg} alt="Single Product" width="350" height="450"/>
-                        </div>
-                        <div className="col-md-6" >
-                           <h5>{product.title}</h5>
-                           <StarRating
-                    rating={4.3}
-                    starRatedColor = "red"
-                    starDimension = "16px"
-                    starSpacing = "2px"
-                    ediiting={false}
-                    />(4)
-                    <br/>
-                           <h5><b>PRICE &#x20B9; {product.price}</b></h5>
-                           <span>(Incl. all taxces) <a href="#details">price breakUp</a></span>
-                           <p>*Weight and Price may vary subject to the stock available.</p>
-                           <p>{product.description}
-                            <HeartOutlined className="float-right" 
-                            style={{fontSize:'24px'}}/>
-                            <ShareAltOutlined className="float-right" 
-                            style={{fontSize:'24px'}}/>
-                            </p>
-                           <a href="#details">Product details</a>
-                           <div className="row">
-                                <div className="col-md-6 col-sm-6">
-                                    <p>Net Qty.</p>
-                                    <p className="text-center" 
-                                    style={{padding:'6px',border:'1px solid black'}}>1</p>
-                                </div>
-                           </div>
-                           <div className="row">
-                               <div className="col-md-6 col-sm-6">
-                                   <button className="button">BuyNow</button>
-                               </div>
-                               <div className="col-md-6 col-sm-6">
-                               {/* <Tooltip title={tooltip}><button className="button" onClick={handleCart}>Add To Cart</button></Tooltip> */}
-                               <button className="button" onClick={handleCart}>Add To Cart</button>
-                               </div>
-                               {/* <RatingModal>
-                            <StarRating 
-                            name={"ProductId"}
-                            numberOfStars={5}
-                            rating={star}
-                            changeRating={(newrating,name)=>setStar(newrating)}
-                            isSelectable={true}
-                            starRatedColor="red"
-                            />
-                            </RatingModal> */}
-                           </div>
-                        </div>
-                    </div>
-                    <div id="details">
+  };
+
+  
+
+  return (
+      <div>
+      <HeaderCard/>
+      <Header/>
+<div className="container mt-5">
+        <div className="row">
+        <div className="col-md-5">
+        {images && images.length ? (
+          <Carousel  autoPlay infiniteLoop className="slider" >
+            {images && images.map((i) => <img  src={i.url} key={i.public_id} alt="Item_Image" />)}
+          </Carousel>
+        ) : (
+          ""
+        )}
+      </div>
+      <div className="col-md-1"></div>
+      <div className="col-md-6" >
+          <h5>{product.title}</h5>
+          <StarRating
+            rating={4.3}
+            starRatedColor = "red"
+            starDimension = "16px"
+            starSpacing = "2px"
+            ediiting={false}/>(4)
+            <br/>
+            <h5><b>PRICE &#x20B9; {product.price}</b></h5>
+            <span>(Incl. all taxces) <a href="#details">price breakUp</a></span>
+            <p>*Weight and Price may vary subject to the stock available.</p>
+            <p>{product.description}
+             <HeartOutlined className="float-right" 
+             style={{fontSize:'24px'}}/>
+             <ShareAltOutlined className="float-right" 
+             style={{fontSize:'24px'}}/>
+             </p>
+            <a href="#details">Product details</a>
+            <div className="row">
+                 <div className="col-md-6 col-sm-6">
+                     <p>Net Qty.</p>
+                     <p className="text-center" 
+                     style={{padding:'6px',border:'1px solid black'}}>1</p>
+                 </div>
+            </div>
+            <div className="row">
+                <div className="col-md-6 col-sm-6">
+                    <button className="button">BuyNow</button>
+                </div>
+                <div className="col-md-6 col-sm-6">
+                {/* <Tooltip title={tooltip}><button className="button" onClick={handleCart}>Add To Cart</button></Tooltip> */}
+                <button className="button" onClick={handleCart}>Add To Cart</button>
+                </div>
+                {/* <RatingModal>
+             <StarRating 
+             name={"ProductId"}
+             numberOfStars={5}
+             rating={star}
+             changeRating={(newrating,name)=>setStar(newrating)}
+             isSelectable={true}
+             starRatedColor="red"
+             />
+             </RatingModal> */}
+            </div>
+        </div>
+    </div>
+    <div id="details">
                         <h4 className="text-center">Product Details</h4>
                         <Tabs defaultActiveKey="1" centered>
           <TabPane tab="Product Specs" key="1">
@@ -267,11 +292,11 @@ const SingleProductCard = ({product}) =>{
                     </div>
                     <div className="pb-5">
                     <h4 className="text-center mt-5">Customers Who Viewed This Also Viewed</h4>
-                 <TopProduct/>   
+                 <TopProductCard/>   
                     </div>
-            </div>
-        </div>
-    );
-}
+</div>
+</div>
+  );
+};
 
 export default SingleProductCard;

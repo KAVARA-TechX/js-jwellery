@@ -71,6 +71,10 @@ button {
     border-color:transparent !important;
 }
 
+.top-product-card img{
+    height: 170 px !important;
+}
+
 .carousel-control-next-icon{
     background-image: url('./Images/prev1.png') !important;
     width: 40px;
@@ -533,4 +537,8 @@ margin-top: 11%;
     margin-left: 155px !important;
 }
 
+.slider-wrapper img{
+    height:300px !important;
+    width: 90% !important;
+}
 

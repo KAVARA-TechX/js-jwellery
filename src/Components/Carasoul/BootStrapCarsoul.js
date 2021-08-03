@@ -10,11 +10,11 @@ const BootStrapCarsoul=()=>{
       <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
       <ol className="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" 
-        className="active" ><img src={indicator} alt="."/></li>
+        className="active" ><img  src={indicator} alt="."/></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1" 
-        ><img src={indicator} alt="."/></li>
+        ><img  src={indicator} alt="."/></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2" 
-        ><img src={indicator} alt="."/></li>
+        ><img  src={indicator} alt="."/></li>
       </ol>
       <div className="carousel-inner">
         <div className="carousel-item active">
