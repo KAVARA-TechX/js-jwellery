@@ -165,7 +165,7 @@ const SingleProductCard = ({ product, onStarClick, star }) => {
                 </div>
             </div>
           </TabPane>
-          <TabPane tab="PRICE BREAKUP" key="2" >
+          <TabPane tab="Price Breakup" key="2" >
               <div className="row">
                   <div className="col-md-2">
                       Component
@@ -259,10 +259,10 @@ const SingleProductCard = ({ product, onStarClick, star }) => {
               <hr/>
 
           </TabPane>
-          <TabPane tab="DESCRIPTION" key="3">
+          <TabPane tab="Description" key="3">
             The Image just for product enhancement.Actual product may differ from the above showm image.
           </TabPane>
-          <TabPane tab="REVIEW" key="4">
+          <TabPane tab="Review" key="4">
               <Tabs>
                   <TabPane tab="REVIEW" key="1.1">
                   <div className="text-center">
@@ -277,7 +277,7 @@ const SingleProductCard = ({ product, onStarClick, star }) => {
               </Tabs>
             
           </TabPane>
-          <TabPane tab="MORE INFO" key="5">
+          <TabPane tab="More Info" key="5">
             <p>Titan Company Limited,Jewellery Division 29,Sipcot 
             Industrial Complex,Hosur - 635126, Krishnagiri District,Tamil Nadu.</p> 
             <p><b>Country Of Origin - </b> India</p>

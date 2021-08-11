@@ -8,6 +8,8 @@ import Nav from '../../Nav/Header';
 import HeaderCard from '../../Cards/HeaderCard';
 import {Link} from 'react-router-dom';
 import {toast} from 'react-toastify';
+import FacebookLogin from 'react-facebook-login';
+
 const Login = ({ history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -39,6 +41,16 @@ const Login = ({ history }) => {
           }
       }
   };
+
+
+  const responseFacebook = (response) => {
+    console.log("Login",response);
+    history.push("/");
+  }
+  
+  const componentClicked = (data) =>{
+    console.log(data);
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -155,8 +167,14 @@ const Login = ({ history }) => {
           {loginForm()}
             <i class="fab fa-google" onClick={googleLogin} 
             style={{color:"#fff",backgroundColor:'red',padding:'8px',borderRadius:'25px',fontSize:'20px',cursor:'pointer'}}></i>
-            <i class="fab fa-facebook-f ml-2" onClick={googleLogin} 
-            style={{color:"#fff",backgroundColor:'blue',padding:'7px 10px',borderRadius:'25px',fontSize:'20px',cursor:'pointer'}}></i>
+            <FacebookLogin 
+    appId="110509031211492"
+    autoLoad={true}
+    fields="name,email,picture"
+    onClick={componentClicked}
+    callback={responseFacebook} 
+    icon="fa-facebook fbBtn"
+    className="ml-2"/>
             <Link to="/password-reset" className="ml-4" style={{textDecoration: 'underline'}}>Forgot password?</Link>
         </div>
       </div>

@@ -542,3 +542,17 @@ margin-top: 11%;
     width: 90% !important;
 }
 
+i.fa.fa-facebook.fbBtn {
+    margin-left: 2px;
+    font-size: 22px;
+    padding: 5px;
+  }
+  
+  button.kep-login-facebook.metro{
+    padding: 0px;
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+  border-radius: 25px !important;
+  }
+

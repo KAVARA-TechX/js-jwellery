@@ -53,6 +53,9 @@ import SingleCollections from './Components/Cards/SingleCollections';
 import SingleCoinsCard from './Components/Cards/SingleCoinsCard';
 import SingleRingsCard from './Components/Cards/SingleRingsCard';
 import SingleSolitaires from './Components/Cards/SingleSolitaires';
+import DesignForm from './Components/Pages/DesignForm';
+import Design from './Components/Pages/Desgin';
+
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -141,6 +144,8 @@ const App = ({history}) => {
 
       {/* Others */}
       <Route exact path="/virtual-consultation" component={VirtualConsultation}/>
+      <Route exact path="/design" component={Design}/>
+      <Route exact path="/design/now" component={DesignForm}/>
 
     </Switch>
     
