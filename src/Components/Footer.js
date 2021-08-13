@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 
 const Footer = () =>{
     return(
@@ -10,19 +10,29 @@ const Footer = () =>{
                         <h5 className=" text-uppercase mt-3 mb-4">JEWELLERY</h5>
                         <ul className="list-unstyled">
                             <li>
+                              <Link style={{color:"#585858"}} to="/shop/search/bracelets">
                                 Bracelets
+                                </Link>
                             </li>
                             <li>
-                              Earings
+                            <Link style={{color:"#585858"}} to="/shop/search/earing">
+                                Earings
+                                </Link>
                             </li>
                             <li>
-                              Neckless
+                            <Link style={{color:"#585858"}} to="/shop/search/neckless">
+                                Neckless
+                                </Link>
                             </li>
                             <li>
-                              Pendents
+                            <Link style={{color:"#585858"}} to="/shop/search/pendents">
+                                Pendents
+                                </Link>
                             </li>
                             <li>
-                              Rings
+                            <Link style={{color:"#585858"}} to="/shop/search/Rings">
+                                Rings
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -34,9 +44,6 @@ const Footer = () =>{
                             </li>
                             <li>
                               Know the brand
-                            </li>
-                            <li>
-                              Invest with us
                             </li>
                             <li>
                               Blog

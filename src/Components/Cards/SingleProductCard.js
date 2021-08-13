@@ -58,6 +58,7 @@ const SingleProductCard = ({ product, onStarClick, star }) => {
         type: "SET_VISIBLE",
         payload: true,
       });
+      toast.success("Product successfully added in cart");
     }
   };
 

@@ -6,6 +6,8 @@ import Nav from '../Nav/Header';
 import PinCodeModal from '../Modal/PinCodeModal';
 import {Link} from "react-router-dom";
 import ProductCardInCheckOut from '../Cards/ProductCardInCheckOut';
+import {userCart} from '../functions/auth';
+import {useHistory} from 'react-router-dom';
 const Cart = () =>{
     const {user,cart} = useSelector((state) => ({...state}));
     const dispatch = useDispatch();
@@ -13,7 +15,15 @@ const Cart = () =>{
     var gst = 1892.00;
     var saved = 2104;
     var totalItems=0;
+    let history = useHistory();
     const saveOrderToDb = () =>{
+        console.log("Cart",JSON.stringify(cart,null,4));
+        userCart(cart,user.token).then((res)=>{
+            if(res.status === 200){
+                history.push("/checkout");
+            }
+        }).catch(err=> console.log(err));
+
     }
     
 

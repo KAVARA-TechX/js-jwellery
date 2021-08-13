@@ -169,7 +169,7 @@ const Login = ({ history }) => {
             style={{color:"#fff",backgroundColor:'red',padding:'8px',borderRadius:'25px',fontSize:'20px',cursor:'pointer'}}></i>
             <FacebookLogin 
     appId="110509031211492"
-    autoLoad={true}
+    autoLoad={false}
     fields="name,email,picture"
     onClick={componentClicked}
     callback={responseFacebook} 

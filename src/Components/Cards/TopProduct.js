@@ -7,15 +7,15 @@ const TopProduct = ({product}) =>{
               <div className="card-body ">
                 <img src={product.images && product.images.length ? product.images[0].url :"" } 
                 alt="tran" 
-                className="p-1"
+                className="p-1 ml-5 ml-4"
                 width="auto"
                 height="150"
                 />
               </div>
             </div>
-            <h5 className="pl-5 ">{product.title}</h5>
-            <p  className="pl-3">{product.description}</p>
-            <h6 className="pl-5 ">`Rs.{product.price}`</h6>
+            <h5 className="text-center">{product.title}</h5>
+            <p  className="text-center">{product.description}</p>
+            <h6 className="text-center">`Rs.{product.price}`</h6>
         </div>
     );
 }

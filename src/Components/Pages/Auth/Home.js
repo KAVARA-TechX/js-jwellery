@@ -25,7 +25,7 @@ const Home = () =>{
     
     <Nav  />
       <BootStrapCarsoul/>
-      <h3 className="text-center ">Top products</h3>
+      <h3 className="text-center mt-5">Top products</h3>
       <TopProductCard/>
       <Covered/>
       <SolitaireProcess/>

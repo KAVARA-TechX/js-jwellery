@@ -55,7 +55,8 @@ import SingleRingsCard from './Components/Cards/SingleRingsCard';
 import SingleSolitaires from './Components/Cards/SingleSolitaires';
 import DesignForm from './Components/Pages/DesignForm';
 import Design from './Components/Pages/Desgin';
-
+import Search from './Components/Pages/Shop/Search';
+import Checkout from './Components/Pages/Checkout';
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -125,6 +126,8 @@ const App = ({history}) => {
       <Route exact path="/shop/solitaires/single-Solitaire" component={SingleSolitaires}/>
       <Route exact path="/shop/coins/single-coin" component={SingleCoinsCard}/>
       <Route exact path="/shop/rings/single-ring" component={SingleRingsCard}/>
+      <Route exact path="/shop/search/:slug" component={Search}/>
+
       
       {/* Admin Routes */}
       
@@ -146,6 +149,9 @@ const App = ({history}) => {
       <Route exact path="/virtual-consultation" component={VirtualConsultation}/>
       <Route exact path="/design" component={Design}/>
       <Route exact path="/design/now" component={DesignForm}/>
+      <Route exact path="/design/now" component={DesignForm}/>
+      <Route exact path="/checkout" component={Checkout} />
+
 
     </Switch>
     

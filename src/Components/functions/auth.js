@@ -67,3 +67,22 @@ export const getConsultation = async(count)=>{
 export const getQuery = async(count)=>{
     return await axios.get(`https://js-solitaire.herokuapp.com/api/query/${count}`);
 } 
+
+export const userCart = async(cart,authtoken) =>{
+    return await axios.post(`https://js-solitaire.herokuapp.com/api/user/cart`,{ cart },{
+        headers:{
+            authtoken:authtoken,
+        },
+    }); 
+}
+
+
+export const getUserCart = async(authtoken) =>{
+    return await axios.get(`https://js-solitaire.herokuapp.com/api/user/cart`,{
+        headers:{
+            authtoken:authtoken,
+        },
+    }); 
+}
+
+
