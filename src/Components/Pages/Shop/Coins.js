@@ -27,7 +27,7 @@ const Coins = ()=>{
             <Nav/>
             <div className="container-fluid mt-5">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-3 mHide">
                     <p>Filter <Link className="float-right"><u>Clear All</u></Link></p> 
                     <hr />
                         <Menu mode="inline">

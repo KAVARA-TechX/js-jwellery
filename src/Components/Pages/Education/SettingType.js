@@ -9,10 +9,10 @@ const SettingType = ( ) =>{
 <HeaderCard/>
     <Nav/>
     <div className="navigation">
-        <Link to="/education" style={{marginLeft:"15%"}} >Loose Diamond</Link>
-        <Link to="/education/ring-type" className="live">Diamond Rings</Link>
+        <Link to="/education" style={{marginLeft:"15%"}} className="centered-item">Loose Diamond</Link>
+        <Link to="/education/ring-type" className="live centered-item">Diamond Rings</Link>
         <Link to="/education/choose-perfect-diamond">Choose Your Perfect Diamond Jewellery</Link>
-        <Link to="/education/diamond-care" >Diamond Care</Link>
+        <Link to="/education/diamond-care" className="centered-item">Diamond Care</Link>
     </div>
     <div className="main">
         <div className="container">

@@ -81,10 +81,11 @@ const SingleProductCard = ({ product, onStarClick, star }) => {
       </div>
       <div className="col-md-1"></div>
       <div className="col-md-6" >
-          <h5>{product.title}</h5>
+          <h5>{product.title} <HeartOutlined className="float-right" 
+             style={{fontSize:'24px'}}/></h5>
           <StarRating
             rating={4.3}
-            starRatedColor = "red"
+            starRatedColor = "orange"
             starDimension = "16px"
             starSpacing = "2px"
             ediiting={false}/>(4)
@@ -93,10 +94,6 @@ const SingleProductCard = ({ product, onStarClick, star }) => {
             <span>(Incl. all taxces) <a href="#details">price breakUp</a></span>
             <p>*Weight and Price may vary subject to the stock available.</p>
             <p>{product.description}
-             <HeartOutlined className="float-right" 
-             style={{fontSize:'24px'}}/>
-             <ShareAltOutlined className="float-right" 
-             style={{fontSize:'24px'}}/>
              </p>
             <a href="#details">Product details</a>
             <div className="row">

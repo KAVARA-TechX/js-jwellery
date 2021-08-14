@@ -5,6 +5,7 @@ import ConsultationForm from '../Forms/ConsultationForm';
 import GenralQueryForm from '../Forms/GenralQueryForm';
 import { Radio } from 'antd';
 import contactImg from '../../Images/Consult.jpg';
+import TopProductCard from '../Cards/TopProductCard';
 const {Group} = Radio;
 const VirtualConsultation = () =>{
 
@@ -19,12 +20,13 @@ const VirtualConsultation = () =>{
             <Nav/>
             <div className="container mt-5 mb-5 pb-5">
               <div className="row">
-                 <div className="col-md-6">
-                 <h4 >Contact Us</h4>
-                <p>Begin by scheduling a complimentary consultation at one of our London 
+              <h3 className="text-center">Contact Us</h3>
+                <p className="text-center">Begin by scheduling a complimentary consultation at one of our 
                 showrooms, via email, chat,phone or Whatsapp, where you can share your ideas with one of our expert 
                 design consultants</p>
-                <img src={contactImg} alt="Contact Us" />
+                 <div className="col-md-6">
+                
+                <img src={contactImg} alt="Contact Us" style={{height:'328px',width:"100%"}}/>
                  </div>
                  <div className="col-md-6">
                  <Group onChange={onChange} value={value}>
@@ -34,6 +36,10 @@ const VirtualConsultation = () =>{
                  {value===1 ? <ConsultationForm/>: <GenralQueryForm/>}
                  </div>
               </div>
+            </div>
+            <div className="mt-5" style={{marginBottom:'6rem'}}>
+              <h3 className="text-center">Our Products</h3>
+              <TopProductCard/>
             </div>
         </div>
     );

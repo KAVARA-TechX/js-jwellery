@@ -9,10 +9,10 @@ const DiamondCare = () =>{
             <HeaderCard/>
             <Nav/>
             <div class="navigation">
-                <Link to="/education" style={{marginLeft:"15%"}} >Loose Diamond</Link>
-                <Link to="/education/ring-type">Diamond Rings</Link>
+                <Link to="/education" className="centered-item" style={{marginLeft:"15%"}} >Loose Diamond</Link>
+                <Link to="/education/ring-type" className="centered-item">Diamond Rings</Link>
                 <Link to="/education/choose-perfect-diamond">Choose Your Perfect Diamond Jewellery</Link>
-                <Link to="/education/diamond-care"className="live" >Diamond Care</Link>
+                <Link to="/education/diamond-care"className="live centered-item" >Diamond Care</Link>
             </div>
             <div className="main">
                 <div className="container">

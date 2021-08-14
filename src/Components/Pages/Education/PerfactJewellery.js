@@ -13,10 +13,10 @@ return(
         <HeaderCard/>
         <Nav/>
         <div class="navigation">
-            <Link to="/education" style={{marginLeft:"15%"}} >Loose Diamond</Link>
-            <Link to="/education/ring-type">Diamond Rings</Link>
+            <Link to="/education" style={{marginLeft:"15%"}} className="centered-item">Loose Diamond</Link>
+            <Link to="/education/ring-type" className="centered-item">Diamond Rings</Link>
             <Link to="/education/choose-perfect-diamond" className="live">Choose Your Perfect Diamond Jewellery</Link>
-            <Link to="/education/diamond-care" >Diamond Care</Link>
+            <Link to="/education/diamond-care" className="centered-item">Diamond Care</Link>
         </div>
         <div class="main">
         <div className="container">    

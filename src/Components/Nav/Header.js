@@ -34,7 +34,8 @@ return (
 			 aria-expanded="false" 
 			 aria-label="Toggle navigation"
 		  >
-			<span className="fas fa-bars" style={{color:"#add8e6"}}>
+			<span style={{color:"#add8e6"}}>
+			<i class="fas fa-bars"></i>
 			</span>
 		  </button>
 		  <div className="collapse navbar-collapse" id="main_nav">
@@ -197,7 +198,7 @@ return (
 						  <div className="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu" >
 							  {offers.map((offer)=>(
 								  <div key={offer._id}>
-									  <Link className="dropdown-item" to="/">{offer.description}</Link></div>
+									  <Link className="dropdown-item" to="/"><b>{offer.code}</b>,{offer.description}</Link></div>
 							  ))}
 						  </div>
 						</li>

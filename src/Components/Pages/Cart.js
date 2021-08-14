@@ -34,8 +34,8 @@ const Cart = () =>{
             
             {/* {JSON.stringify(cart)} */}
             <div className="container mt-5 mb-5">
+                <h3 className="text-center">Cart</h3>
                 <div className="row"> 
-                      
                 <div className="col-lg-7" >
                     <p>{cart.map((p)=>{
                         totalItems += parseInt(p.count);
@@ -50,13 +50,14 @@ const Cart = () =>{
 				))}
                 </div>
                 <div className="col-lg-1"></div>
-                <div className="col-lg-4" >
-                    <div class="new-meows">
+                    
+                    {cart.length != 0 ? (<div className="col-lg-4">
+                        <div class="new-meows">
                         <input type="text" class="form-control"  placeholder="Apply Coupon"/>
                         <button type="button" class="button ml-3">Submit</button>    
                     </div>
                     <br/>
-                    <p><b>Order Summary</b></p>
+                        <p><b>Order Summary</b></p>
                     <div className="card">
                         <span style={{paddingLeft:'10px',paddingRight:'10px',paddingTop:'10px'}}>Subtotal<p className="float-right">₹{cart.length ? total : ""}</p></span>
                         <span style={{paddingLeft:'10px',paddingRight:'10px'}}>Coupon Discount<p className="float-right">Apply Coupon</p></span>
@@ -75,7 +76,10 @@ const Cart = () =>{
                             >
                             Login to checkout</Link></button>
                     }
-                </div>
+                    </div>): (<div className="text-center mt-5 mb-5">
+                        <h5 className="mt-5 mb-5"><b>Your cart is Empty</b></h5>
+                    </div>)}
+                    
                 </div>
             </div>
         </div>

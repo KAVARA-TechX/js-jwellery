@@ -50,7 +50,7 @@ const ConsultationForm = () =>{
                       />
                     </div>
                   <br/>
-                    <button className="button btn-block mb-5">Get in touch</button>
+                    <button className="button btn-block mb-5" style={{height:"30px"}}>Get in touch</button>
                 </form>     
     );
 }

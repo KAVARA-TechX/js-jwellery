@@ -24,7 +24,12 @@ return(
                     </div>
                 </div>
                 <div className="d-flex justify-content-center" style={{marginTop:'20%',fontSize:"18px"}}>
-                    <Link to="/design/now" className="button p-2">Start Now</Link>
+                <button
+                    className="center-block button p-2"
+                    ><Link to="/design/now" style={{color:"#fff"}}>
+                    Start now
+                    </Link>
+                </button>
                 </div>
             </div>  
     </div>
@@ -34,7 +39,7 @@ return(
                  
             </div>
             <div className="col-md-4 text-center">
-            <h4>Custom Engagement Ring Gallery</h4>
+            <h3>Custom Engagement Ring Gallery</h3>
         <p>Get inspired by our custom made engagement rings, individually designed with love and crafted by us</p>
             </div>
             <div className="col-md-4">
@@ -42,53 +47,21 @@ return(
             </div>
 
         </div>
-    </div>
-    <div className="container">
-    <div className="row">
-            <div className="col-md-4">
-                <img src={ringImg} alt="Custom jewellery" style={{border:'1px solid gray'}}/>
-            </div>
-            <div className="col-md-4">
-            <img src={ringImg} alt="Custom jewellery" style={{border:'1px solid gray'}}/>
-
-            </div>
-            <div className="col-md-4">
-            <img src={ringImg} alt="Custom jewellery" style={{border:'1px solid gray'}}/>
-            </div>
-        </div>
-        <div className="row mt-3">
-            <div className="col-md-4">
-                <img src={ringImg} alt="Custom jewellery" style={{border:'1px solid gray'}}/>
-            </div>
-            <div className="col-md-4">
-            <img src={ringImg} alt="Custom jewellery" style={{border:'1px solid gray'}}/>
-
-            </div>
-            <div className="col-md-4">
-            <img src={ringImg} alt="Custom jewellery" style={{border:'1px solid gray'}}/>
-            </div>
-        </div>
-        <div className="row mt-3">
-            <div className="col-md-4">
-                <img src={ringImg} alt="Custom jewellery" style={{border:'1px solid gray'}}/>
-            </div>
-            <div className="col-md-4">
-            <img src={ringImg} alt="Custom jewellery" style={{border:'1px solid gray'}}/>
-
-            </div>
-            <div className="col-md-4">
-            <img src={ringImg} alt="Custom jewellery" style={{border:'1px solid gray'}}/>
-            </div>
-        </div>
-        <div className="row mt-3">
-        <div className="col-md-6 float-right">
-        <button className="button">See More</button></div>
-        <div className="col-md-6">
-        <Link to="/design/now" className="button p-2">Start Now</Link>
-        </div>
+        <h4>Customization Process</h4>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <div className="d-flex justify-content-center">
+        <button
+                    className="center-block button p-2"
+                    ><Link to="/design/now" style={{color:"#fff"}}>
+                    Start now
+                    </Link>
+                </button>
         </div>
     </div>
-    
 </div>
 
 );

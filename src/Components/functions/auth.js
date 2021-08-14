@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const createOrUpdateUser = async(authtoken) =>{
     return await axios.post(
-        'https://js-solitaire.herokuapp.com/api/create-or-update-user',
+        'https:localhost:8000/api/create-or-update-user',
         {},
         {
         headers:{

@@ -6,7 +6,7 @@ import Laser from "../../Images/laser-icon.png";
 import Diamond from "../../Images/conflictfree.png";
 const Guarantee = () =>{
 return(
-<div style={{backgroundColor: '#add8e6'}} className="container-fluid mt-5 mb-5">
+<div style={{backgroundColor: '#add8e6'}} className="container-fluid mt-5 mb-5" id="#buyfromus">
         <h3 className="text-center pt-4 mt-2 ">We Guarantee</h3>
         <div className="row pt-5 text-medium pb-5 tc">
             <div className="col-sm">

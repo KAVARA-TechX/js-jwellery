@@ -15,11 +15,10 @@ const Collections = () =>{
             <Nav/>
             <div className="container-fluid mt-5">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-3 mHide">
                         <h5>Filter</h5>
-                        <Menu mode="inline">
-                            <SubMenu key="1" title="Choose A Collection">
-                            <Checkbox
+                        <p>Choose A Collection</p>
+                        <Checkbox
                         value="Aveer"
                         name="Aveer"
                         >Aveer
@@ -61,8 +60,6 @@ const Collections = () =>{
                         >Mirayah
                         </Checkbox>
                         <br/>
-                            </SubMenu>
-                        </Menu>
                     </div>
                     <div className="col-md-9">
                     <div className="row">

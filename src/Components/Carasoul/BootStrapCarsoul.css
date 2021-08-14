@@ -29,8 +29,7 @@
 
 @media(max-width: 991px){
     .btnLeft{
-        margin-top: 5%;
-        margin-left: 0%;
+        margin-left: 16% !important;
     }
 
     .Row{
@@ -52,7 +51,7 @@
         margin-left: 25%;
     }
     .carousel-indicators li, .carousel-indicators li.active{
-        width: 40px !important;
+        width: 30px !important;
         height: 40px !important;
         background-color: inherit;
         position: relative;          
@@ -68,7 +67,7 @@ height: 550px !important;
 }
 
 .carousel-indicators li, .carousel-indicators li.active{
-    width: 40px;
+    width: 35px;
     height: 60px;
     background-color: inherit;
     position: relative;          

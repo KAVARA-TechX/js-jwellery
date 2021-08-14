@@ -2,52 +2,16 @@ import React from 'react';
 import HeaderCard from '../Cards/HeaderCard';
 import Nav from '../Nav/Header';
 import ring from '../../Images/diamond-ring3.png';
+import {Link} from 'react-router-dom';
 const RecentView = () =>{
     return(
         <div>
             <HeaderCard/>
             <Nav/>
-            <p className="text-center pt-3 fs-3 fw-bold">Recently Viewed</p>
+            <div className="mt-5 mb-5">
+            <h3 className="text-center">Recently Viewed</h3>
             <br/>
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-4">
-                        <div className="card">
-                            <div className="card-img-top">
-                                <img src={ring} alt="product"/>
-                            </div>
-                            <div className="card-body">
-                                <span>₹ 21,393  <strike>₹ 22,994</strike></span> 
-                                <p>Modern diamond ring</p>
-                                <button className="button btn-block">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="card">
-                            <div className="card-img-top">
-                                <img src={ring} alt="product"/>
-                            </div>
-                            <div className="card-body">
-                                <span>₹ 21,393  <strike>₹ 22,994</strike></span> 
-                                <p>Modern diamond ring</p>
-                                <button className="button btn-block">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="card">
-                            <div className="card-img-top">
-                                <img src={ring} alt="product"/>
-                            </div>
-                            <div className="card-body">
-                                <span>₹ 21,393  <strike>₹ 22,994</strike></span> 
-                                <p>Modern diamond ring</p>
-                                <button className="button btn-block">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <p className="text-center">You have nothing in Recently Viewed.<Link to="/shop">Continue Shopping</Link></p>
             </div>
         </div>
     );

@@ -16,7 +16,7 @@ const Covered = () =>{
                 </p>
                 <button
                     className="center-block button p-2"
-                    ><Link to="/virtual-try" style={{color:"#fff"}}>
+                    ><Link to="/virtual-try-on" style={{color:"#fff"}}>
                     VIRTUAL TRY ON
                     </Link></button>
                 </div>

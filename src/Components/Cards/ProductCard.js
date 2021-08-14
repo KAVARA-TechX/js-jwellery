@@ -1,7 +1,7 @@
 import React from 'react';
 const ProductCard = ({ring}) =>{
     return(
-        <div className="card">
+        <div className="card mb-5">
             <div className="card-img-top">
                 <img src={ring} alt="product"/>
             </div>

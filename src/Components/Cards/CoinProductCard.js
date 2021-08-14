@@ -2,7 +2,7 @@ import React from 'react';
 
 const CoinProductCard = ({coin}) =>{
     return(
-        <div className="card">
+        <div className="card mb-5">
             <div className="card-img-top">
                 <img src={coin} alt="product"/>
             </div>

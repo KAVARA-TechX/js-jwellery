@@ -29,9 +29,13 @@ button {
     .dropdown-menu-left{
         margin-left:-80px !important;
     }
+    .navbar{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
     
 }
-/* Mobile view*/
+/* Mobile view */
 @media(max-width: 991px){
     .header-Input{
         margin-left: 0%;
@@ -47,10 +51,7 @@ button {
         margin-left: 12%;
         width: 80% !important;
     }
-    nav{
-        float: right;
-        margin-top: -190px;
-    }
+    
     .dropdown-menu-left{
         margin-left:0%;
     }
@@ -58,12 +59,8 @@ button {
         margin-top: 0px;
     }
 }
-
 /* Navbar */
-.navbar{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-}
+
 
 /* Top products */
 .top-product-card{
@@ -71,9 +68,15 @@ button {
     border-color:transparent !important;
 }
 
-.top-product-card img{
-    height: 170 px !important;
+@media(max-width: 991px){
+    .top-product-card{
+    margin-left: -15px;
+    }
+    .top-product-card img{
+        width: 40% !important;
+    }
 }
+
 
 .carousel-control-next-icon{
     background-image: url('./Images/prev1.png') !important;
@@ -107,7 +110,7 @@ button {
         height: 30px;
     }
     .carousel-control-prev{
-        left: 28% !important;
+        left: 35% !important;
     }
     .carousel-control-next{
         right: 37% !important;
@@ -166,7 +169,7 @@ button {
 }
 @media(max-width: 991px){
     .review-card img {
-        height: 90px ;
+        height: 120px !important ;
         margin-top: 20% !important;
       }
 }
@@ -203,8 +206,13 @@ button {
 }
 
 @media(max-width: 991px){
+    .inCenter{
+        position: absolute;
+        top: 50%;
+        left: 25%;
+}
     .centered{
-        top: 15%;
+        top: 20%;
         left: 10%;
     }
     .banner-img{
@@ -340,7 +348,7 @@ footer{
         height: 500px;
     }
     .offer{
-        margin-left: 112px;
+        margin-left: 32px;
     }
     .dHide{
         display: none;
@@ -500,6 +508,9 @@ margin-top: 11%;
     height: 90px ;
     margin-top: 20% !important;
   }
+  .centered-item{
+    margin-left: 30% !important;
+}
 }
 
 .contained {  height: 200px; overflow-y: scroll; overflow-x: hidden;}
@@ -556,3 +567,4 @@ i.fa.fa-facebook.fbBtn {
   border-radius: 25px !important;
   }
 
+  

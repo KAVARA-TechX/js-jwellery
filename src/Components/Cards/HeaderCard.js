@@ -11,10 +11,13 @@ const HeaderCard = () =>{
     const {user,cart} = useSelector((state)=>({...state}));
 
     const [description,setDescription] = useState("");
+    const [code,setCode] = useState("");
+
     
     useEffect(()=>{
         getCouponsByCount(1).then((res)=>{
             setDescription(res.data[0].description);
+            setCode(res.data[0].code);
         }).catch(err=>console.log(err));
     },[]);
     return(
@@ -22,7 +25,7 @@ const HeaderCard = () =>{
             <div className="container-fluid mHide">
             <div className="row pt-3 pb-3 header-card">
                 <div className="tc col-md-4">Free shipping all over india</div>
-                <div className="tc col-md-3">{description}</div>
+                <div className="tc col-md-3"><b>{code}</b>,{description}</div>
                 <div className="tc col-md-5"><Link to="/virtual-consultation"><span>Book your consultation</span></Link> 
                     {user ? ` Hello ${user.email}`
                     :  <span><span className="ml-3">|</span><Link to="/login" className="ml-3 mr-3"><span>Login</span></Link>

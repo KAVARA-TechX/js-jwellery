@@ -7,7 +7,7 @@ const WishList = () =>{
         <div>
             <HeaderCard/>
             <Nav/>
-            <p className="text-center pt-3 fs-3 fw-bold">Your Wishlist</p>
+            <h3 className="text-center mt-5">Your Wishlist</h3>
             <br/>
             <div className="container">
                 <div className="row">

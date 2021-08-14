@@ -105,7 +105,7 @@ const GenralQueryForm = () =>{
                   By checking this box, I authorise JS solitaire to contact me with updates on our products.
                   </Checkbox>
                   <br/><br/>
-                    <button className="button btn-block mb-5">Submit Query</button>
+                    <button className="button btn-block mb-5" style={{height:'30px'}}>Submit Query</button>
                 </form>     
     );
 }

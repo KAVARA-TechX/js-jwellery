@@ -22,10 +22,10 @@ const BootStrapCarsoul=()=>{
           <div className="carousel-caption textLoc">
           <div className="container">
               <div className="row Row">
-                <div className="col-sm-4">
-                <Link className="btn btn-outline-light btn-block pt-1 pb-1 btn-top" to="/design">DESIGN YOUR JEWELLERY</Link>
+                <div className="col-sm-4 btnLeft">
+                <Link className="btn mb-5 btn-outline-light btn-block pt-1 pb-1  btn-top" to="/design">DESIGN YOUR JEWELLERY</Link>
                 </div><div className="col-sm-4 btnLeft">
-                <Link className="btn btn-outline-light btn-block pt-1 pb-1 btn-top1" to="/shop/collections">BROWSE THE COLLECTION</Link>
+                <Link className="btn btn-outline-light btn-block pt-1 pb-1  btn-top1" to="/shop/collections">BROWSE THE COLLECTION</Link>
                 </div>
               </div>
             </div>

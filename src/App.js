@@ -41,7 +41,7 @@ import Cart from './Components/Pages/Cart';
 import AboutUs from './Components/Pages/AboutUs';
 import WishList from './Components/Pages/Wishlist';
 import RecentView from './Components/Pages/RecentView';
-import Shop from './Components/Pages/Shop/Shop';
+import Shop from './Components/Pages/Shop/Jewellery';
 import Coins from './Components/Pages/Shop/Coins';
 import Collections from './Components/Pages/Shop/Collections';
 import Solitaires from './Components/Pages/Shop/Solitaires';
@@ -57,6 +57,13 @@ import DesignForm from './Components/Pages/DesignForm';
 import Design from './Components/Pages/Desgin';
 import Search from './Components/Pages/Shop/Search';
 import Checkout from './Components/Pages/Checkout';
+import VirtualTryOn from './Components/Pages/VirtualTryOn';
+import ShippingPolicy from './Components/Pages/Policies/ShippingPolicy';
+import ReturnPolicy from './Components/Pages/Policies/ReturnPolicy';
+import Terms from './Components/Pages/Policies/Terms';
+import PrivacyPolicy from './Components/Pages/Policies/PrivacyPolicy';
+import Blog from './Components/Pages/Blog';
+import Press from './Components/Pages/Press';
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -146,12 +153,22 @@ const App = ({history}) => {
       <Route exact path="/Recently-Viewed" component={RecentView}/>
 
       {/* Others */}
+      <Route exact path="/virtual-try-on" component={VirtualTryOn}/>
       <Route exact path="/virtual-consultation" component={VirtualConsultation}/>
       <Route exact path="/design" component={Design}/>
       <Route exact path="/design/now" component={DesignForm}/>
       <Route exact path="/design/now" component={DesignForm}/>
       <Route exact path="/checkout" component={Checkout} />
+      <Route exact path="/blog" component={Blog} />
+      <Route exact path="/press" component={Press} />
 
+
+      
+      {/* Policies */}
+      <Route exact path="/shipping-policy" component={ShippingPolicy} />
+      <Route exact path="/return-policy" component={ReturnPolicy} />
+      <Route exact path="/terms-and-conditions" component={Terms} />
+      <Route exact path="/privacy-policy" component={PrivacyPolicy} />
 
     </Switch>
     
