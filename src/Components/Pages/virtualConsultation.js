@@ -24,7 +24,7 @@ const VirtualConsultation = () =>{
                 <p className="text-center">Begin by scheduling a complimentary consultation at one of our 
                 showrooms, via email, chat,phone or Whatsapp, where you can share your ideas with one of our expert 
                 design consultants</p>
-                 <div className="col-md-6">
+                 <div className="col-md-6 mHide">
                 
                 <img src={contactImg} alt="Contact Us" style={{height:'328px',width:"100%"}}/>
                  </div>

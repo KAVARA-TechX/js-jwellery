@@ -11,7 +11,7 @@ const WishList = () =>{
             <br/>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-md-4 mb-5">
                         <div className="card">
                             <div className="card-img-top">
                                 <img src={ring} alt="product"/>
@@ -23,7 +23,7 @@ const WishList = () =>{
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 mb-5">
                         <div className="card">
                             <div className="card-img-top">
                                 <img src={ring} alt="product"/>
@@ -35,7 +35,7 @@ const WishList = () =>{
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 mb-5">
                         <div className="card">
                             <div className="card-img-top">
                                 <img src={ring} alt="product"/>

@@ -45,7 +45,7 @@ import Shop from './Components/Pages/Shop/Jewellery';
 import Coins from './Components/Pages/Shop/Coins';
 import Collections from './Components/Pages/Shop/Collections';
 import Solitaires from './Components/Pages/Shop/Solitaires';
-import UserDashboard from './Components/Pages/UserDashboard';
+import UserDashboard from './Components/Pages/User/UserDashboard';
 import Product from './Components/Pages/Product';
 import Query from './Components/Pages/Admin/Query';
 import Consultation from './Components/Pages/Admin/Consultation';
@@ -64,6 +64,9 @@ import Terms from './Components/Pages/Policies/Terms';
 import PrivacyPolicy from './Components/Pages/Policies/PrivacyPolicy';
 import Blog from './Components/Pages/Blog';
 import Press from './Components/Pages/Press';
+import Orders from './Components/Pages/User/Orders';
+import Profile from './Components/Pages/User/Profile';
+import ResetPassword from './Components/Pages/User/ResetPassword';
 const App = ({history}) => {
   const dispatch = useDispatch();
   //to check firebase with state
@@ -151,6 +154,11 @@ const App = ({history}) => {
       <Route exact path="/wishlist" component={WishList}/>
       <Route exact path="/About-us" component={AboutUs}/>
       <Route exact path="/Recently-Viewed" component={RecentView}/>
+      <Route exact path="/user/orders" component={Orders}/>
+      <Route exact path="/user/profile" component={Profile}/>
+      <Route exact path="/password/reset" component={ResetPassword}/>
+
+
 
       {/* Others */}
       <Route exact path="/virtual-try-on" component={VirtualTryOn}/>
