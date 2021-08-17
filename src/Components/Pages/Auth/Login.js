@@ -1,14 +1,24 @@
-import React, { useState,useEffect } from "react";
-import { auth,googleAuthProvider } from "../../../firebase";
+import React, { useState, useEffect } from "react";
+import { auth, googleAuthProvider } from "../../../firebase";
+import { toast } from "react-toastify";
 import { Button } from "antd";
-import { useDispatch,useSelector } from "react-redux";
-import login from "../../../Images/feedbackuser3.jpg";
-import {createOrUpdateUser} from "../../functions/auth";
-import Nav from '../../Nav/Header';
+import { MailOutlined, GoogleOutlined } from "@ant-design/icons";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import axios from "axios";
 import HeaderCard from '../../Cards/HeaderCard';
-import {Link} from 'react-router-dom';
-import {toast} from 'react-toastify';
-import FacebookLogin from 'react-facebook-login';
+import Header from '../../Nav/Header';
+const createOrUpdateUser = async (authtoken) => {
+  return await axios.post(
+    "http://localhost:8000/api/create-or-update-user",
+    {},
+    {
+      headers: {
+        authtoken,
+      },
+    }
+  );
+};
 
 const Login = ({ history }) => {
   const [email, setEmail] = useState("");
@@ -18,39 +28,10 @@ const Login = ({ history }) => {
   const { user } = useSelector((state) => ({ ...state }));
 
   useEffect(() => {
-    let intended = history.location.state;
-    if(intended){ return;}else{
-
-        if (user && user.token) history.push("/");
-    }
-  }, [user, history]);
+    if (user && user.token) history.push("/");
+  }, [user]);
 
   let dispatch = useDispatch();
-
-  const roleBasedRedirect = (res) => {
-      //check for intended redirect
-      let intended = history.location.state;
-      console.log("Location :-  ",intended.from);
-      if(intended){
-        history.push(intended.from);
-      }else{
-        if (res.data.role === "admin") {
-            history.push("/admin/dashboard");
-          } else {
-            history.push("/user/history");
-          }
-      }
-  };
-
-
-  const responseFacebook = (response) => {
-    console.log("Login",response);
-    history.push("/");
-  }
-  
-  const componentClicked = (data) =>{
-    console.log(data);
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -63,21 +44,16 @@ const Login = ({ history }) => {
       const idTokenResult = await user.getIdTokenResult();
 
       createOrUpdateUser(idTokenResult.token)
-        .then((res) => {
-          dispatch({
-            type: "LOGGED_IN_USER",
-            payload: {
-              name: res.data.name,
-              email: res.data.email,
-              token: idTokenResult.token,
-              role: res.data.role,
-              _id: res.data._id,
-            },
-          });
-          roleBasedRedirect(res);
-        })
-        .catch((err) => console.log(err));
+        .then((res) => console.log("CREATE OR UPDATE RES", res))
+        .catch();
 
+      dispatch({
+        type: "LOGGED_IN_USER",
+        payload: {
+          email: user.email,
+          token: idTokenResult.token,
+        },
+      });
       // history.push("/");
     } catch (error) {
       console.log(error);
@@ -93,20 +69,15 @@ const Login = ({ history }) => {
         const { user } = result;
         const idTokenResult = await user.getIdTokenResult();
         createOrUpdateUser(idTokenResult.token)
-          .then((res) => {
-            dispatch({
-              type: "LOGGED_IN_USER",
-              payload: {
-                name: res.data.name,
-                email: res.data.email,
-                token: idTokenResult.token,
-                role: res.data.role,
-                _id: res.data._id,
-              },
-            });
-            roleBasedRedirect(res);
-          })
-          .catch((err) => console.log(err));
+        .then((res) => console.log("CREATE OR UPDATE RES", res))
+        .catch();
+        dispatch({
+          type: "LOGGED_IN_USER",
+          payload: {
+            email: user.email,
+            token: idTokenResult.token,
+          },
+        });
         // history.push("/");
       })
       .catch((err) => {
@@ -145,6 +116,7 @@ const Login = ({ history }) => {
         className="mb-3"
         block
         shape="round"
+        icon={<MailOutlined />}
         size="large"
         disabled={!email || password.length < 6}
       >
@@ -155,30 +127,36 @@ const Login = ({ history }) => {
 
   return (
     <div>
-      <HeaderCard/>
-      <Nav/>
-      <div  className="container-fluid mt-5 mb-5 pt-5 pb-5">
+    <HeaderCard/>
+    <Header/>
+    <div className="container p-5">
       <div className="row">
-      <div className="col-md-6">
-          <img src={login} alt="Login"/>
-        </div>
-        <div className="col-md-6">
-          {loading ? <h4 className="text-danger">Loading</h4>: <h4>Login</h4>}
+        <div className="col-md-6 offset-md-3">
+          {loading ? (
+            <h4 className="text-danger">Loading...</h4>
+          ) : (
+            <h4>Login</h4>
+          )}
           {loginForm()}
-            <i class="fab fa-google" onClick={googleLogin} 
-            style={{color:"#fff",backgroundColor:'red',padding:'8px',borderRadius:'25px',fontSize:'20px',cursor:'pointer'}}></i>
-            <FacebookLogin 
-    appId="110509031211492"
-    autoLoad={false}
-    fields="name,email,picture"
-    onClick={componentClicked}
-    callback={responseFacebook} 
-    icon="fa-facebook fbBtn"
-    className="ml-2"/>
-            <Link to="/password-reset" className="ml-4" style={{textDecoration: 'underline'}}>Forgot password?</Link>
+
+          <Button
+            onClick={googleLogin}
+            type="danger"
+            className="mb-3"
+            block
+            shape="round"
+            icon={<GoogleOutlined />}
+            size="large"
+          >
+            Login with Google
+          </Button>
+
+          <Link to="/forgot/password" className="float-right text-danger">
+            Forgot Password
+          </Link>
         </div>
       </div>
-      </div>
+    </div>
     </div>
   );
 };
