@@ -3,15 +3,33 @@ import { auth } from "../../../firebase";
 import { toast } from "react-toastify";
 import HeaderCard from '../../Cards/HeaderCard';
 import Header from '../../Nav/Header';
+import axios from "axios";
+import { useDispatch } from "react-redux";
 const RegisterComplete = ({ history }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email,setEmail] = useState("");
+    const [name,setName] = useState("");
+    const [mobile,setMobile] = useState();
+    const [dob,setDob] = useState(new Date());
+    const [password,setPassword] = useState("");
 
+    let dispatch = useDispatch();
   useEffect(() => {
     setEmail(window.localStorage.getItem("emailForRegistration"));
     // console.log(window.location.href);
     // console.log(window.localStorage.getItem("emailForRegistration"));
   }, []);
+
+  const createOrUpdateUser = async (authtoken) => {
+    return await axios.post(
+      "http://localhost:8000/api/create-or-update-user",
+      {},
+      {
+        headers: {
+          authtoken,
+        },
+      }
+    );
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,9 +58,25 @@ const RegisterComplete = ({ history }) => {
         await user.updatePassword(password);
         const idTokenResult = await user.getIdTokenResult();
         // redux store
-        console.log("user", user, "idTokenResult", idTokenResult);
-        // redirect
+        createOrUpdateUser(idTokenResult.token)
+                .then((res)=>{
+                    dispatch({
+                      type: "LOGGED_IN_USER",
+                      payload: {
+                        name:res.data.name,
+                        email: res.data.email,
+                        token: idTokenResult.token,
+                        role:res.data.role,
+                        _id:res.data._id,
+                      },
+                    });
         history.push("/");
+
+                  }
+                )
+                .catch();
+        // console.log("user", user, "idTokenResult", idTokenResult);
+        // redirect
       }
     } catch (error) {
       console.log(error);
@@ -52,20 +86,56 @@ const RegisterComplete = ({ history }) => {
 
   const completeRegistrationForm = () => (
     <form onSubmit={handleSubmit}>
-      <input type="email" className="form-control" value={email} disabled />
-
-      <input
-        type="password"
+        <div className="form-group">
+            <label>Email</label>
+        <input type="email" className="form-control " value={email} disabled  
+        />
+        </div>
+        <div className="form-group">
+        <label>Enter Your Name:-</label>
+        <input 
+        type="text" 
         className="form-control"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
-        autoFocus
-      />
-      <br />
-      <button type="submit" className="btn btn-raised">
-        Complete Registration
-      </button>
+        value={name}
+        placeholder="Enter Your name"
+        onChange={e => setName(e.target.value)}
+        />
+        </div>
+        <div className="form-group">
+        <label>Enter Your Mobile Number:-</label>
+        <input 
+        type="num" 
+        className="form-control"
+        value={mobile}
+        placeholder="Enter Your Number"
+        onChange={e => setMobile(e.target.value)}
+        />
+        </div> 
+        <div className="form-group">
+            <label>Enter your date of birth:-</label>
+        <input 
+        type="date" 
+        className="form-control"
+        value={dob}
+        placeholder="Enter Your Date of birth"
+        onChange={e => setDob(e.target.value)}
+        />
+        </div>       
+        <div className="form-group">
+        <label>Enter Your Password:-</label>
+        <input 
+        type="password" 
+        className="form-control" 
+        value={password} 
+        onChange={e => setPassword(e.target.value)}
+        placeholder="Enter your password"  
+        />
+        </div>      
+        <div className="form-group">
+        <button type="submit" className="btn btn-primary">
+            Complete Registeration 
+        </button>
+        </div>
     </form>
   );
 
@@ -74,13 +144,13 @@ const RegisterComplete = ({ history }) => {
     <HeaderCard/>
     <Header/>
     <div className="container p-5">
-      <div className="row">
-        <div className="col-md-6 offset-md-3">
-          <h4>Register Complete</h4>
-          {completeRegistrationForm()}
+            <div className="row">
+                <div className="col-md-6 offset-md-3">
+                    <h4>Complete Registeration </h4>
+                    {completeRegistrationForm()}
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
     </div>
   );
 };

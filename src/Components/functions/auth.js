@@ -14,7 +14,7 @@ export const createOrUpdateUser = async(authtoken) =>{
 
 export const currentUser = async(authtoken) =>{
     return await axios.post(
-        'http://js-solitaire.herokuapp.com/api/current-user',
+        'http:localhost:8000/api/current-user',
         {},
         {
         headers:{
@@ -26,7 +26,7 @@ export const currentUser = async(authtoken) =>{
 
 export const currentAdmin = async(authtoken) =>{
     return await axios.post(
-        'http://js-solitaire.herokuapp.com/api/current-admin',
+        'http:localhost:8000/api/current-admin',
         {},
         {
         headers:{

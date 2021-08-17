@@ -8,17 +8,11 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import HeaderCard from '../../Cards/HeaderCard';
 import Header from '../../Nav/Header';
-const createOrUpdateUser = async (authtoken) => {
-  return await axios.post(
-    "http://localhost:8000/api/create-or-update-user",
-    {},
-    {
-      headers: {
-        authtoken,
-      },
-    }
-  );
-};
+import login from "../../../Images/feedbackuser3.jpg";
+import FacebookLogin from 'react-facebook-login';
+
+
+
 
 const Login = ({ history }) => {
   const [email, setEmail] = useState("");
@@ -27,9 +21,39 @@ const Login = ({ history }) => {
 
   const { user } = useSelector((state) => ({ ...state }));
 
-  useEffect(() => {
-    if (user && user.token) history.push("/");
-  }, [user]);
+  const roleBasedRedirect = (res) => {
+    if (res.data.role === "admin") {
+      history.push("/admin/dashboard");
+    } else {
+      history.push("/");
+    }
+  };
+
+  const responseFacebook = (response) => {
+    console.log("Login",response);
+    history.push("/");
+  }
+  
+  const componentClicked = (data) =>{
+    console.log(data);
+  }
+  
+  const createOrUpdateUser = async (authtoken) => {
+    return await axios.post(
+      "http://localhost:8000/api/create-or-update-user",
+      {},
+      {
+        headers: {
+          authtoken,
+        },
+      }
+    );
+  };
+  // useEffect(() => {
+  //   if (user && user.token){
+  //     history.push('/');
+  //   }
+  // }, [user]);
 
   let dispatch = useDispatch();
 
@@ -44,16 +68,19 @@ const Login = ({ history }) => {
       const idTokenResult = await user.getIdTokenResult();
 
       createOrUpdateUser(idTokenResult.token)
-        .then((res) => console.log("CREATE OR UPDATE RES", res))
+        .then((res) => {
+          console.log("CREATE OR UPDATE RES", res);
+          dispatch({
+            type: "LOGGED_IN_USER",
+            payload: {
+              email: user.email,
+              token: idTokenResult.token,
+            },
+          });
+        roleBasedRedirect(res);})
         .catch();
 
-      dispatch({
-        type: "LOGGED_IN_USER",
-        payload: {
-          email: user.email,
-          token: idTokenResult.token,
-        },
-      });
+      
       // history.push("/");
     } catch (error) {
       console.log(error);
@@ -69,15 +96,17 @@ const Login = ({ history }) => {
         const { user } = result;
         const idTokenResult = await user.getIdTokenResult();
         createOrUpdateUser(idTokenResult.token)
-        .then((res) => console.log("CREATE OR UPDATE RES", res))
+        .then((res) => {
+          console.log("CREATE OR UPDATE RES", res);
+          dispatch({
+            type: "LOGGED_IN_USER",
+            payload: {
+              email: user.email,
+              token: idTokenResult.token,
+            },
+          });
+        roleBasedRedirect(res);})
         .catch();
-        dispatch({
-          type: "LOGGED_IN_USER",
-          payload: {
-            email: user.email,
-            token: idTokenResult.token,
-          },
-        });
         // history.push("/");
       })
       .catch((err) => {
@@ -129,34 +158,28 @@ const Login = ({ history }) => {
     <div>
     <HeaderCard/>
     <Header/>
-    <div className="container p-5">
+    <div  className="container-fluid mt-5 mb-5 pt-5 pb-5">
       <div className="row">
-        <div className="col-md-6 offset-md-3">
-          {loading ? (
-            <h4 className="text-danger">Loading...</h4>
-          ) : (
-            <h4>Login</h4>
-          )}
-          {loginForm()}
-
-          <Button
-            onClick={googleLogin}
-            type="danger"
-            className="mb-3"
-            block
-            shape="round"
-            icon={<GoogleOutlined />}
-            size="large"
-          >
-            Login with Google
-          </Button>
-
-          <Link to="/forgot/password" className="float-right text-danger">
-            Forgot Password
-          </Link>
+      <div className="col-md-6">
+          <img src={login} alt="Login"/>
         </div>
-      </div>
-    </div>
+        <div className="col-md-6">
+          {loading ? <h4 className="text-danger">Loading</h4>: <h4>Login</h4>}
+          {loginForm()}
+            <i class="fab fa-google" onClick={googleLogin} 
+            style={{color:"#fff",backgroundColor:'red',padding:'8px',borderRadius:'25px',fontSize:'20px',cursor:'pointer'}}></i>
+          <FacebookLogin 
+    appId="110509031211492"
+    autoLoad={false}
+    fields="name,email,picture"
+    onClick={componentClicked}
+    callback={responseFacebook} 
+    icon="fa-facebook fbBtn"
+    className="ml-2"/>
+            <Link to="/password-reset" className="ml-4" style={{textDecoration: 'underline'}}>Forgot password?</Link>
+        </div>
+        </div>
+        </div>
     </div>
   );
 };

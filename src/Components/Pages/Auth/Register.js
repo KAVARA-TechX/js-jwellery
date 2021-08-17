@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import HeaderCard from '../../Cards/HeaderCard';
 import Header from '../../Nav/Header';
+import register from "../../../Images/lookbok.jpg";
 const Register = ({ history }) => {
   const [email, setEmail] = useState("");
 
@@ -43,7 +44,7 @@ const Register = ({ history }) => {
       />
 
       <br />
-      <button type="submit" className="btn btn-raised">
+      <button type="submit" className="btn btn-primary">
         Register
       </button>
     </form>
@@ -53,11 +54,14 @@ const Register = ({ history }) => {
     <div>
     <HeaderCard/>
     <Header/>
-    <div className="container p-5">
+    <div  className="container-fluid mt-5 mb-5 pt-5 pb-5">
       <div className="row">
-        <div className="col-md-6 offset-md-3">
-          <h4>Register</h4>
-          {registerForm()}
+        <div className="col-md-6">
+          <img src={register} height="400px" className="w-100" alt="Register"/>
+        </div>
+        <div className="col-md-6">
+        <h4>Register</h4>
+        {registerForm()}
         </div>
       </div>
     </div>
