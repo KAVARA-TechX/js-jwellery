@@ -27,7 +27,7 @@ const HeaderCard = () =>{
                 <div className="tc col-md-4">Free shipping all over india</div>
                 <div className="tc col-md-3"><b>{code}</b>,{description}</div>
                 <div className="tc col-md-5"><Link to="/virtual-consultation"><span>Book your consultation</span></Link> 
-                    {user ? ` Hello ${user.email}`
+                    {user ? ` Hello ${user.name}`
                     :  <span><span className="ml-3">|</span><Link to="/login" className="ml-3 mr-3"><span>Login</span></Link>
                     </span>}
                     {user ? "": <span>|<Link to="/register" className=" ml-3"><span>SignUp</span></Link></span>} 

@@ -1,32 +1,31 @@
-import axios from 'axios';
+import axios from "axios";
 
-export const createOrUpdateUser = async(authtoken) =>{
-    return await axios.post(
-        'http:localhost:8000/api/create-or-update-user',
-        {},
-        {
-        headers:{
-            authtoken:authtoken,
-        },
+export const createOrUpdateUser = async (authtoken) => {
+  return await axios.post(
+    `${process.env.REACT_APP_API}/create-or-update-user`,
+    {},
+    {
+      headers: {
+        authtoken,
+      },
     }
-    );
+  );
 };
 
-export const currentUser = async(authtoken) =>{
-    return await axios.post(
-        'http:localhost:8000/api/current-user',
-        {},
-        {
-        headers:{
-            authtoken:authtoken,
-        },
+export const currentUser = async (authtoken) => {
+  return await axios.post(
+    `${process.env.REACT_APP_API}/current-user`,
+    {},
+    {
+      headers: {
+        authtoken,
+      },
     }
-    );
+  );
 };
-
 export const currentAdmin = async(authtoken) =>{
     return await axios.post(
-        'http:localhost:8000/api/current-admin',
+        `${process.env.REACT_APP_API}/current-admin`,
         {},
         {
         headers:{
@@ -35,6 +34,7 @@ export const currentAdmin = async(authtoken) =>{
     }
     );
 };
+
 
 export const createCoupon = async(percentage,description,code,authtoken) =>{
     return await axios.post(

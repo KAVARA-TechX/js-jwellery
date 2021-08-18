@@ -1,10 +1,12 @@
 import React,{useEffect, useState} from 'react';
 import {Route} from 'react-router-dom';
 import {useSelector} from 'react-redux';
-import axios from "axios";
+import {currentAdmin} from '../functions/auth';
 
 
 const AdminRoute = ({children,...rest}) =>{
+
+
 const {user} = useSelector((state) => ({...state}));
 const [ok,setOk] = useState(false);
 useEffect(() =>{
@@ -20,17 +22,7 @@ currentAdmin(user.token)
 }
 },[user]);
 
-const currentAdmin = async(authtoken) =>{
-    return await axios.post(
-        'http:localhost:8000/api/current-admin',
-        {},
-        {
-        headers:{
-            authtoken:authtoken,
-        },
-    }
-    );
-};
+
     return ok ?  (
     <Route {...rest} render={() => children}></Route>
     ) 

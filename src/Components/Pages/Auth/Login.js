@@ -73,11 +73,15 @@ const Login = ({ history }) => {
           dispatch({
             type: "LOGGED_IN_USER",
             payload: {
-              email: user.email,
+              name: res.data.name,
+              email: res.data.email,
               token: idTokenResult.token,
+              role: res.data.role,
+              _id: res.data._id,
             },
           });
-        roleBasedRedirect(res);})
+        roleBasedRedirect(res);
+      })
         .catch();
 
       
@@ -101,8 +105,11 @@ const Login = ({ history }) => {
           dispatch({
             type: "LOGGED_IN_USER",
             payload: {
-              email: user.email,
+              name: res.data.name,
+              email: res.data.email,
               token: idTokenResult.token,
+              role: res.data.role,
+              _id: res.data._id,
             },
           });
         roleBasedRedirect(res);})

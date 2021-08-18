@@ -173,7 +173,7 @@ return (
 							aria-haspopup="true" 
 							aria-expanded="false"
 							>
-								{user.email != null ? user.email : ""}
+								{user.name != null ? user.name : ""}
 						  </div>
 						  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
 							  <Link className="dropdown-item" to="/">Favourites</Link>
