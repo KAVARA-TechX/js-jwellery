@@ -31,7 +31,20 @@ const Login = ({ history }) => {
 
   const responseFacebook = (response) => {
     console.log("Login",response);
-    history.push("/");
+    createUser(response.name,response.email).then((res)=>{
+      console.log("Facebook result",res);
+      dispatch({
+        type: "LOGGED_IN_USER",
+        payload: {
+          name: res.data.name,
+          email: res.data.email,
+          token: response.token,
+          role: res.data.role,
+          _id: res.data._id,
+        },
+      });
+    roleBasedRedirect(res);
+    }).catch(err=>console.log(err));
   }
   
   const componentClicked = (data) =>{
@@ -40,7 +53,7 @@ const Login = ({ history }) => {
   
   const createOrUpdateUser = async (authtoken) => {
     return await axios.post(
-      "http://localhost:8000/api/create-or-update-user",
+      "https://js-solitaire.herokuapp.com/api/create-or-update-user",
       {},
       {
         headers: {
@@ -49,6 +62,13 @@ const Login = ({ history }) => {
       }
     );
   };
+
+  const createUser = async(name,email) =>{
+    return await axios.post(
+      "https://js-solitaire.herokuapp.com/api/create-user",
+      {name,email},
+    );
+  }
   // useEffect(() => {
   //   if (user && user.token){
   //     history.push('/');
