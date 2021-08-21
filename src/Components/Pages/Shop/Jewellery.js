@@ -1120,21 +1120,7 @@ const Shop = () =>{
                 </div>
                 <div className="col-md-9">
                     <div className="row">
-                        <div className="col-md-4">
-                        <Link to="/shop/rings/single-ring">
-                                <ProductCard ring={ring}/>
-                            </Link>
-                        </div>
-                        <div className="col-md-4">
-                        <Link to="/shop/rings/single-ring">
-                                <ProductCard ring={ring}/>
-                            </Link>
-                        </div>
-                        <div className="col-md-4">
-                        <Link to="/shop/rings/single-ring">
-                                <ProductCard ring={ring}/>
-                            </Link>
-                        </div>
+                        
                     </div>
                     <br/><br/>
                     <Pagination 

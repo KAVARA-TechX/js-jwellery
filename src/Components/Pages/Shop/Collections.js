@@ -63,21 +63,7 @@ const Collections = () =>{
                     </div>
                     <div className="col-md-9">
                     <div className="row">
-                        <div className="col-md-4">
-                            <Link to="/shop/collections/single-collection">
-                                <ProductCard ring={ring}/>
-                            </Link>
-                        </div>
-                        <div className="col-md-4">
-                        <Link to="/shop/collections/single-collection">
-                                <ProductCard ring={ring}/>
-                            </Link>
-                        </div>
-                        <div className="col-md-4">
-                        <Link to="/shop/collections/single-collection">
-                                <ProductCard ring={ring}/>
-                            </Link>
-                        </div>
+                        
                     </div>
                     <br/><br/>
                     <Pagination 

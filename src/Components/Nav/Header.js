@@ -62,9 +62,6 @@ return (
 										  <div className="Drop-Down-Cate">
 										  <li><Link to="/shop/search/earings" className=""><span><img src={Ring} alt="JS SOLITAIRE" style={{width:'30%'}} />Earings</span></Link></li>
 										  </div>
-										  <div className="Drop-Down-Cate">
-										  <li><Link to="/shop/search/gold-coins" className=""><span><img src={Ring} alt="JS SOLITAIRE" style={{width:'30%'}} />Gold Coins</span></Link></li>
-									  	  </div>
 									  </ul>
 									  </div>
 									  <div className="col-lg-6">

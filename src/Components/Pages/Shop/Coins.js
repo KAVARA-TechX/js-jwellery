@@ -276,21 +276,7 @@ const Coins = ()=>{
                     </div>
                     <div className="col-md-9">
                     <div className="row">
-                        <div className="col-md-4">
-                        <Link to="/shop/coins/single-coin">
-                        <CoinProductCard coin={coin}/>
-                        </Link>
-                        </div>
-                        <div className="col-md-4">
-                        <Link to="/shop/coins/single-coin">
-                        <CoinProductCard coin={coin}/>
-                        </Link>
-                        </div>
-                        <div className="col-md-4">
-                        <Link to="/shop/coins/single-coin">
-                        <CoinProductCard coin={coin}/>
-                        </Link>
-                        </div>
+                        
                     </div>
                     <br/><br/>
                     <Pagination 

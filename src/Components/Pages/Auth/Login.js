@@ -18,9 +18,7 @@ const Login = ({ history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-
   const { user } = useSelector((state) => ({ ...state }));
-
   const roleBasedRedirect = (res) => {
     if (res.data.role === "admin") {
       history.push("/admin/dashboard");
@@ -29,28 +27,8 @@ const Login = ({ history }) => {
     }
   };
 
-  const responseFacebook = (response) => {
-    console.log("Login",response);
-    createUser(response.name,response.email).then((res)=>{
-      console.log("Facebook result",res);
-      dispatch({
-        type: "LOGGED_IN_USER",
-        payload: {
-          name: res.data.name,
-          email: res.data.email,
-          token: response.token,
-          role: res.data.role,
-          _id: res.data._id,
-        },
-      });
-    roleBasedRedirect(res);
-    }).catch(err=>console.log(err));
-  }
   
-  const componentClicked = (data) =>{
-    console.log(data);
-  }
-  
+
   const createOrUpdateUser = async (authtoken) => {
     return await axios.post(
       "https://js-solitaire.herokuapp.com/api/create-or-update-user",
@@ -68,6 +46,30 @@ const Login = ({ history }) => {
       "https://js-solitaire.herokuapp.com/api/create-user",
       {name,email},
     );
+  }
+  const responseFacebook = (response) => {
+  click(response);
+  }
+  
+  const componentClicked = (data) =>{
+    console.log("Facebook data",data);
+  }
+  
+  const click = (fb)=>{
+  console.log(fb);
+    createUser(fb.name,fb.email).then((res)=>{
+      console.log("CREATE OR UPDATE RES", res);
+          dispatch({
+            type: "LOGGED_IN_USER",
+            payload: {
+              name: res.data.name,
+              email: res.data.email,
+              token: fb.token,
+              role: res.data.role,
+              _id: res.data._id,
+            },
+          });
+    }).catch(err=>console.log(err));
   }
   // useEffect(() => {
   //   if (user && user.token){

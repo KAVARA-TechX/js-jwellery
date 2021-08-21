@@ -156,7 +156,7 @@ const Solitaires = () =>{
                                 Nose pin
                             </Checkbox>
                     </SubMenu>
-                        <SubMenu key="3" title="Wieght Ranges">
+                        <SubMenu key="3" title="Weight Ranges">
                             <Checkbox onChange={handlePurity}
                             name="purity"
                             value="0.00"
@@ -189,7 +189,7 @@ const Solitaires = () =>{
                                 10-20
                             </Checkbox>
                         </SubMenu>
-                        <SubMenu key="4" title="Matarial">
+                        <SubMenu key="4" title="Material">
                             <Checkbox
                             onChange={handleMetal}
                             className="p-2 pl-4 pr-4"
@@ -423,21 +423,7 @@ const Solitaires = () =>{
                     </div>
                     <div className="col-md-9">
                         <div className="row">
-                            <div className="col-md-4">
-                        <Link to="/shop/solitaires/single-Solitaire">
-                        <ProductCard ring={ring}/>
-                        </Link>
-                            </div>
-                    <div className="col-md-4">
-                    <Link to="/shop/solitaires/single-Solitaire">
-                        <ProductCard ring={ring}/>
-                        </Link>
-                    </div>
-                    <div className="col-md-4">
-                    <Link to="/shop/solitaires/single-Solitaire">
-                        <ProductCard ring={ring}/>
-                        </Link>
-                    </div>
+                            
                         </div>
                     </div>
                 </div>

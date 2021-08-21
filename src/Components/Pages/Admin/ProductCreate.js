@@ -1,39 +1,18 @@
 import React, { useState } from "react";
 import AdminNav from "../../Nav/AdminNav";
-import { useSelector } from "react-redux";
-import {createProduct} from "../../functions/product";
 import {LoadingOutlined} from '@ant-design/icons';
-import FileUpload from "../../Forms/FileUpload";
-const initialState = {
-  title: "",
-  description:"",
-  price:"",
-  category:"",
-  subs:"",
-  quantity:"",
-  images:[],
-};
+import CreateJewelleryForm from "../../Forms/CreateJewelleryForm";
+import CreateCoinForm from "../../Forms/CreateCoinForm";
+import CreateSolitaireForm from "../../Forms/CreateSolitaireForm";
+
 
 
 const ProductCreate = () => {
-  const [values, setValues] = useState(initialState);
-  const [loading, setLoading]=useState(false)
-//redux
-const {user} = useSelector((state)=>({...state}));
+  const [select,setSelect] = useState("");
+  const [loading, setLoading]=useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(values);
-    createProduct(values,user.token).then((res)=>{
-      console.log(res.data);
-      window.alert(`${res.data.newProduct.title} is created`);
-    });
-  };
 
-  const handleChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-    //console.log(e.target.name, " ----- ", e.target.value);
-  };
+  
 
   const handleClick = (e) =>{
     e.preventDefault();
@@ -50,55 +29,30 @@ const {user} = useSelector((state)=>({...state}));
                 : <h4 className="ml-2">Product create</h4>
                 }       
                 <div class="container-fluid">
-                <FileUpload values={values} setValues={setValues} setLoading={setLoading}/>
-  
-  <form onSubmit={handleSubmit}>
-    <div className="form-group">
-      <label>Title</label>
-      <input 
-      type="text"
-      name="title"
-      className="form-control"
-      values={values.title}
-      onChange={handleChange}/>
-      <label>Description</label>
-      <input 
-      type="text"
-      name="description"
-      className="form-control"
-      values={values.description}
-      onChange={handleChange}/>
-      <label>Price</label>
-      <input 
-      type="Number"
-      name="price"
-      className="form-control"
-      values={values.price}
-      onChange={handleChange}/>
-      <label>Category</label>
-      <input 
-      type="text"
-      name="category"
-      className="form-control"
-      values={values.category}
-      onChange={handleChange}/>
-      <label>Subs</label>
-      <input 
-      type="text"
-      name="subs"
-      className="form-control"
-      values={values.subs}
-      onChange={handleChange}/>
-      <label>Quantity</label>
-      <input 
-      type="number"
-      name="quantity"
-      className="form-control"
-      values={values.title}
-      onChange={handleChange}/>
-    </div>
-    <button >Submit</button>          
-  </form>
+                <label>Product Type</label>
+                        <select className="form-control mb-5" aria-label="Default select example"
+                        onChange={(e)=>{
+                            setSelect(e.target.value);
+                        }}
+                        >
+                                <option>Please choose Product type</option>
+                                <option value="jewellery">Jewellery</option>
+                                <option value="solitaire">Solitaires</option>
+                                <option value="coin">Coins</option>
+                            </select>
+                            {select === "jewellery" ? 
+                            <CreateJewelleryForm setLoading={setLoading}/>
+                            : 
+                            select === "coin" ? 
+                            <CreateCoinForm setLoading={setLoading}/>
+                            : 
+                            select === "solitaire"
+                            ?
+                            <CreateSolitaireForm/>
+                            :
+                            ""
+                            }
+                
                 </div>
             </div>
         </div>
