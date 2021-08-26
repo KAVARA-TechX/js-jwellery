@@ -67,8 +67,10 @@ const SingleRingsCard = () =>{
                            <span>(Incl. all taxces) <a href="#details">price breakUp</a></span>
                            <p>*Weight and Price may vary subject to the stock available.</p>
                            <p>Collection set for festivals
+                            <a>
                             <HeartOutlined className="float-right" 
                             style={{fontSize:'24px'}}/>
+                            </a>
                             <ShareAltOutlined className="float-right" 
                             style={{fontSize:'24px'}}/>
                             </p>

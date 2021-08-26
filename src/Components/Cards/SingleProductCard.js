@@ -11,6 +11,7 @@ import StarRating from "react-star-ratings";
 import TopProductCard from "./TopProductCard";
 import HeaderCard from "./HeaderCard";
 import Header from "../Nav/Header";
+import { addToWishList } from "../functions/auth";
 
 
 const { TabPane } = Tabs;
@@ -62,7 +63,17 @@ const SingleProductCard = ({ product, onStarClick, star }) => {
     }
   };
 
-  
+  const handleAddToWishlist = (e) =>{
+    e.preventDefault();
+    if(user == null){
+      toast.error("Please login to add product in wishlist");
+    }else{
+      addToWishList(product._id,user.token).then((res)=>{
+        console.log(res);
+        toast.success("product Added to wishlist");
+      }).catch(err=>console.log(err));
+    }
+  }
 
   return (
       <div>
@@ -82,7 +93,7 @@ const SingleProductCard = ({ product, onStarClick, star }) => {
       <div className="col-md-1"></div>
       <div className="col-md-6" >
           <h5>{product.title} <HeartOutlined className="float-right" 
-             style={{fontSize:'24px'}}/></h5>
+             style={{fontSize:'24px'}} onClick={handleAddToWishlist}/></h5>
           <StarRating
             rating={4.3}
             starRatedColor = "orange"

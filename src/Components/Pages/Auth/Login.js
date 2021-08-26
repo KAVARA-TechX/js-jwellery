@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { auth, googleAuthProvider } from "../../../firebase";
+import { auth, googleAuthProvider, facebookProvider } from "../../../firebase";
 import { toast } from "react-toastify";
 import { Button } from "antd";
 import { MailOutlined, GoogleOutlined } from "@ant-design/icons";
@@ -9,7 +9,6 @@ import axios from "axios";
 import HeaderCard from '../../Cards/HeaderCard';
 import Header from '../../Nav/Header';
 import login from "../../../Images/feedbackuser3.jpg";
-import FacebookLogin from 'react-facebook-login';
 
 
 
@@ -27,7 +26,7 @@ const Login = ({ history }) => {
     }
   };
 
-  
+
 
   const createOrUpdateUser = async (authtoken) => {
     return await axios.post(
@@ -41,35 +40,35 @@ const Login = ({ history }) => {
     );
   };
 
-  const createUser = async(name,email) =>{
+  const createUser = async (name, email) => {
     return await axios.post(
       "https://js-solitaire.herokuapp.com/api/create-user",
-      {name,email},
+      { name, email },
     );
   }
   const responseFacebook = (response) => {
-  click(response);
+    click(response);
   }
-  
-  const componentClicked = (data) =>{
-    console.log("Facebook data",data);
+
+  const componentClicked = (data) => {
+    console.log("Facebook data", data);
   }
-  
-  const click = (fb)=>{
-  console.log(fb);
-    createUser(fb.name,fb.email).then((res)=>{
+
+  const click = (fb) => {
+    console.log(fb);
+    createUser(fb.name, fb.email).then((res) => {
       console.log("CREATE OR UPDATE RES", res);
-          dispatch({
-            type: "LOGGED_IN_USER",
-            payload: {
-              name: res.data.name,
-              email: res.data.email,
-              token: fb.token,
-              role: res.data.role,
-              _id: res.data._id,
-            },
-          });
-    }).catch(err=>console.log(err));
+      dispatch({
+        type: "LOGGED_IN_USER",
+        payload: {
+          name: res.data.name,
+          email: res.data.email,
+          token: fb.token,
+          role: res.data.role,
+          _id: res.data._id,
+        },
+      });
+    }).catch(err => console.log(err));
   }
   // useEffect(() => {
   //   if (user && user.token){
@@ -102,11 +101,11 @@ const Login = ({ history }) => {
               _id: res.data._id,
             },
           });
-        roleBasedRedirect(res);
-      })
+          roleBasedRedirect(res);
+        })
         .catch();
 
-      
+
       // history.push("/");
     } catch (error) {
       console.log(error);
@@ -122,20 +121,21 @@ const Login = ({ history }) => {
         const { user } = result;
         const idTokenResult = await user.getIdTokenResult();
         createOrUpdateUser(idTokenResult.token)
-        .then((res) => {
-          console.log("CREATE OR UPDATE RES", res);
-          dispatch({
-            type: "LOGGED_IN_USER",
-            payload: {
-              name: res.data.name,
-              email: res.data.email,
-              token: idTokenResult.token,
-              role: res.data.role,
-              _id: res.data._id,
-            },
-          });
-        roleBasedRedirect(res);})
-        .catch();
+          .then((res) => {
+            console.log("CREATE OR UPDATE RES", res);
+            dispatch({
+              type: "LOGGED_IN_USER",
+              payload: {
+                name: res.data.name,
+                email: res.data.email,
+                token: idTokenResult.token,
+                role: res.data.role,
+                _id: res.data._id,
+              },
+            });
+            roleBasedRedirect(res);
+          })
+          .catch();
         // history.push("/");
       })
       .catch((err) => {
@@ -183,32 +183,67 @@ const Login = ({ history }) => {
     </form>
   );
 
+  const fbLogin = async () => {
+    auth
+      .signInWithPopup(facebookProvider)
+      .then(async (result) => {
+        const { user } = result;
+        const idTokenResult = await user.getIdTokenResult();
+        createOrUpdateUser(idTokenResult.token)
+          .then((res) => {
+            console.log("CREATE OR UPDATE RES", res);
+            dispatch({
+              type: "LOGGED_IN_USER",
+              payload: {
+                name: res.data.name,
+                email: res.data.email,
+                token: idTokenResult.token,
+                role: res.data.role,
+                _id: res.data._id,
+              },
+            });
+            roleBasedRedirect(res);
+          })
+          .catch();
+      })
+      .catch(err => console.log(err));
+    // history.push("/");
+  };
+
   return (
     <div>
-    <HeaderCard/>
-    <Header/>
-    <div  className="container-fluid mt-5 mb-5 pt-5 pb-5">
-      <div className="row">
-      <div className="col-md-6">
-          <img src={login} alt="Login"/>
+      <HeaderCard />
+      <Header />
+      <div className="container-fluid mt-5 mb-5 pt-5 pb-5">
+        <div className="row">
+          <div className="col-md-6">
+            <img src={login} alt="Login" />
+          </div>
+          <div className="col-md-6">
+            {loading ? <h4 className="text-danger">Loading</h4> : <h4>Login</h4>}
+            {loginForm()}
+            <i class="fab fa-google-plus"
+              style={{ color: 'red', cursor: 'pointer', marginRight: '10px', fontSize: '34px' }}
+              onClick={googleLogin} >
+            </i>
+            {/* <FacebookLogin 
+                  appId="110509031211492"
+                  autoLoad={false}
+                  fields="name,email,picture"
+                  onClick={componentClicked}
+                  callback={responseFacebook} 
+                  icon="fa-facebook fbBtn"
+                  className="ml-2"/> 
+              */}
+            <i class="fab fa-facebook"
+              onClick={fbLogin}
+              style={{ color: "blue", cursor: 'pointer', fontSize: '34px' }}>
+            </i>
+            <Link to="/password-reset" className="ml-4" style={{ textDecoration: 'underline' }}>Forgot password?</Link>
+          </div>
+
         </div>
-        <div className="col-md-6">
-          {loading ? <h4 className="text-danger">Loading</h4>: <h4>Login</h4>}
-          {loginForm()}
-            <i class="fab fa-google" onClick={googleLogin} 
-            style={{color:"#fff",backgroundColor:'red',padding:'8px',borderRadius:'25px',fontSize:'20px',cursor:'pointer'}}></i>
-          <FacebookLogin 
-    appId="110509031211492"
-    autoLoad={false}
-    fields="name,email,picture"
-    onClick={componentClicked}
-    callback={responseFacebook} 
-    icon="fa-facebook fbBtn"
-    className="ml-2"/>
-            <Link to="/password-reset" className="ml-4" style={{textDecoration: 'underline'}}>Forgot password?</Link>
-        </div>
-        </div>
-        </div>
+      </div>
     </div>
   );
 };
