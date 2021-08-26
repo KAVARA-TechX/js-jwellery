@@ -86,7 +86,7 @@ export const getUserCart = async (authtoken) => {
 }
 
 export const getWishList = async (authtoken) => {
-    return await axios.get(`http://localhost:8000/api/user/wishlist`, {
+    return await axios.get(`https://js-solitaire.herokuapp.com/api/user/wishlist`, {
         headers: {
             authtoken: authtoken,
         },
@@ -94,7 +94,7 @@ export const getWishList = async (authtoken) => {
 }
 
 export const removeWishList = async (productId, authtoken) => {
-    return await axios.put(`http://localhost:8000/api/user/wishlist/${productId}`,{}, {
+    return await axios.put(`https://js-solitaire.herokuapp.com/api/user/wishlist/${productId}`,{}, {
         headers: {
             authtoken: authtoken,
         },
@@ -103,7 +103,7 @@ export const removeWishList = async (productId, authtoken) => {
 
 
 export const addToWishList = async (productId, authtoken) => {
-    return await axios.post(`http://localhost:8000/api/user/wishlist`, { productId }, {
+    return await axios.post(`https://js-solitaire.herokuapp.com/api/user/wishlist`, { productId }, {
         headers: {
             authtoken: authtoken,
         },
